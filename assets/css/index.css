@@ -33,6 +33,8 @@ li {
 .icons {
 	display: block;
 	text-align: center;
+	height: 2.5em;
+	padding: 0.7em;
 }
 
 .content a {
@@ -66,4 +68,8 @@ li {
 	/*background-color: rgba(0, 0, 0, 0.2);*/
 	color: #767676;
 	white-space: nowrap;
+}
+
+.nav-padding {
+	height: 2.5em;
 }
