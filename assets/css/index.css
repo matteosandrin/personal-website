@@ -62,12 +62,14 @@ li {
 	background-color: rgba(0, 0, 0, 0.85);
 	color: white;
 	white-space: nowrap;
+	padding-left: 3px;
+	padding-right: 3px;
 }
 
 .work-badge {
 	/*background-color: rgba(0, 0, 0, 0.2);*/
 	color: #767676;
-	white-space: nowrap;
+	/*white-space: nowrap;*/
 }
 
 .nav-padding {
