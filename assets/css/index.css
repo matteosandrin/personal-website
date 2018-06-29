@@ -50,26 +50,26 @@ li {
 	padding-bottom: 10px;
 }
 
-.experience-item {
+.list-item {
 	margin-top: 10px;
-}
-
-.project-item {
-	margin-top: 5px;
 }
 
 .project-badge {
 	background-color: rgba(0, 0, 0, 0.85);
 	color: white;
 	white-space: nowrap;
-	padding-left: 3px;
-	padding-right: 3px;
+	padding-left: 5px;
+	padding-right: 5px;
 }
 
 .work-badge {
 	/*background-color: rgba(0, 0, 0, 0.2);*/
 	color: #767676;
 	/*white-space: nowrap;*/
+}
+
+.winner-badge {
+	background-color: #337ab7;
 }
 
 .nav-padding {
