@@ -1,22 +1,22 @@
-* {
-	font-family: 'Source Serif Pro', serif;
-}
-
-body {
-	background-color: #fcfcfc;
-	color: rgba(0, 0, 0, 0.85);
+h1 {
+	font-weight: normal;
+	font-size: 38px;
+	line-height: 50px;
+	margin-top: 55px;
+	margin-bottom: 10px;
+	text-align: center;
 }
 
 h2 {
-	font-size: 2.3em;
-	line-height: 1.5em;
-	font-weight: bold;
+	font-weight: normal;
+	line-height: 26px;
+	font-size: 23px;
+	margin-top: 20px;
 }
 
 li {
-	font-size: 1.15em;
+	font-size: 1em;
 	margin-left: 0.125em;
-
 }
 
 .icons a img {
@@ -24,6 +24,10 @@ li {
 	margin: 2.5px;
 	margin-left: 10px;
 	margin-right: 10px;
+}
+
+.icons a {
+	border-bottom: 0px;
 }
 
 .icons a:hover {
