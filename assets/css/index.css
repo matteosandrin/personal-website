@@ -1,8 +1,8 @@
 h1 {
-	font-weight: normal;
 	font-size: 38px;
+	font-weight: normal;
 	line-height: 50px;
-	margin-top: 55px;
+	margin-top: 76px;
 	margin-bottom: 10px;
 	text-align: center;
 }
@@ -17,13 +17,18 @@ h2 {
 li {
 	font-size: 1em;
 	margin-left: 0.125em;
+	line-height: 1.5;
+}
+
+.icons {
+	text-align: center;
+	height: 25px;
+	margin-bottom: 3em;
 }
 
 .icons a img {
 	width: 25px;
-	margin: 2.5px;
-	margin-left: 10px;
-	margin-right: 10px;
+	margin: 2.5px 5px;
 }
 
 .icons a {
@@ -34,11 +39,10 @@ li {
 	text-decoration: none;
 }
 
-.icons {
-	display: block;
+.essays {
 	text-align: center;
-	height: 2.5em;
-	padding: 0.7em;
+	margin: 1em 0 1.5em 0em;
+	line-height: 1.5;
 }
 
 .content a {
@@ -67,9 +71,7 @@ li {
 }
 
 .work-badge {
-	/*background-color: rgba(0, 0, 0, 0.2);*/
 	color: #767676;
-	/*white-space: nowrap;*/
 }
 
 .winner-badge {
@@ -78,4 +80,10 @@ li {
 
 .nav-padding {
 	height: 2.5em;
+}
+
+@media (max-width: 580px) {
+	.badges {
+		display: inline-block;
+	}
 }
