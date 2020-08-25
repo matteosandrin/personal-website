@@ -45,15 +45,6 @@ li {
 	line-height: 1.5;
 }
 
-.content a {
-	border-bottom: 2px solid;
-}
-
-.content a:hover {
-	border-bottom: 0px solid;
-	text-decoration: none;
-}
-
 .section {
 	padding-bottom: 10px;
 }
@@ -80,6 +71,29 @@ li {
 
 .nav-padding {
 	height: 2.5em;
+}
+
+.nav-bar {
+	width: 100%;
+	line-height: 2.0;
+	font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+	margin-top: 21px;
+	font-size: 15.75px;
+	color: #AAAAAA;
+}
+
+.nav-button {
+	color: #AAAAAA;
+	padding-left: 0.5em;
+}
+
+.nav-info {
+	color: #AAAAAA;
+	letter-spacing: 0.05em;
+}
+
+.pull-right {
+	float: right;
 }
 
 @media (max-width: 580px) {
