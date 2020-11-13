@@ -124,6 +124,24 @@
 					return false;
 				}
 			}
+			async function isLocal() {
+				const data = window.localStorage.getItem("isLocal");
+				if (data == null) {
+					return false;
+				}
+				const hash = await digestMessage(data);
+				if (hash == "b5ac86e24933b6b0bab07f52c5d34bf4a4aef61f8e79f2fd879b5c750fe10987") {
+					return true;
+				}
+				return false;
+			}
+			async function digestMessage(message) {
+				const msgUint8 = new TextEncoder().encode(message);
+				const hashBuffer = await crypto.subtle.digest('SHA-256', msgUint8);
+				const hashArray = Array.from(new Uint8Array(hashBuffer));
+				const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+				return hashHex;
+			}
 			function notify() {
 				var urlA = "https://blip.runway7.net";
 				var reqA = new XMLHttpRequest();
@@ -145,9 +163,12 @@
 				reqA.open("GET", urlA, true);
 				reqA.send();
 			}
-			if (!botCheck()) {
-				setTimeout(notify, 2000);
-			}
+			(async function() {
+				const isLocalReq = await isLocal();
+				if (!botCheck() && !isLocalReq) {
+					setTimeout(notify, 2000);
+				}
+			})()
 		</script>
 	</body>
 </html>
