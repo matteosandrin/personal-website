@@ -5,7 +5,14 @@ module.exports = {
     "./public/**/*.{html,js}",
   ],
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+            'blueish-gray': '#F5F9FA'
+        },
+        fontFamily: {
+            sans: ['Helvetica', 'sans-serif']
+        }
+    },
   },
   plugins: [],
   variants: {},
