@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    html {
+        @apply text-slate-900;
+    }
+}
+
 @font-face {
     font-family: "MoMA Sans Web";
     src: url("assets/fonts/moma_sans_regular.ttf");
