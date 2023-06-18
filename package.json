@@ -4,7 +4,8 @@
   "description": "Matteo Sandrin's personal website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build-tailwind" : "npx tailwindcss -i public/assets/css/tailwind.css -o public/assets/css/build/index.css",
+    "watch-tailwind" : "npx tailwindcss -i public/assets/css/tailwind.css -o public/assets/css/build/index.css --watch"
   },
   "author": "Matteo Sandrin",
   "license": "ISC",
