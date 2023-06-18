@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: "MoMA Sans Web";
+    src: url("assets/fonts/moma_sans_regular.ttf");
+}
+@font-face {
+    font-family: "MoMA Sans Web";
+    src: url("assets/fonts/moma_sans_bold.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "MoMA Sans Web";
+    src: url("assets/fonts/moma_sans_regular_italic.ttf");
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: "MoMA Sans Web";
+    src: url("assets/fonts/moma_sans_bold_italic.ttf");
+    font-weight: bold;
+    font-style: italic, oblique;
+}
+@font-face {
+    font-family: "MoMA Sans Web";
+    src: url("assets/fonts/moma_sans_medium.ttf");
+    font-weight: 600
+}

@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   mode: 'jit',
   content: [
@@ -7,10 +8,10 @@ module.exports = {
   theme: {
     extend: {
         colors: {
-            'blueish-gray': '#F5F9FA'
+            'blueish-gray': '#F5F9FA',
         },
         fontFamily: {
-            sans: ['Helvetica', 'sans-serif']
+            sans: ['"MoMA Sans Web"', ...defaultTheme.fontFamily.sans],
         }
     },
   },
