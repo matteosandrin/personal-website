@@ -600,39 +600,64 @@ html {
 @font-face {
   font-family: "MoMA Sans Web";
 
-  src: url("assets/fonts/moma_sans_regular.ttf");
+  src: url("/assets/fonts/MoMASansWeb-Regular.woff2") format("woff2"),
+    url("/assets/fonts/MoMASansWeb-Regular.woff") format("woff");
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MoMA Sans Web";
 
-  src: url("assets/fonts/moma_sans_bold.ttf");
-
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: "MoMA Sans Web";
-
-  src: url("assets/fonts/moma_sans_regular_italic.ttf");
-
-  font-style: italic, oblique;
-}
-
-@font-face {
-  font-family: "MoMA Sans Web";
-
-  src: url("assets/fonts/moma_sans_bold_italic.ttf");
+  src: url("/assets/fonts/MoMASansWeb-BoldItalic.woff2") format("woff2"),
+    url("/assets/fonts/MoMASansWeb-BoldItalic.woff") format("woff");
 
   font-weight: bold;
 
-  font-style: italic, oblique;
+  font-style: italic;
+
+  font-display: swap;
 }
 
 @font-face {
   font-family: "MoMA Sans Web";
 
-  src: url("assets/fonts/moma_sans_medium.ttf");
+  src: url("/assets/fonts/MoMASansWeb-RegularItalic.woff2") format("woff2"),
+    url("/assets/fonts/MoMASansWeb-RegularItalic.woff") format("woff");
 
-  font-weight: 600
+  font-weight: normal;
+
+  font-style: italic;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MoMA Sans Web";
+
+  src: url("/assets/fonts/MoMASansWeb-Medium.woff2") format("woff2"),
+    url("/assets/fonts/MoMASansWeb-Medium.woff") format("woff");
+
+  font-weight: 500;
+
+  font-style: normal;
+
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "MoMA Sans Web";
+
+  src: url("/assets/fonts/MoMASansWeb-Bold.woff2") format("woff2"),
+    url("/assets/fonts/MoMASansWeb-Bold.woff") format("woff");
+
+  font-weight: bold;
+
+  font-style: normal;
+
+  font-display: swap;
 }
