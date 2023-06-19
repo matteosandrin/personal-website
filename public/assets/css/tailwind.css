@@ -3,8 +3,21 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  :root {
     @apply text-slate-900;
+    font-size: 10px;
+  }
+
+  @screen md {
+    :root {
+        font-size: 16px;
+    }
+  }
+
+  @screen 2xl {
+    :root {
+        font-size: 22px;
+    }
   }
 }
 
