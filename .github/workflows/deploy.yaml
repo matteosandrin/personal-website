@@ -1,0 +1,23 @@
+name: Deploy Matteo's portfolio website
+
+on:
+  push:
+    branches:
+      # - 'master'
+      - 'redesign-2023'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Generate content
+        run: make build
+
+      - name: Publish current workdir to GitHub Pages
+        uses: rayluo/github-pages-overwriter@v1.3
+        with:
+          source-directory: build
+          target-branch: gh_pages
