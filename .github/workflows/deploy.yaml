@@ -16,6 +16,9 @@ jobs:
       - name: Generate content
         run: make build
 
+      - name: Copy CNAME
+        run: cp CNAME ./build/
+
       - name: Publish current workdir to GitHub Pages
         uses: rayluo/github-pages-overwriter@v1.3
         with:
