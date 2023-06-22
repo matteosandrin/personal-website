@@ -1,14 +1,18 @@
 SRC_DIR = ./public
 DST_DIR = ./build
 
-build: clean copy-assets build-templates build-tailwind
+build: clean dependencies copy-assets build-templates build-tailwind
+
+dirty-build: copy-assets build-templates build-tailwind
+
+dependencies:
+	pip install -r requirements.txt
+	npm install
 
 build-templates:
-	pip install -r requirements.txt
 	python3 build-templates.py ${SRC_DIR} ${DST_DIR}
 
 build-tailwind:
-	npm install
 	npx tailwind -i ${SRC_DIR}/assets/css/index.css -o ${DST_DIR}/assets/css/index.css
 
 copy-assets:
@@ -17,4 +21,4 @@ copy-assets:
 clean:
 	rm -rf $(DST_DIR)
 
-.PHONY: build build-templates build-tailwind copy-assets clean
+.PHONY: build dirty-build build-templates build-tailwind copy-assets clean
