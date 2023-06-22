@@ -3,8 +3,7 @@ name: Deploy Matteo's portfolio website
 on:
   push:
     branches:
-      # - 'master'
-      - 'redesign-2023'
+      - 'master'
 
 jobs:
   publish:
