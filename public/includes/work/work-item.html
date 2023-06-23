@@ -1,12 +1,12 @@
-<div class="mx-auto flex max-w-5xl md:flex-row flex-col px-16">
-    <div class="mt-8 basis-3/5">
+<div class="mx-auto flex max-w-5xl md:flex-row flex-col px-8 md:px-16">
+    <div class="mt-8 md:mr-8 basis-3/5">
         <h2 class="text-3xl font-bold">{% block title %}{% endblock %}</h2>
-        <h3 class="mt-2 text-xl">{% block subtitle %}{% endblock %}</h3>
+        <h3 class="mt-2 text-xl text-slate-500 italic">{% block subtitle %}{% endblock %}</h3>
         {% block content %}{% endblock %}
     </div>
     <div class="basis-2/5 flex justify-center items-center">
         <img
-          class="object-contain w-3/4"
+          class="object-contain w-1/2 md:w-3/4 mt-8 md:mt-0"
           src="{% block img_url %}{% endblock %}"
           alt="" />
     </div>
