@@ -9,33 +9,9 @@
   </head>
   <body class="bg-blueish-gray">
     {% include "includes/header.html" %}
-    <div class="mx-auto flex max-w-5xl md:flex-row flex-col px-8">
-      <div class="mt-8 basis-3/5">
-        <h2 class="text-3xl font-bold">Google</h2>
-        <h3 class="mt-2 text-xl">Software Engineer</h3>
-        <p class="mt-4 text-base">
-          I work as a software engineer on the Hotel Ads team. The features I
-          built allow hotel owners to understand how to improve their ad
-          campaigns. I get to work on the complex plumbing that follows a click
-          on google.com all the through the Ads infrastructure.
-        </p>
-        <p class="mt-4 text-base">
-          Before that, I worked as an intern on the Flights team. I worked on
-          rewriting from scratch the frontend of matrix.itasoftware.com. The
-          Matrix flight search engine has a loyal following of over 200,000
-          users.
-        </p>
-        <p class="mt-4 text-base">
-          Cambridge, MA 2021 – Now (full time)<br />
-          Summer 2020 (intern)
-        </p>
-      </div>
-      <div class="basis-2/5 flex justify-center items-center">
-          <img
-            class="object-contain w-3/4"
-            src="/assets/img/google-logo.svg"
-            alt="" />
-      </div>
+    <div>
+      {% include "includes/work/work-item-01-google.html" %}
+      {% include "includes/work/work-item-02-smartcar.html" %}
     </div>
   </body>
 </html>
