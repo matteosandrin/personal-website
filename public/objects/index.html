@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects – Matteo Sandrin</title>
+    <meta
+      name="description"
+      content="This is Matteo Sandrin's personal website. This page showcases Matteo's art projects." />
+      {% include "includes/head.html" %}
+    </head>
+    <body class="bg-blueish-gray">
+      {% with selected="objects" %}
+        {% include "includes/header.html" %}
+      {% endwith %}
+    <div class="mb-8">
+      {% include "includes/objects/objects-item-metrocard.html" %}
+    </div>
+  </body>
+</html>
