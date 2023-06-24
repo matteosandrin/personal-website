@@ -23,7 +23,7 @@ watch-tailwind:
 	npx tailwind -i ${SRC_DIR}/assets/css/index.css -o ${DST_DIR}/assets/css/index.css --watch
 
 copy-assets:
-	rsync -av --exclude='*.html' --exclude='*.css' --exclude='includes' ${SRC_DIR}/ ${DST_DIR}
+	rsync -av --exclude='*.html' --exclude='*.css' --exclude='templates' ${SRC_DIR}/ ${DST_DIR}
 
 clean:
 	rm -rf $(DST_DIR)

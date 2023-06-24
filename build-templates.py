@@ -4,7 +4,7 @@ import os
 
 
 def filter_templates(t):
-    return t.endswith(".html") and (not t.startswith("includes"))
+    return t.endswith(".html") and (not t.startswith("templates"))
 
 
 if len(sys.argv) < 3:

@@ -5,15 +5,15 @@
     <meta
       name="description"
       content="This is Matteo Sandrin's personal website. This page showcases Matteo's professional accomplishments in software engineering" />
-      {% include "includes/head.html" %}
+      {% include "templates/head.html" %}
     </head>
     <body class="bg-blueish-gray">
       {% with selected="work" %}
-        {% include "includes/header.html" %}
+        {% include "templates/header.html" %}
       {% endwith %}
     <div class="mb-8">
-      {% include "includes/work/work-item-google.html" %}
-      {% include "includes/work/work-item-smartcar.html" %}
+      {% include "templates/work/work-item-google.html" %}
+      {% include "templates/work/work-item-smartcar.html" %}
     </div>
   </body>
 </html>

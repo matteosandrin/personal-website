@@ -5,14 +5,14 @@
     <meta
       name="description"
       content="This is Matteo Sandrin's personal website. This page showcases Matteo's art projects." />
-      {% include "includes/head.html" %}
+      {% include "templates/head.html" %}
     </head>
     <body class="bg-blueish-gray">
       {% with selected="objects" %}
-        {% include "includes/header.html" %}
+        {% include "templates/header.html" %}
       {% endwith %}
     <div class="mb-8">
-      {% include "includes/objects/objects-item-metrocard.html" %}
+      {% include "templates/objects/objects-item-metrocard.html" %}
     </div>
   </body>
 </html>
