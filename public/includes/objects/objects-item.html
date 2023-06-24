@@ -1,15 +1,25 @@
-<div class="mx-auto mt-12 flex max-w-7xl flex-col px-8 first:mt-8 md:flex-row md:px-16">
-  <div class="basis-2/5 md:mr-8">
-    <h2 class="text-4xl font-medium">{% block title %}{% endblock %}</h2>
+<div
+  class="mx-auto mt-12 flex max-w-7xl flex-col px-8 first:mt-8 md:flex-row md:px-16">
+  <div class="order-last mt-8 basis-2/5 md:order-first md:mr-8 md:mt-0">
+    <h2 class="text-4xl font-medium">
+      <a href="{% block object_url %}{% endblock %}">
+        {% block title %}{% endblock %}
+      </a>
+    </h2>
     <h3 class="mt-2 text-xl text-slate-500">
       {% block subtitle %}{% endblock %}
     </h3>
     {% block content %}{% endblock %}
+    <p>
+      <a class="link" href="{{ self.object_url() }}">(SEE MORE)</a>
+    </p>
   </div>
   <div class="basis-3/5">
-    <img
-      class="mt-16 md:mt-0 w-full rounded-2xl shadow-xl"
-      src="{% block img_url %}{% endblock %}"
-      alt="" />
+    <a href="{{ self.object_url() }}">
+      <img
+        class="w-full rounded-2xl"
+        src="{% block img_url %}{% endblock %}"
+        alt="" />
+    </a>
   </div>
 </div>
