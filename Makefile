@@ -1,9 +1,13 @@
 SRC_DIR = ./public
 DST_DIR = ./build
+PROD_DIR = ./prod
 
 build: clean dependencies copy-assets build-templates build-tailwind
 
 dirty-build: copy-assets build-templates build-tailwind
+
+prod: build
+	mv ${DST_DIR} ${PROD_DIR}
 
 dependencies:
 	pip install -r requirements.txt
@@ -23,5 +27,6 @@ copy-assets:
 
 clean:
 	rm -rf $(DST_DIR)
+	rm -rf $(PROD_DIR)
 
-.PHONY: build dirty-build build-templates build-tailwind copy-assets clean
+.PHONY: build prod dirty-build build-templates build-tailwind copy-assets clean
