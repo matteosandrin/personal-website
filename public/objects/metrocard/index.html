@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>METROCARD XXL – Matteo Sandrin</title>
+    <meta
+      name="description"
+      content="This is Matteo Sandrin's personal website. This page showcases the METROCARD XXL" />
+    {% include "templates/head.html" %}
+  </head>
+  <body class="bg-blueish-gray">
+    {% with selected="objects" %}
+      {% include "templates/header.html" %}
+    {% endwith %}
+    {%
+      with images = [
+        {
+          "url" : "/assets/img/metrocard-01.jpg",
+          "width" : 5884,
+          "height" : 4218
+        },
+        {
+          "url" : "/assets/img/metrocard-02.jpg",
+          "width" : 3072,
+          "height" : 4608
+        },
+        {
+          "url" : "/assets/img/metrocard-03.jpg",
+          "width" : 5896,
+          "height" : 4238,
+        },
+    ]
+    %}
+      {% include "templates/image-gallery.html" %}
+    {% endwith %}
+  </body>
+</html>
