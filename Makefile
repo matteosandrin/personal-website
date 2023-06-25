@@ -24,6 +24,8 @@ watch-tailwind:
 
 copy-assets:
 	rsync -av --exclude='*.html' --exclude='*.css' --exclude='templates' ${SRC_DIR}/ ${DST_DIR}
+	cp node_modules/photoswipe/dist/*.min.js ${DST_DIR}/assets/js/
+	cp node_modules/photoswipe/dist/*.css ${DST_DIR}/assets/css/
 
 clean:
 	rm -rf $(DST_DIR)
