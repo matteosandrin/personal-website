@@ -17,7 +17,10 @@
   <div class="basis-3/5 flex justify-center items-center">
     <a href="{{ self.object_url() }}">
       <img
-        class="w-full md:max-h-[75vh]"
+        class="w-full md:max-h-[75vh]
+               {% if thumbnail_crop == 'square' %}
+               aspect-square object-center object-cover
+               {% endif %}"
         src="{% block img_url %}{% endblock %}"
         alt="" />
     </a>
