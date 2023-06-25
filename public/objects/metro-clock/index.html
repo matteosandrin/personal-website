@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>METRO CLOCK – Matteo Sandrin</title>
+    <meta
+      name="description"
+      content="This is Matteo Sandrin's personal website. This page showcases the METRO CLOCK" />
+    {% include "templates/head.html" %}
+  </head>
+  <body class="bg-blueish-gray">
+    {% with selected="objects" %}
+      {% include "templates/header.html" %}
+    {% endwith %}
+    {%
+      with image_urls=[
+      "/assets/img/metro-clock-01.jpg",
+      "/assets/img/DSC_0294_edit.jpg",
+      "/assets/img/metro-clock-02.jpg",
+      "/assets/img/metro-clock-03.jpg",
+      "/assets/img/metro-clock-04.jpg"]
+    %}
+      {% include "templates/image-gallery.html" %}
+    {% endwith %}
+  </body>
+</html>
