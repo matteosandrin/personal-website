@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>About – Matteo Sandrin</title>
+    <meta
+      name="description"
+      content="This is Matteo Sandrin's personal website. This page has some information about Matteo Sandrin" />
+    {% include "templates/head.html" %}
+  </head>
+  <body class="bg-blueish-gray">
+    {% with selected="about" %}
+      {% include "templates/header.html" %}
+    {% endwith %}
+    <div class="mx-auto my-8 flex max-w-5xl flex-col px-8 md:flex-row md:px-16">
+      <div class="basis-1/2 md:mr-8">
+        <h2 class="text-5xl font-medium">about</h2>
+        <p>(last update: june 2023)</p>
+        <p>I was born in Milan, Italy. Now I live and work in Boston.</p>
+        <p>
+          Currently I write software at Google, on the Hotel Ads team. <a class="link" href="/work">More about my work.</a>
+        </p>
+        <p>
+          I graduated from Columbia University with a B.S. in Computer Science.
+        </p>
+        <p>
+          I'm currently interested in:<br />
+          Daft Punk • focaccia • formula 1 • Bauhaus • NYC subway signage •
+          casting concrete • embroidery machines • vinyl cutters • soldering •
+          watchmaking • Fellini films • Wes Anderson films
+        </p>
+        <p>How to reach me:</p>
+        <ul class="list-inside list-disc">
+          <li>sandrin98@gmail.com (reply guaranteed!)</li>
+          <li>
+            <a
+              class="link"
+              target="_blank"
+              href="https://twitter.com/teosandrin">
+              twitter
+            </a>
+          </li>
+          <li>
+            <a
+              class="link"
+              target="_blank"
+              href="https://instagram.com/matteo.sandrin">
+              instagram
+            </a>
+          </li>
+          <li>
+            <a
+              class="link"
+              target="_blank"
+              href="https://www.linkedin.com/in/matteosandrin">
+              linkedin
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="mt-8 flex basis-1/2 items-center justify-center md:mt-0">
+        <img class="w-full" src="/assets/img/matteo-about.jpg" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
