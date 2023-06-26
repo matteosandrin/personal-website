@@ -28,6 +28,10 @@
     @apply mt-4 text-lg md:text-base;
   }
 
+  ul {
+    @apply mt-2 text-lg md:text-base;
+  }
+
   .right-arrow .outer-color, .close-button .outer-color {
     fill: transparent;
     stroke: black;
