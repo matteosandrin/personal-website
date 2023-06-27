@@ -1,41 +1,35 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>METRO CLOCK – Matteo Sandrin</title>
-    <meta
-      name="description"
-      content="This is Matteo Sandrin's personal website. This page showcases the METRO CLOCK" />
-    {% include "templates/head.html" %}
-  </head>
-  <body class="bg-blueish-gray">
-    {% with selected="objects" %}
-      {% include "templates/header.html" %}
-    {% endwith %}
-    {%
-      with images = [
-        {
-          "url" : "/assets/img/metro-clock/metro-clock-01.jpg",
-          "width" : 3072,
-          "height" : 3072
-        },
-        {
-          "url" : "/assets/img/metro-clock/metro-clock-02.jpg",
-          "width" : 4608,
-          "height" : 3072
-        },
-        {
-          "url" : "/assets/img/metro-clock/metro-clock-03.jpg",
-          "width" : 3112,
-          "height" : 3112,
-        },
-        {
-          "url" : "/assets/img/metro-clock/metro-clock-04.jpg",
-          "width" : 4486,
-          "height" : 2991,
-        },
-    ]
-    %}
-      {% include "templates/image-gallery.html" %}
-    {% endwith %}
-  </body>
-</html>
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>METRO CLOCK – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases the METRO CLOCK" />
+{% endblock %}
+{% block body %}
+  {% with images = [
+    {
+      "url" : "/assets/img/metro-clock/metro-clock-01.jpg",
+      "width" : 3072,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/metro-clock/metro-clock-02.jpg",
+      "width" : 4608,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/metro-clock/metro-clock-03.jpg",
+      "width" : 3112,
+      "height" : 3112,
+    },
+    {
+      "url" : "/assets/img/metro-clock/metro-clock-04.jpg",
+      "width" : 4486,
+      "height" : 2991,
+    },
+  ]
+  %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}

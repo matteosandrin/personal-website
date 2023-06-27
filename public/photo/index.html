@@ -1,51 +1,45 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Photo – Matteo Sandrin</title>
-    <meta
-      name="description"
-      content="This is Matteo Sandrin's personal website. This page showcases Matteo's photography." />
-    {% include "templates/head.html" %}
-  </head>
-  <body class="bg-blueish-gray">
-    {% with selected="photo" %}
-      {% include "templates/header.html" %}
-    {% endwith %}
-    {%
-      with images = [
-      {
-        "url" : "/assets/img/film/roll_010_img_08_jan_2020.jpg",
-        "width" : 2202,
-        "height" : 1468,
-      },
-      {
-        "url" : "/assets/img/film/roll_009_img_11_dec_2019.jpg",
-        "width" : 1600,
-        "height" : 2400,
-      },
-      {
-        "url" : "/assets/img/film/roll_007_img_15_nov_2019.jpg",
-        "width" : 3089,
-        "height" : 2048,
-      },
-      {
-        "url" : "/assets/img/film/roll_009_img_08_dec_2019.jpg",
-        "width" : 1600,
-        "height" : 2400,
-      },
-      {
-        "url" : "/assets/img/film/roll_006_img_04_sep_2019.jpg",
-        "width" : 2522,
-        "height" : 1672,
-      },
-      {
-        "url" : "/assets/img/film/roll_008_img_10_dec_2019.jpg",
-        "width" : 1829,
-        "height" : 2758,
-      },
-      ]
-    %}
-      {% include "templates/image-gallery.html" %}
-    {% endwith %}
-  </body>
-</html>
+{% extends "templates/page.html" %}
+{% set selected="photo" %}
+{% block head %}
+  <title>Photo – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases Matteo's photography." />
+{% endblock %}
+{% block body %}
+  {% with images = [
+    {
+      "url" : "/assets/img/film/roll_010_img_08_jan_2020.jpg",
+      "width" : 2202,
+      "height" : 1468,
+    },
+    {
+      "url" : "/assets/img/film/roll_009_img_11_dec_2019.jpg",
+      "width" : 1600,
+      "height" : 2400,
+    },
+    {
+      "url" : "/assets/img/film/roll_007_img_15_nov_2019.jpg",
+      "width" : 3089,
+      "height" : 2048,
+    },
+    {
+      "url" : "/assets/img/film/roll_009_img_08_dec_2019.jpg",
+      "width" : 1600,
+      "height" : 2400,
+    },
+    {
+      "url" : "/assets/img/film/roll_006_img_04_sep_2019.jpg",
+      "width" : 2522,
+      "height" : 1672,
+    },
+    {
+      "url" : "/assets/img/film/roll_008_img_10_dec_2019.jpg",
+      "width" : 1829,
+      "height" : 2758,
+    },
+  ]
+  %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}

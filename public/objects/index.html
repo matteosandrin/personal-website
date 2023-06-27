@@ -1,20 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Objects – Matteo Sandrin</title>
-    <meta
-      name="description"
-      content="This is Matteo Sandrin's personal website. This page showcases Matteo's art projects." />
-      {% include "templates/head.html" %}
-    </head>
-    <body class="bg-blueish-gray">
-      {% with selected="objects" %}
-        {% include "templates/header.html" %}
-      {% endwith %}
-    <div class="mb-8">
-      {% include "templates/objects/objects-item-metro-clock.html" %}
-      {% include "templates/objects/objects-item-metrocard.html" %}
-      {% include "templates/objects/objects-item-space-clock.html" %}
-    </div>
-  </body>
-</html>
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>Objects – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases Matteo's art projects." />
+{% endblock %}
+{% block body %}
+  <div class="mb-8">
+    {% include "templates/objects/objects-item-metro-clock.html" %}
+    {% include "templates/objects/objects-item-metrocard.html" %}
+    {% include "templates/objects/objects-item-space-clock.html" %}
+  </div>
+{% endblock %}

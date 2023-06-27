@@ -1,61 +1,56 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>SPACE CLOCK XXL – Matteo Sandrin</title>
-    <meta
-      name="description"
-      content="This is Matteo Sandrin's personal website. This page showcases the SPACE CLOCK" />
-    {% include "templates/head.html" %}
-  </head>
-  <body class="bg-blueish-gray">
-    {% with selected="objects" %}
-      {% include "templates/header.html" %}
-    {% endwith %}
-    {%
-      with images = [
-      {
-        "url" : "/assets/img/space-clock/space-clock-01.jpg",
-        "width" : 4608,
-        "height" : 3072
-      },
-      {
-        "url" : "/assets/img/space-clock/space-clock-02.jpg",
-        "width" : 4608,
-        "height" : 3072
-      },
-      {
-        "url" : "/assets/img/space-clock/space-clock-03.jpg",
-        "width" : 4608,
-        "height" : 3072
-      },
-      {
-        "url" : "/assets/img/space-clock/space-clock-04.jpg",
-        "width" : 4608,
-        "height" : 3072
-      },
-      {
-        "url" : "/assets/img/space-clock/space-clock-05.jpg",
-        "width" : 4608,
-        "height" : 3072
-      },
-      {
-        "url" : "/assets/img/space-clock/space-clock-detail-01.jpg",
-        "width" : 4608,
-        "height" : 3072
-      },
-      {
-        "url" : "/assets/img/space-clock/space-clock-detail-02.jpg",
-        "width" : 3915,
-        "height" : 2610,
-      },
-      {
-        "url" : "/assets/img/space-clock/space-clock-detail-03.jpg",
-        "width" : 4133,
-        "height" : 2755,
-      },
-      ]
-    %}
-      {% include "templates/image-gallery.html" %}
-    {% endwith %}
-  </body>
-</html>
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>SPACE CLOCK XXL – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases the SPACE CLOCK" />
+{% endblock %}
+{% block body %}
+  {% with images = [
+    {
+      "url" : "/assets/img/space-clock/space-clock-01.jpg",
+      "width" : 4608,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/space-clock/space-clock-02.jpg",
+      "width" : 4608,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/space-clock/space-clock-03.jpg",
+      "width" : 4608,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/space-clock/space-clock-04.jpg",
+      "width" : 4608,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/space-clock/space-clock-05.jpg",
+      "width" : 4608,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/space-clock/space-clock-detail-01.jpg",
+      "width" : 4608,
+      "height" : 3072
+    },
+    {
+      "url" : "/assets/img/space-clock/space-clock-detail-02.jpg",
+      "width" : 3915,
+      "height" : 2610,
+    },
+    {
+      "url" : "/assets/img/space-clock/space-clock-detail-03.jpg",
+      "width" : 4133,
+      "height" : 2755,
+    },
+  ]
+  %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}
+
