@@ -1,0 +1,25 @@
+name: Deploy Matteo's portfolio website
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@v3
+
+      - name: Generate content
+        run: make prod
+
+      - name: Copy CNAME
+        run: cp CNAME ./prod/
+
+      - name: Publish current workdir to GitHub Pages
+        uses: rayluo/github-pages-overwriter@v1.3
+        with:
+          source-directory: prod
+          target-branch: gh-pages

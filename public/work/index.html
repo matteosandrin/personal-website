@@ -1,0 +1,14 @@
+{% extends "templates/page.html" %}
+{% set selected="work" %}
+{% block head %}
+  <title>Work – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases Matteo's professional accomplishments in software engineering" />
+{% endblock %}
+{% block body %}
+  <div class="mb-8">
+    {% include "templates/work/work-item-google.html" %}
+    {% include "templates/work/work-item-smartcar.html" %}
+  </div>
+{% endblock %}

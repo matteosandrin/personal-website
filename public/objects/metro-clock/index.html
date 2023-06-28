@@ -1,0 +1,13 @@
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>METRO CLOCK – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases the METRO CLOCK" />
+{% endblock %}
+{% block body %}
+  {% with images = img.objects.metro_clock %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}

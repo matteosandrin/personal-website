@@ -1,0 +1,14 @@
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>SPACE CLOCK XXL – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases the SPACE CLOCK" />
+{% endblock %}
+{% block body %}
+  {% with images = img.objects.space_clock %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}
+

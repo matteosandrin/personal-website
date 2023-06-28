@@ -1,0 +1,13 @@
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+    <title>METROCARD XXL – Matteo Sandrin</title>
+    <meta
+      name="description"
+      content="This is Matteo Sandrin's personal website. This page showcases the METROCARD XXL" />
+{% endblock %}
+{% block body %}
+  {% with images = img.objects.metrocard %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}

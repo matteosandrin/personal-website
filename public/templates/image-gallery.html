@@ -1,0 +1,23 @@
+<link rel="stylesheet" href="/assets/css/photoswipe.css" />
+<style>
+  .pswp {
+    --pswp-bg: white;
+  }
+</style>
+<div
+  id="gallery"
+  class="pswp-gallery pswp-gallery--single-column mx-auto mb-4 flex max-w-7xl flex-col px-8 md:px-16">
+  {% for image in images %}
+    <a
+      data-pswp-src="{{ image.url }}"
+      data-pswp-width="{{ image.width }}"
+      data-pswp-height="{{ image.height }}"
+      alt="">
+      <img
+        src="{{ image.url }}"
+        class="mx-auto mt-4 cursor-zoom-in object-contain md:max-h-[75vh]"
+        alt="" />
+    </a>
+  {% endfor %}
+</div>
+<script type="module" src="/assets/js/image-gallery.js"></script>

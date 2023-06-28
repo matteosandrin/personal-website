@@ -1,0 +1,35 @@
+{
+  "img": {
+    "objects": {
+      "metro_clock": [
+        "/assets/img/metro-clock/metro-clock-01.jpg",
+        "/assets/img/metro-clock/metro-clock-02.jpg",
+        "/assets/img/metro-clock/metro-clock-03.jpg",
+        "/assets/img/metro-clock/metro-clock-04.jpg"
+      ],
+      "metrocard": [
+        "/assets/img/metrocard/metrocard-01.jpg",
+        "/assets/img/metrocard/metrocard-02.jpg",
+        "/assets/img/metrocard/metrocard-03.jpg"
+      ],
+      "space_clock": [
+        "/assets/img/space-clock/space-clock-01.jpg",
+        "/assets/img/space-clock/space-clock-02.jpg",
+        "/assets/img/space-clock/space-clock-03.jpg",
+        "/assets/img/space-clock/space-clock-04.jpg",
+        "/assets/img/space-clock/space-clock-05.jpg",
+        "/assets/img/space-clock/space-clock-detail-01.jpg",
+        "/assets/img/space-clock/space-clock-detail-02.jpg",
+        "/assets/img/space-clock/space-clock-detail-03.jpg"
+      ]
+    },
+    "film" : [
+      "/assets/img/film/roll_010_img_08_jan_2020.jpg",
+      "/assets/img/film/roll_009_img_11_dec_2019.jpg",
+      "/assets/img/film/roll_007_img_15_nov_2019.jpg",
+      "/assets/img/film/roll_008_img_10_dec_2019.jpg",
+      "/assets/img/film/roll_006_img_04_sep_2019.jpg",
+      "/assets/img/film/roll_009_img_08_dec_2019.jpg"
+    ]
+  }
+}
