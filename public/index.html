@@ -1,9 +1,26 @@
 {% extends "templates/page.html" %}
+{% set description="This is Matteo Sandrin's personal website. I build useful software and beautiful objects." %}
+{% set title="Matteo Sandrin" %}
+{% set social_preview_url="/assets/img/social-preview.jpg" %}
 {% block head %}
-  <title>Matteo Sandrin</title>
+  <title>{{ title }}</title>
   <meta
     name="description"
-    content="This is Matteo Sandrin's personal website. I am passionate about computer science, software engineering, photography and all things Italian." />
+    content="{{ description }}" />
+  <meta name="twitter:image:src" content="{{ social_preview_url }}">
+  <meta name="twitter:site" content="@TeoSandrin">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="og:image" content="{{ social_preview_url }}">
+  <meta name="og:image:alt" content="{{ description }}">
+  <meta name="og:image:width" content="1200">
+  <meta name="og:image:height" content="640">
+  <meta name="og:site_name" content="{{ title }}">
+  <meta name="og:type" content="object">
+  <meta name="og:title" content="{{ title }}">
+  <meta name="og:url" content="https://sandrin.dev">
+  <meta name="og:description" content="{{ description }}">
 {% endblock %}
 {% block body %}
   <div class="mx-auto max-w-2xl px-4">
