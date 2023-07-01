@@ -1,7 +1,7 @@
 {% extends "templates/page.html" %}
 {% set description="This is Matteo Sandrin's personal website. I build useful software and beautiful objects." %}
 {% set title="Matteo Sandrin" %}
-{% set social_preview_url="https://sandrin.dev/assets/img/social-preview.jpg" %}
+{% set social_preview_url="https://{}/assets/img/social-preview.jpg".format(config.domain) %}
 {% block head %}
   <title>{{ title }}</title>
   <meta
@@ -19,7 +19,7 @@
   <meta name="og:site_name" content="{{ title }}">
   <meta name="og:type" content="object">
   <meta name="og:title" content="{{ title }}">
-  <meta name="og:url" content="https://sandrin.dev">
+  <meta name="og:url" content="https://{{ config.domain }}">
   <meta name="og:description" content="{{ description }}">
 {% endblock %}
 {% block body %}

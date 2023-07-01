@@ -1,4 +1,7 @@
 {
+  "config" : {
+    "domain" : "sandr.in"
+  },
   "img": {
     "objects": {
       "metro_clock": [
