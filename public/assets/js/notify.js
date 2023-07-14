@@ -10,6 +10,17 @@ function botCheck() {
   }
 }
 
+function getReferrer() {
+  const ref = document.referrer;
+  if (!ref || document.referrer == "") {
+    return null;
+  }
+  if (ref.includes("sandr.in") || ref.includes("sandrin.dev")) {
+    return null;
+  }
+  return ref;
+}
+
 async function isLocal() {
   const data = window.localStorage.getItem("isLocal");
   if (data == null) {
@@ -34,15 +45,29 @@ async function digestMessage(message) {
   return hashHex;
 }
 
+function buildMessage(geoData, pathName, referrer) {
+  var message =
+    Base64.decode("TmV3IHZpc2l0IGZyb20g") +
+    geoData.city +
+    ", " +
+    geoData.region +
+    ", " +
+    geoData.country_name +
+    " " +
+    geoData.emoji_flag +
+    " on " +
+    pathName;
+  if (referrer != null) {
+    message += " from " + referrer;
+  }
+  return message;
+}
+
 function encodeMessage(message) {
   var params = new Object();
   params.token = Base64.decode("YXQxbnR0anJ2ZDEzNnQ4OHRha2YycGVoamdjNmNo");
   params.user = Base64.decode("dXhjb2pmM3JqcWVuMXNrcnphajFiNTE3NXdnOWYz");
-  params.message =
-    Base64.decode("TmV3IHZpc2l0IGZyb20g") +
-    message +
-    Base64.decode("IG9uIA==") +
-    window.location.pathname;
+  params.message = message;
 
   let urlEncodedDataPairs = [];
   for (let name in params) {
@@ -66,21 +91,18 @@ function notify() {
       var content = "";
       if (this.status == 200) {
         var data = JSON.parse(this.responseText);
-        content =
-          data.city +
-          ", " +
-          data.region +
-          ", " +
-          data.country_name +
-          " " +
-          data.emoji_flag;
+        const message = buildMessage(
+          data,
+          window.location.pathname,
+          getReferrer()
+        );
+        reqB.open("POST", urlB, true); // true for asynchronous request
+        reqB.setRequestHeader(
+          "Content-type",
+          "application/x-www-form-urlencoded"
+        );
+        reqB.send(encodeMessage(message));
       }
-      reqB.open("POST", urlB, true); // true for asynchronous request
-      reqB.setRequestHeader(
-        "Content-type",
-        "application/x-www-form-urlencoded"
-      );
-      reqB.send(encodeMessage(content));
     }
   };
   reqA.open("GET", urlA, true);
