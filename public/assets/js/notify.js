@@ -47,18 +47,21 @@ async function digestMessage(message) {
 
 function buildMessage(geoData, pathName, referrer) {
   var message =
-    Base64.decode("TmV3IHZpc2l0IGZyb20g") +
+    "New personal website visit!\n" +
+    "Location: " +
+    geoData.emoji_flag +
+    " " +
     geoData.city +
     ", " +
     geoData.region +
     ", " +
     geoData.country_name +
-    " " +
-    geoData.emoji_flag +
-    " on " +
-    pathName;
+    "\n" +
+    "Path: " +
+    pathName +
+    "\n";
   if (referrer != null) {
-    message += " from " + referrer;
+    message += "Referrer: " + referrer + "\n";
   }
   return message;
 }
