@@ -47,7 +47,6 @@ async function digestMessage(message) {
 
 function buildMessage(geoData, pathName, referrer) {
   var message =
-    "New personal website visit!\n" +
     "Location: " +
     geoData.emoji_flag +
     " " +
@@ -59,6 +58,9 @@ function buildMessage(geoData, pathName, referrer) {
     "\n" +
     "Path: " +
     pathName +
+    "\n" +
+    "ISP: " +
+    geoData.asn.name +
     "\n";
   if (referrer != null) {
     message += "Referrer: " + referrer + "\n";
