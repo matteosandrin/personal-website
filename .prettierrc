@@ -5,6 +5,12 @@
       "options": {
         "parser": "jinja-template"
       }
+    },
+    {
+      "files": ["*.md"],
+      "options": {
+        "proseWrap": "always"
+      }
     }
   ],
   "bracketSameLine": true
