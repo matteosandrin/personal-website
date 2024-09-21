@@ -1,0 +1,13 @@
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>MBTA ARRIVAL BOARD – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases the MBTA ARRIVAL BOARD" />
+{% endblock %}
+{% block body %}
+  {% with images = img.objects.led_matrix %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}
