@@ -1,0 +1,13 @@
+{% extends "templates/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>DUNKIN SIGN – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases the DUNKIN SIGN" />
+{% endblock %}
+{% block body %}
+  {% with images = img.objects.dd_sign %}
+    {% include "templates/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}
