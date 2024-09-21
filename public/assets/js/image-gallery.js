@@ -27,6 +27,8 @@ const lightbox = new PhotoSwipeLightbox({
     pswpModule: () => import("/assets/js/photoswipe.esm.min.js"),
     counter: false,
     zoom: false,
+    initialZoomLevel: 'fit',
+    secondaryZoomLevel: 2.5,
     paddingFn: (viewportSize, itemData, index) => {
         const p = viewportSize.x > 768 ? 32 : 8;
         return {
