@@ -29,6 +29,7 @@ def process_single_image(image_url):
     img_filepath = os.path.join(TEMPLATE_DIR, img_partial_path)
     im = Image.open(img_filepath)
     width, height = im.size
+    print(" * ({}, {}) {}".format(width, height, image_url))
     return {
         "url" : image_url,
         "width" : width,
@@ -44,12 +45,13 @@ def process_images(data):
     return data
 
 data = load_data(DATA_FILEPATH)
+print("Processing images:")
 data["img"] = process_images(data["img"])
 loader = FileSystemLoader(TEMPLATE_DIR)
 env = Environment(loader=loader)
 print("Generating templates:")
 for t in env.list_templates(filter_func=filter_templates):
-    print("    ", t)
+    print(" * {}".format(t))
     template = env.get_template(t)
     output_filename = os.path.join(DESTINATION_DIR, t)
     os.makedirs(os.path.dirname(output_filename), exist_ok=True)
