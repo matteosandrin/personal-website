@@ -1,4 +1,4 @@
-{% extends "templates/page.html" %}
+{% extends "fragments/page.html" %}
 {% set selected="objects" %}
 {% block head %}
   <title>MBTA ARRIVAL BOARD – Matteo Sandrin</title>
@@ -8,6 +8,6 @@
 {% endblock %}
 {% block body %}
   {% with images = img.objects.led_matrix %}
-    {% include "templates/image-gallery.html" %}
+    {% include "fragments/image-gallery.html" %}
   {% endwith %}
 {% endblock %}

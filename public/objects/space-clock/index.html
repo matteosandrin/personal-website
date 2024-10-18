@@ -1,4 +1,4 @@
-{% extends "templates/page.html" %}
+{% extends "fragments/page.html" %}
 {% set selected="objects" %}
 {% block head %}
   <title>SPACE CLOCK XXL – Matteo Sandrin</title>
@@ -8,7 +8,7 @@
 {% endblock %}
 {% block body %}
   {% with images = img.objects.space_clock %}
-    {% include "templates/image-gallery.html" %}
+    {% include "fragments/image-gallery.html" %}
   {% endwith %}
 {% endblock %}
 

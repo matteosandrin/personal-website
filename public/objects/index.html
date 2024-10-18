@@ -1,4 +1,4 @@
-{% extends "templates/page.html" %}
+{% extends "fragments/page.html" %}
 {% set selected="objects" %}
 {% block head %}
   <title>Objects – Matteo Sandrin</title>
@@ -8,11 +8,11 @@
 {% endblock %}
 {% block body %}
   <div class="mb-8">
-    {% include "templates/objects/objects-item-led-matrix.html" %}
-    {% include "templates/objects/objects-item-metro-clock.html" %}
-    {% include "templates/objects/objects-item-dd-sign.html" %}
-    {% include "templates/objects/objects-item-123-sign.html" %}
-    {% include "templates/objects/objects-item-metrocard.html" %}
-    {% include "templates/objects/objects-item-space-clock.html" %}
+    {% include "fragments/objects/objects-item-led-matrix.html" %}
+    {% include "fragments/objects/objects-item-metro-clock.html" %}
+    {% include "fragments/objects/objects-item-dd-sign.html" %}
+    {% include "fragments/objects/objects-item-123-sign.html" %}
+    {% include "fragments/objects/objects-item-metrocard.html" %}
+    {% include "fragments/objects/objects-item-space-clock.html" %}
   </div>
 {% endblock %}

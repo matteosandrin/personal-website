@@ -13,7 +13,7 @@ TEMPLATE_DIR = os.path.abspath(sys.argv[2])
 DESTINATION_DIR = os.path.abspath(sys.argv[3])
 
 def filter_templates(t):
-    return t.endswith(".html") and (not t.startswith("templates"))
+    return t.endswith(".html") and (not t.startswith("fragments"))
 
 def load_data(data_filepath):
     if not os.path.exists(data_filepath):

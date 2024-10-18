@@ -1,4 +1,4 @@
-{% extends "templates/page.html" %}
+{% extends "fragments/page.html" %}
 {% set selected="work" %}
 {% block head %}
   <title>Work – Matteo Sandrin</title>
@@ -8,7 +8,7 @@
 {% endblock %}
 {% block body %}
   <div class="mb-8">
-    {% include "templates/work/work-item-google.html" %}
-    {% include "templates/work/work-item-smartcar.html" %}
+    {% include "fragments/work/work-item-google.html" %}
+    {% include "fragments/work/work-item-smartcar.html" %}
   </div>
 {% endblock %}
