@@ -6,6 +6,9 @@ import os
 
 if len(sys.argv) < 4:
     print("usage: python build-templates.py <data_filepath> <template_dir> <destination_dir>", file=sys.stderr)
+    print("  <data_filepath>   A JSON file containing data to inject into the templates.", file=sys.stderr)
+    print("  <template_dir>    The directory where the Jinja/HTML templates are located.", file=sys.stderr)
+    print("  <destination_dir> The directory where the built templates will be output to.", file=sys.stderr)
     exit(1)
 
 DATA_FILEPATH = os.path.abspath(sys.argv[1])
