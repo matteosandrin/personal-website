@@ -44,7 +44,7 @@ def process_images(data):
     return data
 
 data = load_data(DATA_FILEPATH)
-data = process_images(data)
+data["img"] = process_images(data["img"])
 loader = FileSystemLoader(TEMPLATE_DIR)
 env = Environment(loader=loader)
 print("Generating templates:")
