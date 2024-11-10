@@ -1,13 +1,23 @@
-{% extends "fragments/page.html" %}
-{% set selected="objects" %}
-{% block head %}
-    <title>METROCARD XXL – Matteo Sandrin</title>
-    <meta
-      name="description"
-      content="This is Matteo Sandrin's personal website. This page showcases the METROCARD XXL" />
-{% endblock %}
-{% block body %}
-  {% with images = img.objects.metrocard %}
-    {% include "fragments/image-gallery.html" %}
-  {% endwith %}
+{% extends "fragments/objects/objects-page.html" %}
+{% set object_name="METROCARD XXL" %}
+{% set object_images=img.objects.metrocard %}
+{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
+{% block page_meta_object_name %}{{ object_name }}{% endblock %}
+{% block object_title %}{{ object_name }}{% endblock %}
+{% block object_subtitle %}Large replica of the iconic NYC subway card{% endblock %}
+{% block object_description %}
+  <p>
+    In November 2022, the MTA announced the discontinuation of the MetroCard
+    from NYC subways. As a frequent subway rider, I had grown fond of its iconic
+    design and felt a pang of sadness thinking it would be gone forever. I
+    decided to manufacture a wall-sized replica of the MetroCard, in an effort
+    to pay tribute to and preserve its timeless design.
+  </p>
+  <p>
+    The “METROCARD XXL” measures a staggering 48in by 32in, fourteen times its
+    original. The sturdy plywood base is finished with rounded corners and the
+    iconic lanyard hole. Every detail is faithfully reproduced with multiple
+    layers of spray acrylic paint, creating a flawlessly flat and industrial
+    aesthetic.
+  </p>
 {% endblock %}

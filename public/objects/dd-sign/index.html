@@ -1,13 +1,17 @@
-{% extends "fragments/page.html" %}
-{% set selected="objects" %}
-{% block head %}
-  <title>DUNKIN SIGN – Matteo Sandrin</title>
-  <meta
-    name="description"
-    content="This is Matteo Sandrin's personal website. This page showcases the DUNKIN SIGN" />
-{% endblock %}
-{% block body %}
-  {% with images = img.objects.dd_sign %}
-    {% include "fragments/image-gallery.html" %}
-  {% endwith %}
+{% extends "fragments/objects/objects-page.html" %}
+{% set object_name="DUNKIN SIGN" %}
+{% set object_images=img.objects.dd_sign %}
+{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
+{% block page_meta_object_name %}{{ object_name }}{% endblock %}
+{% block object_title %}{{ object_name }}{% endblock %}
+{% block object_subtitle %}A piece of original, restored Dunkin neon signage{% endblock %}
+{% block object_description %}
+  <p>
+    I found this original Dunkin Donuts neon sign in an antique shop in Rhode
+    Island, laying non-functional in a corner. It was originally manufactured in
+    2009 in Virginia. I cleaned up the inside, dirty after years of outdoors
+    service, and I redid the internal wiring from scratch. The sign originally
+    came with cool white neon bulbs, but I changed them out for moody warm white
+    ones.
+  </p>
 {% endblock %}

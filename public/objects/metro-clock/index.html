@@ -1,13 +1,25 @@
-{% extends "fragments/page.html" %}
-{% set selected="objects" %}
-{% block head %}
-  <title>METRO CLOCK – Matteo Sandrin</title>
-  <meta
-    name="description"
-    content="This is Matteo Sandrin's personal website. This page showcases the METRO CLOCK" />
-{% endblock %}
-{% block body %}
-  {% with images = img.objects.metro_clock %}
-    {% include "fragments/image-gallery.html" %}
-  {% endwith %}
+{% extends "fragments/objects/objects-page.html" %}
+{% set object_name="METRO CLOCK" %}
+{% set object_images=img.objects.metro_clock %}
+{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
+{% block page_meta_object_name %}{{ object_name }}{% endblock %}
+{% block object_title %}{{ object_name }}{% endblock %}
+{% block object_subtitle %}A replica of the clock from Milan's Metro{% endblock %}
+{% block object_description %}
+  <p>
+    Growing up in Milan, the Metro played an integral role in my daily life,
+    shuttling me between home, school, and many nights out. I was fascinated by
+    the distinctive signage that Bob Noorda had designed in the 1960s for the
+    Milan Metro. A bespoke clock designed by Noorda himself could be found in
+    every station, with its railway-style dial, bold sans-serif numerals, and
+    chunky red hands.
+  </p>
+  <p>
+    I found this clock delightful and nostalgic. Unable to find one for sale, I
+    decided to create a replica of my own. Using an existing 30in clock as a
+    base, the dial is painstakingly recreated with spray acrylic paint. The red
+    hands are 3D printed, thoroughly sanded and coated with layers of durable
+    enamel paint. The shorter end of the minute hand is filled with steel
+    bearings, counteracting the weight of its 15in wingspan.
+  </p>
 {% endblock %}

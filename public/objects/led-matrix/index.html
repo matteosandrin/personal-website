@@ -1,13 +1,20 @@
-{% extends "fragments/page.html" %}
-{% set selected="objects" %}
-{% block head %}
-  <title>MBTA ARRIVAL BOARD – Matteo Sandrin</title>
-  <meta
-    name="description"
-    content="This is Matteo Sandrin's personal website. This page showcases the MBTA ARRIVAL BOARD" />
+{% extends "fragments/objects/objects-page.html" %}
+{% set object_name="MBTA ARRIVAL BOARD" %}
+{% set object_images=img.objects.led_matrix %}
+{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
+{% block page_meta_object_name %}{{ object_name }}{% endblock %}
+{% block object_title %}{{ object_name }}{% endblock %}
+{% block object_subtitle %}
+  A pixel-perfect replica of the the MBTA platform display
 {% endblock %}
-{% block body %}
-  {% with images = img.objects.led_matrix %}
-    {% include "fragments/image-gallery.html" %}
-  {% endwith %}
+{% block object_description %}
+  <p>
+    The display shows a real-time view of the incoming trains at the Harvard
+    MBTA train stop. It's powered by five 32x32 dot matrix LED displays
+    daisy-chained together and controlled by an ESP32. The MBTA font was
+    faithfully re-created pixel-by-pixel from hundreds of reference pictures,
+    along with the specific copy and timing of announcements. The final product
+    is an exact and functional replica of the MBTA's arrival board. The display
+    can alternatively show currently playing songs and album art from Spotify.
+  </p>
 {% endblock %}

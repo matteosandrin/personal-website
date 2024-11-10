@@ -1,13 +1,17 @@
-{% extends "fragments/page.html" %}
-{% set selected="objects" %}
-{% block head %}
-  <title>123 SIGN – Matteo Sandrin</title>
-  <meta
-    name="description"
-    content="This is Matteo Sandrin's personal website. This page showcases the 123 SIGN" />
-{% endblock %}
-{% block body %}
-  {% with images = img.objects.sign_123 %}
-    {% include "fragments/image-gallery.html" %}
-  {% endwith %}
+{% extends "fragments/objects/objects-page.html" %}
+{% set object_name="123 SIGN" %}
+{% set object_images=img.objects.sign_123 %}
+{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
+{% block page_meta_object_name %}{{ object_name }}{% endblock %}
+{% block object_title %}{{ object_name }}{% endblock %}
+{% block object_subtitle %}A painting inspired by 96th street subway station{% endblock %}
+{% block object_description %}
+  <p>
+    When I lived in New York in college, I would often take the 1 train downtown
+    from 116th street, then change to the 2 or 3 train at 96th street. This
+    painting memorializes the station's sign into six square panels of acrylic
+    on canvas. I chose to paint this sign because I think of this station as a
+    liminal checkpoint of sorts, a threshold between the sleepy upper Manhattan
+    and the bustling downtown.
+  </p>
 {% endblock %}

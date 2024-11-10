@@ -1,0 +1,20 @@
+{% extends "fragments/page.html" %}
+{% set selected="objects" %}
+{% block head %}
+  <title>{% block page_title %}{% endblock %}</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page showcases the {% block page_meta_object_name %}{% endblock %}" />
+{% endblock %}
+{% block body %}
+  <div class="mx-auto max-w-xl px-8 md:px-16 my-4">
+    <h2 class="mt-4 text-4xl font-medium">{% block object_title %}{% endblock %}</h2>
+    <h3 class="mt-2 text-xl text-slate-500">
+        {% block object_subtitle %}{% endblock %}
+    </h3>
+    {% block object_description %}{% endblock %}
+  </div>
+  {% with images = object_images %}
+    {% include "fragments/image-gallery.html" %}
+  {% endwith %}
+{% endblock %}
