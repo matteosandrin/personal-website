@@ -2,7 +2,7 @@
 
 This repository holds the templates and assets for my personal website. There is
 a Makefile in the root of this repository that contains all the commands needed
-to build the tempalates and assets into a static website.
+to build the templates and assets into a static website.
 
 To build this website, run the `make build` command. This command will:
 
