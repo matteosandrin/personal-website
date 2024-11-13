@@ -14,12 +14,6 @@
     }
   }
 
-  @screen 2xl {
-    :root {
-        font-size: 22px;
-    }
-  }
-
   .link {
     @apply text-blue-700 underline underline-offset-4;
   }
