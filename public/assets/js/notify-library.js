@@ -54,8 +54,8 @@ function buildMessage(geoData, pathName, referrer) {
 
 function encodeMessage(message) {
   var params = new Object();
-  params.token = Base64.decode("YXQxbnR0anJ2ZDEzNnQ4OHRha2YycGVoamdjNmNo");
-  params.user = Base64.decode("dXhjb2pmM3JqcWVuMXNrcnphajFiNTE3NXdnOWYz");
+  params.token = atob("YXQxbnR0anJ2ZDEzNnQ4OHRha2YycGVoamdjNmNo");
+  params.user = atob("dXhjb2pmM3JqcWVuMXNrcnphajFiNTE3NXdnOWYz");
   params.message = message;
 
   let urlEncodedDataPairs = [];
@@ -68,7 +68,7 @@ function encodeMessage(message) {
 }
 
 export function notify() {
-  var urlA = Base64.decode(
+  var urlA = atob(
     "aHR0cHM6Ly9hcGkuaXBkYXRhLmNvP2FwaS1rZXk9NmNhZTZkMmQ0YzgxMDY5NmE0YTM4Mzk2NWU1Y2E5MjFhY2EzNTQwYjBmNThiYmFiMWZlYmUyMDg="
   );
   var reqA = new XMLHttpRequest();
