@@ -96,3 +96,13 @@ export function notify() {
   reqA.open("GET", urlA, true);
   reqA.send();
 }
+
+export function togglePageVisitTracking() {
+  const isLocalReq = isLocal();
+  if (isLocalReq) {
+    window.localStorage.removeItem("isLocal");
+  } else {
+    window.localStorage.setItem("isLocal", "true");
+  }
+  window.location.reload();
+}
