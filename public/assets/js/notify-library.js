@@ -67,34 +67,37 @@ function encodeMessage(message) {
   return urlEncodedDataPairs.join("&");
 }
 
-export function notify() {
-  var urlA = atob(
+export function getIpData(callback) {
+  var url = atob(
     "aHR0cHM6Ly9hcGkuaXBkYXRhLmNvP2FwaS1rZXk9NmNhZTZkMmQ0YzgxMDY5NmE0YTM4Mzk2NWU1Y2E5MjFhY2EzNTQwYjBmNThiYmFiMWZlYmUyMDg="
   );
-  var reqA = new XMLHttpRequest();
-  reqA.onreadystatechange = function () {
+  var req = new XMLHttpRequest();
+  req.onreadystatechange = function () {
     if (this.readyState == 4) {
-      // request finished and response is ready
-      var reqB = new XMLHttpRequest();
-      var urlB = "https://api.pushover.net/1/messages.json";
-      if (this.status == 200) {
-        var data = JSON.parse(this.responseText);
-        const message = buildMessage(
-          data,
-          window.location.pathname,
-          getReferrer()
-        );
-        reqB.open("POST", urlB, true); // true for asynchronous request
-        reqB.setRequestHeader(
-          "Content-type",
-          "application/x-www-form-urlencoded"
-        );
-        reqB.send(encodeMessage(message));
-      }
+      const data = JSON.parse(this.responseText);
+      callback(data);
     }
   };
-  reqA.open("GET", urlA, true);
-  reqA.send();
+  req.open("GET", url, true);
+  req.send();
+}
+
+export function notify() {
+  getIpData(data => {
+    var req = new XMLHttpRequest();
+    var url = "https://api.pushover.net/1/messages.json";
+    const message = buildMessage(
+      data,
+      window.location.pathname,
+      getReferrer()
+    );
+    req.open("POST", url, true); // true for asynchronous request
+    req.setRequestHeader(
+      "Content-type",
+      "application/x-www-form-urlencoded"
+    );
+    req.send(encodeMessage(message));
+  });
 }
 
 export function togglePageVisitTracking() {
