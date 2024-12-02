@@ -51,5 +51,70 @@
       "/assets/img/film/roll_006_img_04_sep_2019.jpg",
       "/assets/img/film/roll_009_img_08_dec_2019.jpg"
     ]
-  }
+  },
+  "cars" : [
+    {
+      "year" : "2023",
+      "make" : "Genesis",
+      "model" : "G80E",
+      "img" : "/assets/img/cars/2023_genesis_g80e.jpg",
+      "date" : "2023-12-17",
+      "description" : "This is the first electric car I've driven. I had never heard of Genesis cars before, it is a sub-brand of Hyundai that makes their line of luxury cars. I was impressed with its acceleration and responsiveness. The interior felt luxurious and well made.\n\nThe car was only partly charged when I picked it up, but showed more than enough range for my trip. As I was driving back however, the range estimate dropped significantly. I almost didn't make it back to the rental counter.",
+      "tags" : ["rental", "sedan", "electric"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Chevrolet",
+      "model" : "Equinox",
+      "img" : "/assets/img/cars/2023_chevrolet_equinox.png",
+      "date" : "2023-11-20",
+      "description" : "I drove this car to thanksgiving in Westchester, New York.",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Hyundai",
+      "model" : "Santa Fe",
+      "img" : "/assets/img/cars/2023_hyundai_santafe.png",
+      "date" : "2023-10-13",
+      "description" : "I drove this car to go hike Mt. Lafyette in New Hampshire. It was a 2-day hike with an overnight stop at Greenleaf hut on the mountain top. When I arrived back at the car, the keyfob had stopped working because of the cold. I had to open the car manually with the emergency key, and the alarm went off. The alarm would not stop until the keyfob got warm enough to work again.",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Ford",
+      "model" : "Escape",
+      "img" : "/assets/img/cars/2023_ford_escape.png",
+      "date" : "2023-09-08",
+      "description" : "",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Toyota",
+      "model" : "Highlander",
+      "img" : "/assets/img/cars/2023_toyota_highlander.png",
+      "date" : "2023-09-06",
+      "description" : "",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Kia",
+      "model" : "K5",
+      "img" : "/assets/img/cars/2023_kia_k5.png",
+      "date" : "2023-08-20",
+      "description" : "I drove this car to go hike Mt. Monadnock in New Hampshire.",
+      "tags" : ["rental", "sedan"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Nissan",
+      "model" : "Rogue",
+      "img" : "/assets/img/cars/2023_nissan_rogue.png",
+      "date" : "2023-08-11",
+      "description" : "I drove this car to drive up to Jeremy's cabin in Maine. The car was white, and it handled well the dirt road leading up to the cabin.",
+      "tags" : ["rental", "SUV"]
+    }
+  ]
 }
