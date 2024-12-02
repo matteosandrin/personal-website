@@ -55,6 +55,105 @@
   "cars" : [
     {
       "year" : "2023",
+      "make" : "Cadillac",
+      "model" : "XT4",
+      "img" : "/assets/img/cars/2023_cadillac_xt4.jpg",
+      "date" : "2024-08-31",
+      "description" : "I drove this car to go hike Mt. Monadnock in New Hampshire (again!).",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Citroën",
+      "model" : "C3",
+      "img" : "/assets/img/cars/2023_citroen_c3.jpg",
+      "date" : "2024-08-13",
+      "description" : "I drove this car around Provence in France. It is a fun yet spartan vehicle. It feels much smaller than Amerian SUVs. I even drove someone to the hospital in this car.",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Genesis",
+      "model" : "G80",
+      "img" : "/assets/img/cars/2023_genesis_g80.jpg",
+      "date" : "2024-07-13",
+      "description" : "I drove this car to the beach, which is not its natural habitat. I suspect that I was upgraded to a luxury car because it was my birthday.",
+      "tags" : ["rental", "sedan"]
+    },
+    {
+      "year" : "1999",
+      "make" : "Toyota",
+      "model" : "Landcruiser",
+      "img" : "/assets/img/cars/1999_toyota_landcruiser.jpg",
+      "date" : "2024-07-04",
+      "description" : "This car is a beauty to drive. The V8 engine sounds incredible and it's surprisingly comfortable for a vintage car. Shortly after I drove this car, the brakes completely failed, fortunately while driving at low speed.",
+      "tags" : ["SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Kia",
+      "model" : "Sportage",
+      "img" : "/assets/img/cars/2023_kia_sportage.png",
+      "date" : "2024-07-01",
+      "description" : "I drove this car to Connecticut to celebrate July 4th",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Ford",
+      "model" : "Explorer",
+      "img" : "/assets/img/cars/2023_ford_explorer.png",
+      "date" : "2024-06-22",
+      "description" : "I drove this car to pick up and drop off my cousins who were visiting. I was stopped by state troopers at the airport, because I accidentally drove the wrong way (there was construction and the signage was unclear). Fortunately the officer was understanding of my mistake.",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2024",
+      "make" : "Jeep",
+      "model" : "Grand Cherokee",
+      "img" : "/assets/img/cars/2024_jeep_grandcherokee.png",
+      "date" : "2024-06-15",
+      "description" : "I drove this car to Crane Beach, just an hour north of Boston.",
+      "tags" : ["rental", "SUV", "hybrid"]
+    },
+    {
+      "year" : "2024",
+      "make" : "Chrysler",
+      "model" : "Pacifica",
+      "img" : "/assets/img/cars/2024_chrysler_pacifica.png",
+      "date" : "2024-04-08",
+      "description" : "I drove five hours up to Vermont to see the total Eclipse. This minivan was comfortable and spacious even with seven passengers. It makes you feel like the king of the road.",
+      "tags" : ["rental", "minivan", "hybrid"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Hyundai",
+      "model" : "Santa Fe",
+      "img" : "/assets/img/cars/2023_hyundai_santafe_white.png",
+      "date" : "2024-02-24",
+      "description" : "",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Mitsubishi",
+      "model": "Outlander",
+      "img" : "/assets/img/cars/2023_mitsubishi_outlander.png",
+      "date": "2024-01-29",
+      "description" : "This is the first plug-in hybrid I've driven.",
+      "tags": ["rental", "SUV", "hybrid"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Jeep",
+      "model": "Grand Cherokee",
+      "img" : "/assets/img/cars/2023_jeep_grandcherokee.jpg",
+      "date": "2024-01-13",
+      "description" : "I drove this car to go skiing at Attitash mountain in New Hampshire.",
+      "tags": ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
       "make" : "Genesis",
       "model" : "G80E",
       "img" : "/assets/img/cars/2023_genesis_g80e.jpg",
@@ -75,7 +174,7 @@
       "year" : "2023",
       "make" : "Hyundai",
       "model" : "Santa Fe",
-      "img" : "/assets/img/cars/2023_hyundai_santafe.png",
+      "img" : "/assets/img/cars/2023_hyundai_santafe_grey.png",
       "date" : "2023-10-13",
       "description" : "I drove this car to go hike Mt. Lafyette in New Hampshire. It was a 2-day hike with an overnight stop at Greenleaf hut on the mountain top. When I arrived back at the car, the keyfob had stopped working because of the cold. I had to open the car manually with the emergency key, and the alarm went off. The alarm would not stop until the keyfob got warm enough to work again.",
       "tags" : ["rental", "SUV"]
