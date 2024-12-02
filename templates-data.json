@@ -55,9 +55,63 @@
   "cars" : [
     {
       "year" : "2023",
+      "make" : "Mitsubishi",
+      "model": "Outlander",
+      "img" : "/assets/img/cars/2023_mitsubishi_outlander_white.png",
+      "date": "2024-11-25",
+      "description" : "I drove this car to thanksgiving in Westchester, New York. I was impressed by the quality of the interiors, for a non-luxury car.",
+      "tags": ["rental", "SUV"]
+    },
+    {
+      "year" : "2024",
+      "make" : "Chevrolet",
+      "model" : "Equinox",
+      "img" : "/assets/img/cars/2024_chevrolet_equinox.png",
+      "date" : "2024-11-10",
+      "description" : "",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Jeep",
+      "model" : "Grand Cherokee",
+      "img" : "/assets/img/cars/2023_jeep_grandcherokee_white.png",
+      "date" : "2024-10-26",
+      "description" : "",
+      "tags" : ["rental", "SUV"]
+    },
+    {
+      "year" : "2023",
+      "make" : "Chevrolet",
+      "model" : "Malibu",
+      "img" : "/assets/img/cars/2023_chevrolet_malibu.png",
+      "date" : "2024-10-17",
+      "description" : "I drove this car two hours west of Boston to go see the Tsuchinshan-ATLAS comet, which was visible in areas with low light pollution.",
+      "tags" : ["rental", "sedan"]
+    },
+    {
+      "year" : "2022",
+      "make" : "Chevrolet",
+      "model" : "Malibu",
+      "img" : "/assets/img/cars/2022_chevrolet_malibu.png",
+      "date" : "2024-09-23",
+      "description" : "I drove this car to Hawley, PA to join some friends for a week in a cabin in nature. This was a thoroughly unimpressive vehicle.",
+      "tags" : ["rental", "sedan"]
+    },
+    {
+      "year" : "2024",
+      "make" : "Kia",
+      "model" : "Carnival",
+      "img" : "/assets/img/cars/2024_kia_carnival.png",
+      "date" : "2024-09-14",
+      "description" : "",
+      "tags" : ["rental", "minivan"]
+    },
+    {
+      "year" : "2023",
       "make" : "Cadillac",
       "model" : "XT4",
-      "img" : "/assets/img/cars/2023_cadillac_xt4.jpg",
+      "img" : "/assets/img/cars/2023_cadillac_xt4.png",
       "date" : "2024-08-31",
       "description" : "I drove this car to go hike Mt. Monadnock in New Hampshire (again!).",
       "tags" : ["rental", "SUV"]
@@ -66,7 +120,7 @@
       "year" : "2023",
       "make" : "Citroën",
       "model" : "C3",
-      "img" : "/assets/img/cars/2023_citroen_c3.jpg",
+      "img" : "/assets/img/cars/2023_citroen_c3.png",
       "date" : "2024-08-13",
       "description" : "I drove this car around Provence in France. It is a fun yet spartan vehicle. It feels much smaller than Amerian SUVs. I even drove someone to the hospital in this car.",
       "tags" : ["rental", "SUV"]
@@ -138,7 +192,7 @@
       "year" : "2023",
       "make" : "Mitsubishi",
       "model": "Outlander",
-      "img" : "/assets/img/cars/2023_mitsubishi_outlander.png",
+      "img" : "/assets/img/cars/2023_mitsubishi_outlander_blue.png",
       "date": "2024-01-29",
       "description" : "This is the first plug-in hybrid I've driven.",
       "tags": ["rental", "SUV", "hybrid"]
@@ -147,7 +201,7 @@
       "year" : "2023",
       "make" : "Jeep",
       "model": "Grand Cherokee",
-      "img" : "/assets/img/cars/2023_jeep_grandcherokee.jpg",
+      "img" : "/assets/img/cars/2023_jeep_grandcherokee_silver.jpg",
       "date": "2024-01-13",
       "description" : "I drove this car to go skiing at Attitash mountain in New Hampshire.",
       "tags": ["rental", "SUV"]
