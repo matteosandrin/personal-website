@@ -1,0 +1,50 @@
+{% extends "fragments/page.html" %}
+<!-- {% set selected="about" %} -->
+{% block head %}
+  <title>Cars I've driven – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page shows the cars that I've driven throughout the years." />
+{% endblock %}
+{% block body %}
+  <div class="mx-auto my-8 px-8 md:px-16">
+    {% for car in cars %}
+    <div class="mx-auto mt-12 first:mt-8 max-w-5xl">
+        <h2 class="text-4xl font-medium">{{ car.year }} {{ car.make }} {{ car.model }}</h2>
+        <div class="mt-4 flex md:flex-row flex-col">
+            <div class="basis-3/5">
+                <img
+                class="object-contain rounded-md w-full"
+                src="{{ car.img }}"
+                alt="" />
+            </div>
+            <div class="basis-2/5 mt-4 md:mt-0 md:ml-4">
+                <div>
+                    <span class="font-medium">Date driven:</span> {{ car.date }}
+                </div>
+                {% if car.description | length > 0 %}
+                    <p>
+                        {{ car.description }}
+                    </p>
+                {% endif %}
+                <div class="mt-4">
+                    {% for tag in car.tags%}
+                        <span class="mr-2 rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm transition-all shadow-sm text-slate-600">
+                            {{ tag }}
+                        </span>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- <div class="mx-auto flex max-w-5xl md:flex-row flex-col">
+            <h2 class="text-3xl font-medium">{{ car.year }} {{ car.make }} {{ car.model }}</h2>
+            <img
+            class="object-contain rounded-md w-full p-2"
+            src="{{ car.img }}"
+            alt="" />
+            
+        </div> -->
+    {% endfor %}
+  </div>
+{% endblock %}
