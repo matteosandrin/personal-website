@@ -1,8 +1,9 @@
 from jinja2 import FileSystemLoader, Environment
 from PIL import Image
+import datetime
 import json
-import sys
 import os
+import sys
 
 if len(sys.argv) < 4:
     print("usage: python build-templates.py <data_filepath> <template_dir> <destination_dir>", file=sys.stderr)
@@ -47,11 +48,18 @@ def process_images(data):
             data[key] = list(map(process_single_image, value))
     return data
 
+def format_iso_date(str_date, format=None):
+    date = datetime.datetime.fromisoformat(str_date)
+    if format is not None:
+        return date.strftime(format)
+    return date.isoformat()
+
 data = load_data(DATA_FILEPATH)
 print("Processing images:")
 data["img"] = process_images(data["img"])
 loader = FileSystemLoader(TEMPLATE_DIR)
 env = Environment(loader=loader)
+env.filters['format_iso_date'] = format_iso_date
 print("Generating templates:")
 for t in env.list_templates(filter_func=filter_templates):
     print(" * {}".format(t))

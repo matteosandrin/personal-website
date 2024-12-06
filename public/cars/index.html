@@ -21,7 +21,7 @@
             src="{{ car.img }}"
             alt="" />
           <div class="mt-4">
-            <span class="font-medium">Date:</span> {{ car.date }}
+            <span class="font-medium">Date:</span> {{ car.date | format_iso_date("%b %-d, %Y") }}
           </div>
           <div class="mt-2">
             <span class="font-medium">Model year:</span> {{ car.year }}
