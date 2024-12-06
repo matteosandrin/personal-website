@@ -7,44 +7,39 @@
     content="This is Matteo Sandrin's personal website. This page shows the cars that I've driven throughout the years." />
 {% endblock %}
 {% block body %}
-  <div class="mx-auto my-8 px-8 md:px-16">
-    {% for car in cars %}
-    <div class="mx-auto mt-12 first:mt-8 max-w-5xl">
-        <h2 class="text-4xl font-medium">{{ car.year }} {{ car.make }} {{ car.model }}</h2>
-        <div class="mt-4 flex md:flex-row flex-col">
-            <div class="basis-3/5">
-                <img
-                class="object-contain rounded-md w-full"
-                src="{{ car.img }}"
-                alt="" />
-            </div>
-            <div class="basis-2/5 mt-4 md:mt-0 md:ml-4">
-                <div>
-                    <span class="font-medium">Date driven:</span> {{ car.date }}
-                </div>
-                {% if car.description | length > 0 %}
-                    <p>
-                        {{ car.description }}
-                    </p>
-                {% endif %}
-                <div class="mt-4">
-                    {% for tag in car.tags%}
-                        <span class="mr-2 rounded-md border border-slate-300 py-0.5 px-2.5 text-center text-sm transition-all shadow-sm text-slate-600">
-                            {{ tag }}
-                        </span>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
+  <div class="mx-auto mb-16 mt-8 max-w-7xl px-8 md:px-16">
+    <div class="text-4xl md:text-center">
+      This is a list of every car I've ever driven ↓
     </div>
-        <!-- <div class="mx-auto flex max-w-5xl md:flex-row flex-col">
-            <h2 class="text-3xl font-medium">{{ car.year }} {{ car.make }} {{ car.model }}</h2>
-            <img
-            class="object-contain rounded-md w-full p-2"
+    <p class="md:text-center">(last update december 2024)</p>
+    <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+      {% for car in cars %}
+        <div class="">
+          <h2 class="text-3xl font-medium">{{ car.make }} {{ car.model }}</h2>
+          <img
+            class="mt-4 w-full rounded-xl object-contain object-center md:h-48"
             src="{{ car.img }}"
             alt="" />
-            
-        </div> -->
-    {% endfor %}
+          <div class="mt-4">
+            <span class="font-medium">Date:</span> {{ car.date }}
+          </div>
+          <div class="mt-2">
+            <span class="font-medium">Model year:</span> {{ car.year }}
+          </div>
+          <div class="mt-2">
+            <span class="font-medium">Tags:</span>
+            {% for tag in car.tags %}
+              <span
+                class="ml-2 rounded-md border border-slate-300 px-2.5 py-0.5 text-center text-slate-600 shadow-sm transition-all">
+                {{ tag }}
+              </span>
+            {% endfor %}
+          </div>
+          {% if car.description | length > 0 %}
+            <p>{{ car.description }}</p>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
   </div>
 {% endblock %}
