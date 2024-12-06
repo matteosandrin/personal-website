@@ -1,0 +1,47 @@
+{% extends "fragments/page.html" %}
+<!-- {% set selected="about" %} -->
+{% block head %}
+  <title>Cars I've driven – Matteo Sandrin</title>
+  <meta
+    name="description"
+    content="This is Matteo Sandrin's personal website. This page shows the cars that I've driven throughout the years." />
+{% endblock %}
+{% block body %}
+  <div class="mx-auto mb-16 mt-8 max-w-7xl px-8 md:px-16">
+    <div class="text-4xl md:text-center">
+      This is a list of every car I've ever driven ↓
+    </div>
+    <p class="md:text-center">(last update december 2024)</p>
+    <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+      {% for car in cars %}
+        <div class="">
+          <h2 class="text-3xl font-medium">{{ car.make }} {{ car.model }}</h2>
+          <img
+            class="mt-4 w-full rounded-xl object-contain object-center md:h-48"
+            src="{{ car.img }}"
+            alt="" />
+          <div class="mt-4">
+            <span class="font-medium">Date:</span> {{ car.date }}
+          </div>
+          <div class="mt-2">
+            <span class="font-medium">Model year:</span> {{ car.year }}
+          </div>
+          <div class="mt-2">
+            <span class="font-medium">Tags:</span>
+            {% for tag in car.tags %}
+              <span
+                class="ml-2 rounded-md border border-slate-300 px-2.5 py-0.5 text-center text-slate-600 shadow-sm transition-all">
+                {{ tag }}
+              </span>
+            {% endfor %}
+          </div>
+          {% for paragraph in car.description %}
+            {% if paragraph | length > 0 %}
+              <p>{{ paragraph }}</p>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}
