@@ -35,9 +35,11 @@
               </span>
             {% endfor %}
           </div>
-          {% if car.description | length > 0 %}
-            <p>{{ car.description }}</p>
-          {% endif %}
+          {% for paragraph in car.description %}
+            {% if paragraph | length > 0 %}
+              <p>{{ paragraph }}</p>
+            {% endif %}
+          {% endfor %}
         </div>
       {% endfor %}
     </div>
