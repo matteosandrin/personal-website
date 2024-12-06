@@ -62,7 +62,8 @@
       "description": [
         "I drove this car to thanksgiving in Westchester, New York. I was impressed by the quality of the interiors, for a non-luxury car."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2024",
@@ -71,7 +72,8 @@
       "img": "/assets/img/cars/2024_chevrolet_equinox.png",
       "date": "2024-11-10",
       "description": [""],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -80,7 +82,8 @@
       "img": "/assets/img/cars/2023_jeep_grandcherokee_white.png",
       "date": "2024-10-26",
       "description": [""],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -91,7 +94,8 @@
       "description": [
         "I drove this car two hours west of Boston to go see the Tsuchinshan-ATLAS comet, which was visible in areas with low light pollution."
       ],
-      "tags": ["rental", "sedan"]
+      "tags": ["rental", "sedan"],
+      "star": false
     },
     {
       "year": "2022",
@@ -102,7 +106,8 @@
       "description": [
         "I drove this car to Hawley, PA to join some friends for a week in a cabin in nature. This was a thoroughly unimpressive vehicle."
       ],
-      "tags": ["rental", "sedan"]
+      "tags": ["rental", "sedan"],
+      "star": false
     },
     {
       "year": "2024",
@@ -111,7 +116,8 @@
       "img": "/assets/img/cars/2024_kia_carnival.png",
       "date": "2024-09-14",
       "description": [""],
-      "tags": ["rental", "minivan"]
+      "tags": ["rental", "minivan"],
+      "star": false
     },
     {
       "year": "2023",
@@ -122,7 +128,8 @@
       "description": [
         "I drove this car to go hike Mt. Monadnock in New Hampshire (again!)."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -133,7 +140,8 @@
       "description": [
         "I drove this car around Provence in France. It is a fun yet spartan vehicle. It feels much smaller than American SUVs. I even drove someone to the hospital in this car."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -145,7 +153,8 @@
         "I drove this car to the beach, which is not its natural habitat.",
         "I suspect that I was upgraded to a luxury car because it was my birthday."
       ],
-      "tags": ["rental", "sedan"]
+      "tags": ["rental", "sedan"],
+      "star": false
     },
     {
       "year": "1999",
@@ -157,7 +166,8 @@
         "This car is a beauty to drive. The V8 engine sounds incredible and it's surprisingly comfortable for a vintage car.",
         "Shortly after I drove this car, the brakes completely failed, fortunately while driving at low speed."
       ],
-      "tags": ["SUV"]
+      "tags": ["SUV"],
+      "star": true
     },
     {
       "year": "2023",
@@ -166,7 +176,8 @@
       "img": "/assets/img/cars/2023_kia_sportage.png",
       "date": "2024-07-01",
       "description": ["I drove this car to Connecticut to celebrate July 4th"],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -177,7 +188,8 @@
       "description": [
         "I drove this car to pick up and drop off my cousins who were visiting. I was stopped by state troopers at the airport, because I accidentally drove the wrong way (there was construction and the signage was unclear). Fortunately the officer was understanding of my mistake."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2024",
@@ -188,7 +200,8 @@
       "description": [
         "I drove this car to Crane Beach, just an hour north of Boston."
       ],
-      "tags": ["rental", "SUV", "hybrid"]
+      "tags": ["rental", "SUV", "hybrid"],
+      "star": false
     },
     {
       "year": "2024",
@@ -199,7 +212,8 @@
       "description": [
         "I drove five hours up to Vermont to see the total Eclipse. This minivan was comfortable and spacious even with seven passengers. It makes you feel like the king of the road."
       ],
-      "tags": ["rental", "minivan", "hybrid"]
+      "tags": ["rental", "minivan", "hybrid"],
+      "star": false
     },
     {
       "year": "2023",
@@ -208,7 +222,8 @@
       "img": "/assets/img/cars/2023_hyundai_santafe_white.png",
       "date": "2024-02-24",
       "description": [],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -217,7 +232,8 @@
       "img": "/assets/img/cars/2023_mistubishi_outlander_blue.png",
       "date": "2024-01-29",
       "description": ["This is the first plug-in hybrid I've driven."],
-      "tags": ["rental", "SUV", "hybrid"]
+      "tags": ["rental", "SUV", "hybrid"],
+      "star": false
     },
     {
       "year": "2023",
@@ -228,7 +244,8 @@
       "description": [
         "I drove this car to go skiing at Attitash mountain in New Hampshire."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -241,7 +258,8 @@
         "I had never heard of Genesis before, it is a sub-brand of Hyundai that makes their line of luxury cars. I was impressed with its acceleration and responsiveness. The interior felt luxurious and well made.",
         "The car was only partly charged when I picked it up, but showed more than enough range for my trip. As I was driving back however, the range estimate dropped significantly. I almost didn't make it back to the rental counter."
       ],
-      "tags": ["rental", "sedan", "electric"]
+      "tags": ["rental", "sedan", "electric"],
+      "star": true
     },
     {
       "year": "2023",
@@ -252,7 +270,8 @@
       "description": [
         "I drove this car to thanksgiving in Westchester, New York."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -264,7 +283,8 @@
         "I drove this car to go hike Mt. Lafyette in New Hampshire. It was a 2-day hike with an overnight stop at Greenleaf hut on the mountain top.",
         "When I arrived back at the car, the keyfob had stopped working because of the cold. I had to open the car manually with the emergency key, and the alarm went off. The alarm would not stop until the keyfob got warm enough to work again."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -273,7 +293,8 @@
       "img": "/assets/img/cars/2023_ford_escape.png",
       "date": "2023-09-08",
       "description": [],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -282,7 +303,8 @@
       "img": "/assets/img/cars/2023_toyota_highlander.png",
       "date": "2023-09-06",
       "description": [],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     },
     {
       "year": "2023",
@@ -293,7 +315,8 @@
       "description": [
         "I drove this car to go hike Mt. Monadnock in New Hampshire."
       ],
-      "tags": ["rental", "sedan"]
+      "tags": ["rental", "sedan"],
+      "star": false
     },
     {
       "year": "2023",
@@ -304,7 +327,8 @@
       "description": [
         "I drove this car to drive up to Jeremy's cabin in Maine. The car was white, and it handled well the dirt road leading up to the cabin."
       ],
-      "tags": ["rental", "SUV"]
+      "tags": ["rental", "SUV"],
+      "star": false
     }
   ]
 }

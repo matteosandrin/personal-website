@@ -13,34 +13,8 @@
     </div>
     <p class="md:text-center">(last update december 2024)</p>
     <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-      {% for car in cars %}
-        <div class="">
-          <h2 class="text-3xl font-medium">{{ car.make }} {{ car.model }}</h2>
-          <img
-            class="mt-4 w-full rounded-xl object-contain object-center aspect-[2/1]"
-            src="{{ car.img }}"
-            alt="" />
-          <div class="mt-4">
-            <span class="font-medium">Date:</span> {{ car.date | format_iso_date("%b %-d, %Y") }}
-          </div>
-          <div class="mt-2">
-            <span class="font-medium">Model year:</span> {{ car.year }}
-          </div>
-          <div class="mt-2">
-            <span class="font-medium">Tags:</span>
-            {% for tag in car.tags %}
-              <span
-                class="ml-2 rounded-md border border-slate-300 px-2.5 py-0.5 text-center text-slate-600 shadow-sm transition-all">
-                {{ tag }}
-              </span>
-            {% endfor %}
-          </div>
-          {% for paragraph in car.description %}
-            {% if paragraph | length > 0 %}
-              <p>{{ paragraph }}</p>
-            {% endif %}
-          {% endfor %}
-        </div>
+      {% for car in cars | sort_cars_star_first %}
+        {% include "fragments/cars/car-item.html" %}
       {% endfor %}
     </div>
   </div>

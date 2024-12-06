@@ -54,12 +54,16 @@ def format_iso_date(str_date, format=None):
         return date.strftime(format)
     return date.isoformat()
 
+def sort_cars_star_first(cars):
+    return [c for c in cars if c["star"]] + [c for c in cars if not c["star"]]
+
 data = load_data(DATA_FILEPATH)
 print("Processing images:")
 data["img"] = process_images(data["img"])
 loader = FileSystemLoader(TEMPLATE_DIR)
 env = Environment(loader=loader)
 env.filters['format_iso_date'] = format_iso_date
+env.filters['sort_cars_star_first'] = sort_cars_star_first
 print("Generating templates:")
 for t in env.list_templates(filter_func=filter_templates):
     print(" * {}".format(t))
