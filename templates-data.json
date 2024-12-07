@@ -54,6 +54,19 @@
   },
   "cars": [
     {
+      "year": "2024",
+      "make": "Mini",
+      "model": "Countryman",
+      "img": "/assets/img/cars/2024_mini_countryman.jpg",
+      "date": "2024-12-06",
+      "description": [
+        "This is my cousin's car, which she drives in Miami. She let me drive it for the weekend.",
+        "I was surprised by the responsiveness of the accelerator on this car. I was delighted by the aircraft style switches on the console of this car. They are fun to use!"
+      ],
+      "tags": ["hatchback"],
+      "star": false
+    },
+    {
       "year": "2023",
       "make": "Mitsubishi",
       "model": "Outlander",
