@@ -3,7 +3,7 @@
   <h2 class="text-3xl font-medium">
     {{ car.make }} {{ car.model }}
     {% if car.star %}
-      <span title="This car is a certified Matteo favorite">
+      <span class="group relative">
         <svg
           viewBox="0 0 22 22"
           role="img"
@@ -18,6 +18,9 @@
               fill="black" />
           </g>
         </svg>
+        {% with content="This car is a favorite" %}
+          {% include "fragments/tooltip.html" %}
+        {% endwith %}
       </span>
     {% endif %}
   </h2>
