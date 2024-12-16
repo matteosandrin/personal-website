@@ -55,6 +55,8 @@ def format_iso_date(str_date, format=None):
     return date.isoformat()
 
 def sort_cars_star_first(cars):
+    # sort by date, descending
+    cars = sorted(cars, reverse=True, key=lambda c: datetime.datetime.fromisoformat(c["date"]))
     return [c for c in cars if c["star"]] + [c for c in cars if not c["star"]]
 
 data = load_data(DATA_FILEPATH)
