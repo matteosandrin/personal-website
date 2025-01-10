@@ -54,6 +54,19 @@
   },
   "cars": [
     {
+      "year": "2000",
+      "make": "Ford",
+      "model": "Ka",
+      "img": "/assets/img/cars/2000_ford_ka.jpg",
+      "date": "2024-12-17",
+      "description": [
+        "I learned how to drive on this six-speed manual transmission car. It's my mom's old car. The acceleration is surprisingly good, considering it's a quarter decade old.",
+        "However the passenger window doesn't work, the central locking system doesn't work, the power steering is long gone, it overheats going over 80km/h, and the rearview mirror is missing. Despite its inherent danger (or because of it), I love this vehicle."
+      ],
+      "tags": ["hatchback"],
+      "star": true
+    },
+    {
       "year": "2025",
       "make": "Toyota",
       "model": "Camry",
