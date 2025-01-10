@@ -1,5 +1,5 @@
 {% extends "fragments/page.html" %}
-<!-- {% set selected="about" %} -->
+{% set last_updated_date=(cars | cars_sort_date_desc | first)["date"] %}
 {% block head %}
   <title>Cars I've driven – Matteo Sandrin</title>
   <meta
@@ -11,9 +11,11 @@
     <div class="text-4xl md:text-center">
       This is a list of every car I've ever driven ↓
     </div>
-    <p class="md:text-center">(last update december 2024)</p>
+    <p class="md:text-center">
+      (last update {{ last_updated_date | format_iso_date("%B %Y") | lower }})
+    </p>
     <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
-      {% for car in cars | sort_cars_star_first %}
+      {% for car in cars | cars_sort_star_first %}
         {% include "fragments/cars/car-item.html" %}
       {% endfor %}
     </div>
