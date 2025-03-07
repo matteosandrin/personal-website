@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install linux dependencies
-        run sudo apt install -y zlib1g-dev libjpeg8-dev
+        run: sudo apt install -y zlib1g-dev libjpeg8-dev
 
       - name: Generate content
         run: make prod
