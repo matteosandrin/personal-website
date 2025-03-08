@@ -1,7 +1,9 @@
-<div class="sticky z-50 top-0 bg-white pt-4">
-  <a class="w-full block text-center text-5xl font-bold" href="/">Matteo Sandrin</a>
+<div class="sticky z-50 top-0 bg-white" id="header">
+  <div class="py-4 w-full" id="header-title">
+    <a class="w-full block text-center text-5xl font-bold" href="/">Matteo Sandrin</a>
+  </div>
   <div class="mx-auto flex max-w-4xl">
-    {% with classes="w-1/4 hover:underline hover:underline-offset-4 grow text-center text-lg font-medium tracking-wider pt-8 pb-4 md:pb-4",
+    {% with classes="w-1/4 hover:underline hover:underline-offset-4 grow text-center text-lg font-medium tracking-wider pt-4 pb-4",
             underline="underline underline-offset-4" %}
       <a
         href="/about"
@@ -25,4 +27,17 @@
       </a>
     {% endwith %}
   </div>
+  <script>
+    const header = document.querySelector('#header');
+    const headerTitle = document.querySelector('#header-title');
+
+    window.addEventListener('scroll', () => {
+      const scrollPosition = window.scrollY;
+      var headerTop = `-${headerTitle.offsetHeight}px`;
+      if (scrollPosition < headerTitle.offsetHeight) {
+        headerTop = `-${scrollPosition}px`;
+      }
+      header.style.setProperty('top', headerTop);
+    });
+  </script>
 </div>
