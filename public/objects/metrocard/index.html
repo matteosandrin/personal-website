@@ -1,10 +1,5 @@
 {% extends "objects/_objects-page.html" %}
-{% set object_name="metrocard XXL" %}
-{% set object_images=img.objects.metrocard %}
-{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
-{% block page_meta_object_name %}{{ object_name }}{% endblock %}
-{% block object_title %}{{ object_name }}{% endblock %}
-{% block object_subtitle %}Large replica of the iconic NYC subway card{% endblock %}
+{% set object = objects[4] %}
 {% block object_description %}
   <p>
     In November 2022, the MTA announced the discontinuation of the MetroCard

@@ -1,10 +1,5 @@
 {% extends "objects/_objects-page.html" %}
-{% set object_name="space clock" %}
-{% set object_images=img.objects.space_clock %}
-{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
-{% block page_meta_object_name %}{{ object_name }}{% endblock %}
-{% block object_title %}{{ object_name }}{% endblock %}
-{% block object_subtitle %}A trusted timekeeper for outer space{% endblock %}
+{% set object = objects[5] %}
 {% block object_description %}
   <p>
     This object began its life as a General Electric model F1-8147 bedside alarm

@@ -1,10 +1,5 @@
 {% extends "objects/_objects-page.html" %}
-{% set object_name="one-two-three sign" %}
-{% set object_images=img.objects.sign_123 %}
-{% block page_title %}{{ object_name }} – Matteo Sandrin{% endblock %}
-{% block page_meta_object_name %}{{ object_name }}{% endblock %}
-{% block object_title %}{{ object_name }}{% endblock %}
-{% block object_subtitle %}A painting inspired by 96th street subway station{% endblock %}
+{% set object = objects[3] %}
 {% block object_description %}
   <p>
     When I lived in New York in college, I would often take the 1 train downtown

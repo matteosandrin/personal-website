@@ -2,20 +2,71 @@
   "config": {
     "domain": "sandr.in"
   },
-  "img": {
-    "objects": {
-      "metro_clock": [
+  "objects": [
+    {
+      "url": "/objects/led-matrix",
+      "img": "/assets/img/led-matrix/led-matrix-thumbnail.jpg",
+      "title": "LED matrix sign",
+      "subtitle": "A pixel-perfect replica of the the MBTA & MTA platform displays",
+      "images": [
+        "/assets/img/led-matrix/led-matrix-01.jpg",
+        "/assets/img/led-matrix/led-matrix-02.jpg",
+        "/assets/img/led-matrix/led-matrix-03.jpg",
+        "/assets/img/led-matrix/led-matrix-04.jpg",
+        "/assets/img/led-matrix/led-matrix-05.jpg"
+      ]
+    },
+    {
+      "url": "/objects/metro-clock",
+      "img": "/assets/img/metro-clock/metro-clock-thumbnail.jpg",
+      "title": "milan metro clock",
+      "subtitle": "A replica of the clock from Milan's Metro",
+      "images": [
         "/assets/img/metro-clock/metro-clock-01.jpg",
         "/assets/img/metro-clock/metro-clock-02.jpg",
         "/assets/img/metro-clock/metro-clock-03.jpg",
         "/assets/img/metro-clock/metro-clock-04.jpg"
-      ],
-      "metrocard": [
+      ]
+    },
+    {
+      "url": "/objects/dd-sign",
+      "img": "/assets/img/dd-sign/dd-sign-thumbnail.jpg",
+      "title": "dunkin sign",
+      "subtitle": "A piece of original, restored Dunkin neon signage",
+      "images": [
+        "/assets/img/dd-sign/dd-sign-01.jpg",
+        "/assets/img/dd-sign/dd-sign-02.jpg",
+        "/assets/img/dd-sign/dd-sign-03.jpg"
+      ]
+    },
+    {
+      "url": "/objects/123-sign",
+      "img": "/assets/img/123-sign/123-sign-thumbnail.jpg",
+      "title": "one-two-three sign",
+      "subtitle": "A painting inspired by 96th street subway station",
+      "images": [
+        "/assets/img/123-sign/123-sign-01.jpg",
+        "/assets/img/123-sign/123-sign-02.jpg",
+        "/assets/img/123-sign/123-sign-03.jpg"
+      ]
+    },
+    {
+      "url": "/objects/metrocard",
+      "img": "/assets/img/metrocard/metrocard-thumbnail.jpg",
+      "title": "metrocard XXL",
+      "subtitle": "Large replica of the iconic NYC subway card",
+      "images": [
         "/assets/img/metrocard/metrocard-01.jpg",
         "/assets/img/metrocard/metrocard-02.jpg",
         "/assets/img/metrocard/metrocard-03.jpg"
-      ],
-      "space_clock": [
+      ]
+    },
+    {
+      "url": "/objects/space-clock",
+      "img": "/assets/img/space-clock/space-clock-thumbnail.jpg",
+      "title": "space clock",
+      "subtitle": "A trusted timekeeper for outer space",
+      "images": [
         "/assets/img/space-clock/space-clock-01.jpg",
         "/assets/img/space-clock/space-clock-02.jpg",
         "/assets/img/space-clock/space-clock-03.jpg",
@@ -24,34 +75,17 @@
         "/assets/img/space-clock/space-clock-detail-01.jpg",
         "/assets/img/space-clock/space-clock-detail-02.jpg",
         "/assets/img/space-clock/space-clock-detail-03.jpg"
-      ],
-      "led_matrix": [
-        "/assets/img/led-matrix/led-matrix-01.jpg",
-        "/assets/img/led-matrix/led-matrix-02.jpg",
-        "/assets/img/led-matrix/led-matrix-03.jpg",
-        "/assets/img/led-matrix/led-matrix-04.jpg",
-        "/assets/img/led-matrix/led-matrix-05.jpg"
-      ],
-      "sign_123": [
-        "/assets/img/123-sign/123-sign-01.jpg",
-        "/assets/img/123-sign/123-sign-02.jpg",
-        "/assets/img/123-sign/123-sign-03.jpg"
-      ],
-      "dd_sign": [
-        "/assets/img/dd-sign/dd-sign-01.jpg",
-        "/assets/img/dd-sign/dd-sign-02.jpg",
-        "/assets/img/dd-sign/dd-sign-03.jpg"
       ]
-    },
-    "film": [
-      "/assets/img/film/roll_010_img_08_jan_2020.jpg",
-      "/assets/img/film/roll_009_img_11_dec_2019.jpg",
-      "/assets/img/film/roll_007_img_15_nov_2019.jpg",
-      "/assets/img/film/roll_008_img_10_dec_2019.jpg",
-      "/assets/img/film/roll_006_img_04_sep_2019.jpg",
-      "/assets/img/film/roll_009_img_08_dec_2019.jpg"
-    ]
-  },
+    }
+  ],
+  "film_images": [
+    "/assets/img/film/roll_010_img_08_jan_2020.jpg",
+    "/assets/img/film/roll_009_img_11_dec_2019.jpg",
+    "/assets/img/film/roll_007_img_15_nov_2019.jpg",
+    "/assets/img/film/roll_008_img_10_dec_2019.jpg",
+    "/assets/img/film/roll_006_img_04_sep_2019.jpg",
+    "/assets/img/film/roll_009_img_08_dec_2019.jpg"
+  ],
   "cars": [
     {
       "year": "2000",

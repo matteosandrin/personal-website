@@ -42,11 +42,14 @@ def process_single_image(image_url):
     }
 
 def process_images(data):
-    for key, value in data.items():
-        if isinstance(value, dict):
+    if isinstance(data, dict):
+        for key, value in data.items():
             data[key] = process_images(value)
-        if isinstance(value, list):
-            data[key] = list(map(process_single_image, value))
+    elif isinstance(data, list):
+        for i, value in enumerate(data):
+            data[i] = process_images(value)
+    elif isinstance(data, str) and data.startswith("/assets/img/"):
+        return process_single_image(data)
     return data
 
 def format_iso_date(str_date, format=None):
@@ -65,7 +68,7 @@ def cars_sort_star_first(cars):
 
 data = load_data(DATA_FILEPATH)
 print("Processing images:")
-data["img"] = process_images(data["img"])
+data = process_images(data)
 loader = FileSystemLoader(TEMPLATE_DIR)
 env = Environment(loader=loader)
 env.filters['format_iso_date'] = format_iso_date

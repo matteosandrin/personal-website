@@ -10,29 +10,8 @@
 {% block body %}
   <div
     class="mx-auto my-8 grid max-w-7xl grid-cols-2 gap-4 px-8 md:grid-cols-3 md:gap-8 md:px-16">
-    {{ object_item("/objects/led-matrix",
-                   "/assets/img/led-matrix/led-matrix-thumbnail.jpg",
-                   "LED matrix sign",
-                   "A pixel-perfect replica of the the MBTA & MTA platform displays") }}
-    {{ object_item("/objects/metro-clock",
-                   "/assets/img/metro-clock/metro-clock-thumbnail.jpg",
-                   "milan metro clock",
-                   "A replica of the clock from Milan's Metro") }}
-    {{ object_item("/objects/dd-sign",
-                   "/assets/img/dd-sign/dd-sign-thumbnail.jpg",
-                   "dunkin sign",
-                   "A piece of original, restored Dunkin neon signage") }}
-    {{ object_item("/objects/123-sign",
-                   "/assets/img/123-sign/123-sign-thumbnail.jpg",
-                   "one-two-three sign",
-                   "A painting inspired by 96th street subway station") }}
-    {{ object_item("/objects/metrocard",
-                   "/assets/img/metrocard/metrocard-thumbnail.jpg",
-                   "metrocard XXL",
-                   "Large replica of the iconic NYC subway card") }}
-    {{ object_item("/objects/space-clock",
-                   "/assets/img/space-clock/space-clock-thumbnail.jpg",
-                   "space clock",
-                   "A trusted timekeeper for outer space") }}
+    {% for object in objects %}
+      {{ object_item(object) }}
+    {% endfor %}
   </div>
 {% endblock %}
