@@ -1,4 +1,5 @@
 {# expects a variable "car" to be passed in #}
+{% from "_partials/_tooltip.html" import tooltip %}
 <div>
   <h2 class="text-3xl font-medium">
     {{ car.make }} {{ car.model }}
@@ -18,9 +19,7 @@
               fill="black" />
           </g>
         </svg>
-        {% with content="This car is a favorite" %}
-          {% include "_partials/_tooltip.html" %}
-        {% endwith %}
+        {{ tooltip("This car is a favorite") }}
       </span>
     {% endif %}
   </h2>
