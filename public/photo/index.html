@@ -1,4 +1,5 @@
 {% extends "_partials/_page.html" %}
+{% from "_partials/_image-gallery.html" import image_gallery %}
 {% set selected="photo" %}
 {% block head %}
   <title>Photo – Matteo Sandrin</title>
@@ -7,7 +8,5 @@
     content="This is Matteo Sandrin's personal website. This page showcases Matteo's photography." />
 {% endblock %}
 {% block body %}
-  {% with images = img.film %}
-    {% include "_partials/_image-gallery.html" %}
-  {% endwith %}
+  {{ image_gallery(img.film) }}
 {% endblock %}
