@@ -1,28 +1,18 @@
 <div class="sticky z-50 top-0 bg-white pt-4">
   <a class="w-full block text-center text-5xl font-bold" href="/">Matteo Sandrin</a>
   <div class="mx-auto flex max-w-4xl">
-    {% with classes="w-1/4 hover:underline hover:underline-offset-4 grow text-center text-lg font-medium tracking-wider pt-8 pb-4 md:pb-4",
-            underline="underline underline-offset-4" %}
+    {% macro nav_link(href, text) %}
       <a
-        href="/about"
-        class="{{ classes }} {% if selected == 'about' %}{{ underline }}{% endif %}">
-        about
+        href="{{ href }}"
+        class="w-1/4 hover:underline hover:underline-offset-4 grow text-center text-lg font-medium tracking-wider pt-8 pb-4 md:pb-4
+               {% if selected == text %}underline underline-offset-4{% endif %}">
+        {{ text }}
       </a>
-      <a
-        href="/work"
-        class="{{ classes }} {% if selected == 'work' %}{{ underline }}{% endif %}">
-        work
-      </a>
-      <a
-        href="/objects"
-        class="{{ classes }} {% if selected == 'objects' %}{{ underline }}{% endif %}">
-        objects
-      </a>
-      <a
-        href="/photo"
-        class="{{ classes }} {% if selected == 'photo' %}{{ underline }}{% endif %}">
-        photo
-      </a>
-    {% endwith %}
+    {% endmacro %}
+
+    {{ nav_link("/about", "about") }}
+    {{ nav_link("/work", "work") }}
+    {{ nav_link("/objects", "objects") }}
+    {{ nav_link("/photo", "photo") }}
   </div>
 </div>
