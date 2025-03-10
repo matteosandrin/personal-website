@@ -1,16 +1,18 @@
+{% macro object_item(object_url, img_url, title, subtitle) %}
 <div>
-  <a href="{{ self.object_url() }}">
+  <a href="{{ object_url }}">
     <div class="flex aspect-square w-full items-end">
       <img
         class="aspect-square w-full rounded-md object-cover object-center"
-        src="{% block img_url %}{% endblock %}"
+        src="{{ img_url }}"
         alt="" />
     </div>
     <h2 class="mt-2 text-2xl font-medium md:mt-4 md:text-4xl">
-      {% block title %}{% endblock %}
+      {{ title }}
     </h2>
     <h3 class="mt-2 text-slate-500 md:text-xl">
-      {% block subtitle %}{% endblock %}
+      {{ subtitle }}
     </h3>
   </a>
 </div>
+{% endmacro %}
