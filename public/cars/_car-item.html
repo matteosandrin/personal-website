@@ -1,5 +1,5 @@
-{# expects a variable "car" to be passed in #}
 {% from "_partials/_tooltip.html" import tooltip %}
+{% macro car_item(car) %}
 <div>
   <h2 class="text-3xl font-medium">
     {{ car.make }} {{ car.model }}
@@ -49,3 +49,4 @@
     {% endif %}
   {% endfor %}
 </div>
+{% endmacro %}
