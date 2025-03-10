@@ -16,7 +16,7 @@
     </p>
     <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
       {% for car in cars | cars_sort_star_first %}
-        {% include "fragments/cars/car-item.html" %}
+        {% include "cars/_car-item.html" %}
       {% endfor %}
     </div>
   </div>
