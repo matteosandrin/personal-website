@@ -1,4 +1,4 @@
-{% extends "fragments/page.html" %}
+{% extends "_partials/page.html" %}
 {% set selected="photo" %}
 {% block head %}
   <title>Photo – Matteo Sandrin</title>
@@ -8,6 +8,6 @@
 {% endblock %}
 {% block body %}
   {% with images = img.film %}
-    {% include "fragments/image-gallery.html" %}
+    {% include "_partials/image-gallery.html" %}
   {% endwith %}
 {% endblock %}

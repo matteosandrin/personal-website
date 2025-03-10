@@ -1,4 +1,4 @@
-{% extends "fragments/page.html" %}
+{% extends "_partials/page.html" %}
 {% set selected="objects" %}
 {% block head %}
   <title>{% block page_title %}{% endblock %}</title>
@@ -15,6 +15,6 @@
     {% block object_description %}{% endblock %}
   </div>
   {% with images = object_images %}
-    {% include "fragments/image-gallery.html" %}
+    {% include "_partials/image-gallery.html" %}
   {% endwith %}
 {% endblock %}

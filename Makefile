@@ -24,7 +24,7 @@ watch-tailwind:
 	npx tailwind -i ${TEMPLATE_DIR}/assets/css/index.css -o ${DESTINATION_DIR}/assets/css/index.css --watch
 
 copy-assets:
-	rsync -av --exclude='*.html' --exclude='*.css' --exclude='fragments' ${TEMPLATE_DIR}/ ${DESTINATION_DIR}
+	rsync -av --exclude='*.html' --exclude='*.css' --exclude='_partials' ${TEMPLATE_DIR}/ ${DESTINATION_DIR}
 	cp node_modules/photoswipe/dist/*.min.js ${DESTINATION_DIR}/assets/js/
 	cp node_modules/photoswipe/dist/*.css ${DESTINATION_DIR}/assets/css/
 
