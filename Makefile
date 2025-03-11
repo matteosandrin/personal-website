@@ -11,7 +11,7 @@ prod: build
 	mv ${DESTINATION_DIR} ${PROD_DIR}
 
 dependencies:
-	pip install -r requirements.txt
+	pip3 install -r requirements.txt
 	npm install
 
 build-templates:
@@ -28,8 +28,18 @@ copy-assets:
 	cp node_modules/photoswipe/dist/*.min.js ${DESTINATION_DIR}/assets/js/
 	cp node_modules/photoswipe/dist/*.css ${DESTINATION_DIR}/assets/css/
 
+watch:
+	watchmedo shell-command \
+		--patterns="*.html;*.css;*.js;*.json;*.xml;*.jpg;*.png;*.svg" \
+		--recursive \
+		--verbose \
+		--command='make dirty-build'
+
+serve:
+	python3 -m http.server --directory ${DESTINATION_DIR}
+
 clean:
 	rm -rf $(DESTINATION_DIR)
 	rm -rf $(PROD_DIR)
 
-.PHONY: build prod dirty-build build-templates build-tailwind copy-assets clean
+.PHONY: build prod dirty-build build-templates build-tailwind copy-assets clean watch serve
