@@ -22,24 +22,23 @@ function updateClock(clock) {
   const seconds = date.getSeconds();
   const milliseconds = date.getMilliseconds();
 
-  const hours_hand = clock.svg.getElementById("hours_hand");
   const minutes_hand = clock.svg.getElementById("minutes_hand");
-
   const minutes_hand_sec = minutes * 60 + seconds + milliseconds / 1000;
-  const hours_hand_sec = (hours % 12) * 60 * 60 + minutes_hand_sec;
-
-  const twelve_hours_sec = 12 * 60 * 60;
-  const hours_rot_angle = (hours_hand_sec / twelve_hours_sec) * 360;
-  hours_hand.setAttribute(
-    "transform",
-    `rotate(${hours_rot_angle} ${clock.pivot_point})`
-  );
-
   const one_hour_sec = 60 * 60;
   const mins_rot_angle = (minutes_hand_sec / one_hour_sec) * 360;
+
+  const hours_hand = clock.svg.getElementById("hours_hand");
+  const hours_hand_sec = (hours % 12) * 60 * 60 + minutes_hand_sec;
+  const twelve_hours_sec = 12 * 60 * 60;
+  const hours_rot_angle = (hours_hand_sec / twelve_hours_sec) * 360;
+
   minutes_hand.setAttribute(
     "transform",
     `rotate(${mins_rot_angle} ${clock.pivot_point})`
+  );
+  hours_hand.setAttribute(
+    "transform",
+    `rotate(${hours_rot_angle} ${clock.pivot_point})`
   );
 }
 
