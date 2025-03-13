@@ -1,10 +1,15 @@
 window.addEventListener("load", function () {
-    updateClock();
-    this.setInterval(updateClock, 1000);
+    updateAllClocks();
+    this.setInterval(updateAllClocks, 1000);
 });
 
-function updateClock() {
-    var svg = document.getElementById('jr-clock').contentDocument;
+function updateAllClocks() {
+    updateClock("jr-clock");
+    updateClock("milano-metro-clock");
+}
+
+function updateClock(clockSVGId) {
+    var svg = document.getElementById(clockSVGId).contentDocument;
 
     const date = new Date();
     const hours = date.getHours();
