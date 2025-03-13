@@ -289,7 +289,7 @@
          aria-label="M. SANDRIN – MILANO" />
     </g>
     <g
-       id="hours_hand"
+       id="minutes_hand"
        style="display:inline">
       <path
          id="path33"
@@ -305,7 +305,7 @@
          clip-path="url(#clipPath36)" />
     </g>
     <g
-       id="minutes_hand"
+       id="hours_hand"
        style="display:inline">
       <path
          id="path37"
