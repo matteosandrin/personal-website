@@ -3,11 +3,11 @@ TEMPLATE_DIR = ./public
 DESTINATION_DIR = ./build
 PROD_DIR = ./prod
 
-build: clean dependencies copy-assets build-templates build-tailwind
+build: clean copy-assets build-templates build-tailwind
 
-dirty-build: copy-assets build-templates build-tailwind
+install: dependencies build
 
-prod: build
+prod: install
 	mv ${DESTINATION_DIR} ${PROD_DIR}
 
 dependencies:
@@ -29,11 +29,9 @@ copy-assets:
 	cp node_modules/photoswipe/dist/*.css ${DESTINATION_DIR}/assets/css/
 
 watch:
-	watchmedo shell-command \
-		--patterns="*.html;*.css;*.js;*.json;*.xml;*.jpg;*.png;*.svg" \
-		--recursive \
-		--verbose \
-		--command='make dirty-build'
+	cd ${TEMPLATE_DIR} && watchmedo shell-command \
+		--recursive --verbose --wait --interval=1 \
+		--command='cd .. && make build'
 
 serve:
 	python3 -m http.server --directory ${DESTINATION_DIR}
@@ -42,4 +40,4 @@ clean:
 	rm -rf $(DESTINATION_DIR)
 	rm -rf $(PROD_DIR)
 
-.PHONY: build prod dirty-build build-templates build-tailwind copy-assets clean watch serve
+.PHONY: build prod build-templates build-tailwind copy-assets clean watch serve
