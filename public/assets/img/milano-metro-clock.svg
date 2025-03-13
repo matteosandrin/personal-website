@@ -288,6 +288,22 @@
          id="text32"
          aria-label="M. SANDRIN – MILANO" />
     </g>
+   <g
+       id="hours_hand"
+       style="display:inline">
+      <path
+         id="path37"
+         d="m 0,0 589.015,-442.993 27.261,36.247 27.261,36.247 L 54.522,72.494 -3.323,59.249 Z"
+         style="fill:#ee2d2c;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(0.80121608,1.0657535,1.0657535,-0.80121608,1256.4672,644.08994)"
+         clip-path="url(#clipPath38)" />
+      <path
+         id="path39"
+         d="m 0,0 c -2.353,-3.128 -1.724,-7.571 1.404,-9.923 3.128,-2.353 7.571,-1.724 9.923,1.404 2.353,3.128 1.724,7.571 -1.404,9.923 C 6.795,3.756 2.352,3.128 0,0"
+         style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+         transform="matrix(1.3333333,0,0,-1.3333333,1309.3982,1311.2703)"
+         clip-path="url(#clipPath40)" />
+    </g>
     <g
        id="minutes_hand"
        style="display:inline">
@@ -303,22 +319,6 @@
          style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
          transform="matrix(1.3333333,0,0,-1.3333333,1328.2935,1314.5632)"
          clip-path="url(#clipPath36)" />
-    </g>
-    <g
-       id="hours_hand"
-       style="display:inline">
-      <path
-         id="path37"
-         d="m 0,0 589.015,-442.993 27.261,36.247 27.261,36.247 L 54.522,72.494 -3.323,59.249 Z"
-         style="fill:#ee2d2c;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(0.80121608,1.0657535,1.0657535,-0.80121608,1256.4672,644.08994)"
-         clip-path="url(#clipPath38)" />
-      <path
-         id="path39"
-         d="m 0,0 c -2.353,-3.128 -1.724,-7.571 1.404,-9.923 3.128,-2.353 7.571,-1.724 9.923,1.404 2.353,3.128 1.724,7.571 -1.404,9.923 C 6.795,3.756 2.352,3.128 0,0"
-         style="fill:#231f20;fill-opacity:1;fill-rule:nonzero;stroke:#ffffff;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-         transform="matrix(1.3333333,0,0,-1.3333333,1309.3982,1311.2703)"
-         clip-path="url(#clipPath40)" />
     </g>
   </g>
 </svg>
