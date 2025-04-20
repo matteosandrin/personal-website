@@ -88,6 +88,18 @@
   ],
   "cars": [
     {
+      "year": "2024",
+      "make": "Toyota",
+      "model": "Prius",
+      "img": "/assets/img/cars/2024_toyota_prius.png",
+      "date": "2025-03-20",
+      "description": [
+        "I am positively surprised by the glow up that the Prius has received with the the latest generation. It looks sleek as hell, which I never thought I would say about a Prius."
+      ],
+      "tags": ["rental", "hatchback", "hybrid"],
+      "star": false
+    },
+    {
       "year": "2023",
       "make": "DR",
       "model": "4.0",
