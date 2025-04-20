@@ -88,6 +88,18 @@
   ],
   "cars": [
     {
+      "year": "2023",
+      "make": "DR",
+      "model": "4.0",
+      "img": "/assets/img/cars/2023_dr_4_0.jpg",
+      "date": "2024-12-30",
+      "description": [
+        "This is a peculiar car. The DR brand is Italian, but the car itself is a rebadged version of a chinese car. It looks like a normal SUV, but shrunken down by 20%. It can run on either gasoline or GPL, and will get incredibly high mileage on GPL. The GPL system seems like an aftermarket modification, since it's not integrated with the car's dashboard."
+      ],
+      "tags": ["rental", "suv", "GPL"],
+      "star": false
+    },
+    {
       "year": "2000",
       "make": "Ford",
       "model": "Ka",
