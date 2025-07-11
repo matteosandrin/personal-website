@@ -88,6 +88,18 @@
   ],
   "cars": [
     {
+      "year": "1969",
+      "make": "Citroën",
+      "model": "Mehari",
+      "img": "/assets/img/cars/1969_citroen_mehari.jpg",
+      "date": "2025-06-20",
+      "description": [
+        "This car is an orange bathtub on wheels. No doors, no windows, no seat belts. Perfect for an italian summer, because there's always a breeze! The transmission is manual and temperamental, the steering wheel as large as a truck's. It's a surprisingly fun car to drive, and scary one to be a passenger in."
+      ],
+      "tags": ["vintage"],
+      "star": false
+    },
+    {
       "year": "2024",
       "make": "Toyota",
       "model": "Prius",
