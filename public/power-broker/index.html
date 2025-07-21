@@ -1,0 +1,31 @@
+{% extends "_partials/_page.html" %}
+{% set book="The Power Broker" %}
+{% set author="Robert Caro" %}
+{% block head %}
+  <title>Summary by chapters of the book "{{ book }}" by {{ author }}</title>
+  <meta
+    name="description"
+    content="Summary by chapters the book '{{ book }}' by {{ author }}" />
+{% endblock %}
+{% block body %}
+  <div class="mx-auto mb-16 mt-8 max-w-3xl px-8 md:px-16">
+    <h2 class="mt-4 text-5xl font-medium leading-tight">{{ book }} by {{ author }}</h2>
+    <h2 class="mt-2 text-xl text-slate-500">Summary by chapters</h2>
+    <ul class="mt-4 space-y-2">
+      {% for chapter in power_broker.chapters %}
+        {% set chapter_index = loop.index0 %}
+        {% for section in power_broker.sections %}
+            {% if section.chapter == chapter_index %}
+                <li class="pt-4">
+                    <h3 class="text-xl">{{ section.name }}</h3>
+                </li>
+            {% endif %}
+        {% endfor %}
+        <li>
+          <a href="/power-broker/{{ loop.index0 }}" class="link">
+            {{ chapter.name }}
+          </a>
+        </li>
+      {% endfor %}
+  </div>
+{% endblock %}
