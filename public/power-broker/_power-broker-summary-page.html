@@ -1,0 +1,16 @@
+{% extends "_partials/_page.html" %}
+{% set book="The Power Broker" %}
+{% set author="Robert Caro" %}
+{% block head %}
+  <title>{% block chapter %}{% endblock %} | Summary of "{{ book }}"</title>
+  <meta
+    name="description"
+    content="Summary of 'Chapter {{ self.chapter() }}' of the book '{{ book }}' by {{ author }}" />
+{% endblock %}
+{% block body %}
+  <div class="mx-auto mb-16 mt-8 max-w-3xl px-8 md:px-16">
+    <h2 class="mt-4 text-5xl font-medium">{{ self.chapter() }}</h2>
+    <h2 class="mt-2 text-xl text-slate-500">Summary of "{{ book }}" by {{ author }}</h2>
+    {% block content %}{% endblock %}
+  </div>
+{% endblock %}
