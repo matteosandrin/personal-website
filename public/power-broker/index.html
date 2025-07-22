@@ -42,9 +42,12 @@
             {% endif %}
         {% endfor %}
         <li>
-          <a href="/power-broker/{{ loop.index0 }}" class="link">
-            {{ chapter.name }}
-          </a>
+            <div class="flex justify-between gap-2">
+                <a href="/power-broker/{{ loop.index0 }}" class="link">
+                  {{ chapter.name }}
+                </a>
+                <span class="block w-16 text-right">{{ chapter.page }}</span>
+            </div>
         </li>
       {% endfor %}
   </div>
