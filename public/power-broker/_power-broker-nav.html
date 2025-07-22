@@ -1,0 +1,38 @@
+{% macro power_broker_nav(index) %}
+<div class="mt-4 flex justify-between gap-2">
+    {{ previous_chapter(index) }}
+    <div class="">
+        {{ button("/power-broker", "index") }}
+    </div>
+    {{ next_chapter(index) }}
+</div>
+{% endmacro %}
+
+{% macro previous_chapter(index) %}
+  {% set previous_index = (index | int) - 1 %}
+  {% if previous_index >= 0 %}
+    <div class="w-1/4">
+      {{ chapter_link(previous_index, "← previous") }}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro next_chapter(index) %}
+  {% set next_index = (index | int) + 1 %}
+  {% if next_index < power_broker.chapters | length %}
+    <div class="text-right  w-1/4">
+      {{ chapter_link(next_index, "next →") }}
+    </div>
+  {% endif %}
+{% endmacro %}
+
+{% macro chapter_link(index, label) %}
+  {% set url = "/power-broker/" ~ index %}
+  {{ button(url, label) }}
+{% endmacro %}
+
+{% macro button(url, label) %}
+  <a href="{{ url }}" class="hover:underline hover:underline-offset-4 font-medium tracking-wider">
+    {{ label }}
+  </a>
+{% endmacro %}
