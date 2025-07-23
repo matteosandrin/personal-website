@@ -1,28 +1,28 @@
 {% macro power_broker_nav(index) %}
 <div class="mt-4 flex justify-between gap-2">
-    {{ previous_chapter(index) }}
+    <div class="w-1/4">
+      {{ previous_chapter(index) }}
+    </div>
     <div class="">
         {{ button("/power-broker", "index") }}
     </div>
-    {{ next_chapter(index) }}
+    <div class="text-right w-1/4">
+      {{ next_chapter(index) }}
+    </div>
 </div>
 {% endmacro %}
 
 {% macro previous_chapter(index) %}
   {% set previous_index = (index | int) - 1 %}
   {% if previous_index >= 0 %}
-    <div class="w-1/4">
-      {{ chapter_link(previous_index, "← previous") }}
-    </div>
+    {{ chapter_link(previous_index, "← previous") }}
   {% endif %}
 {% endmacro %}
 
 {% macro next_chapter(index) %}
   {% set next_index = (index | int) + 1 %}
   {% if next_index < power_broker.chapters | length %}
-    <div class="text-right  w-1/4">
-      {{ chapter_link(next_index, "next →") }}
-    </div>
+    {{ chapter_link(next_index, "next →") }}
   {% endif %}
 {% endmacro %}
 
