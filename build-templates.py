@@ -18,7 +18,9 @@ DESTINATION_DIR = os.path.abspath(sys.argv[3])
 
 def filter_templates(t):
     t_name = os.path.basename(t)
-    return t.endswith(".html") and (not t.startswith("_partials")) and not t_name.startswith("_")
+    is_allowed_extension = (t.endswith(".html") or t.endswith(".txt"))
+    is_partial = (t.startswith("_partials") or t_name.startswith("_"))
+    return is_allowed_extension and (not is_partial)
 
 def load_data(data_filepath):
     if not os.path.exists(data_filepath):
