@@ -2,8 +2,10 @@
 {% from "power-broker/_power-broker-nav.html" import power_broker_nav with context %}
 {% set book="The Power Broker" %}
 {% set author="Robert Caro" %}
+{% block title %}
+{% block chapter %}{% endblock %} | Chapter summary
+{% endblock %}
 {% block head %}
-  <title>{% block chapter %}{% endblock %} | Chapter summary</title>
   <meta
     name="description"
     content="Summary of 'Chapter {{ self.chapter() }}' of the book '{{ book }}' by {{ author }}" />

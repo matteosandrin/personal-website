@@ -1,8 +1,8 @@
 {% extends "_partials/_page.html" %}
 {% from "_partials/_image-gallery.html" import image_gallery %}
 {% set selected="objects" %}
+{% block title %}{{ object.title }} – Matteo Sandrin{% endblock %}
 {% block head %}
-  <title>{% block page_title %}{{ object.title }} – Matteo Sandrin{% endblock %}</title>
   <meta
     name="description"
     content="This is Matteo Sandrin's personal website. This page showcases the {{ object.title }}" />

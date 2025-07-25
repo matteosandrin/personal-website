@@ -1,22 +1,22 @@
 {% set description="This is Matteo Sandrin's personal website. I build useful software and beautiful objects." %}
-{% set title="Matteo Sandrin" %}
 {% set social_preview_url="https://{}/assets/img/social-preview.jpg".format(config.domain) %}
 <!DOCTYPE html>
 <html>
   <head>
+    <title>{% block title required %}{% endblock %}</title>
     {% block head %}{% endblock %}
     {% block social_preview %}
     <meta
       name="description"
       content="{{ description }}" />
     <meta name="twitter:site" content="@TeoSandrin">
-    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{ self.title() }}">
     <meta name="twitter:description" content="{{ description }}">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image:src" content="{{ social_preview_url }}">
-    <meta name="og:site_name" content="{{ title }}">
+    <meta name="og:site_name" content="{{ self.title() }}">
     <meta name="og:type" content="object">
-    <meta name="og:title" content="{{ title }}">
+    <meta name="og:title" content="{{ self.title() }}">
     <meta name="og:url" content="https://{{ config.domain }}">
     <meta name="og:description" content="{{ description }}">
     <meta name="og:image" content="{{ social_preview_url }}">
