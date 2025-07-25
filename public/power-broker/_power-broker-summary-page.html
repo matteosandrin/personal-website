@@ -3,7 +3,7 @@
 {% set book="The Power Broker" %}
 {% set author="Robert Caro" %}
 {% block title %}
-  {% block chapter %}{% endblock %} | Chapter summary
+  {% block chapter %}{% endblock %} – Chapter summary
 {% endblock %}
 {% block head %}Summary of 'Chapter {{ self.chapter() }}' of the book '{{ book }}' by {{ author }}{% endblock %}
 {% block body %}
