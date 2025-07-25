@@ -1,10 +1,8 @@
-{% set social_preview_url="https://{}/assets/img/social-preview.jpg".format(config.domain) %}
 <!DOCTYPE html>
 <html>
   <head>
     <title>{% block title required %}{% endblock %}</title>
     {% block head %}{% endblock %}
-    {% block social_preview %}
     <meta
       name="description"
       content="{% block description %}This is Matteo Sandrin's personal website. I build useful software and beautiful objects.{% endblock %}" />
@@ -12,24 +10,23 @@
     <meta name="twitter:title" content="{{ self.title() }}">
     <meta name="twitter:description" content="{{ self.description() }}">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="{{ social_preview_url }}">
+    <meta name="twitter:image:src" content="https://{{ config.domain }}{% block social_preview_url %}/assets/img/social-preview.jpg{% endblock %}">
     <meta name="og:site_name" content="{{ self.title() }}">
     <meta name="og:type" content="object">
     <meta name="og:title" content="{{ self.title() }}">
     <meta name="og:url" content="https://{{ config.domain }}">
     <meta name="og:description" content="{{ self.description() }}">
-    <meta name="og:image" content="{{ social_preview_url }}">
+    <meta name="og:image" content="https://{{ config.domain }}{{ self.social_preview_url() }}">
     <meta name="og:image:alt" content="{{ self.description() }}">
     <meta name="og:image:width" content="1280">
     <meta name="og:image:height" content="640">
-    <link rel="canonical" href="https://{{ config.domain }}" />
-    {% endblock %}
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-
+    
     <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
+    <link rel="canonical" href="https://{{ config.domain }}" />
     <link rel="stylesheet" href="/assets/css/index.css" />
   </head>
   <body class="bg-blueish-gray">
