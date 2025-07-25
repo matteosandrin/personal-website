@@ -1,22 +1,6 @@
 {% extends "_partials/_page.html" %}
-{% set description="This is Matteo Sandrin's personal website. I build useful software and beautiful objects." %}
-{% set title="Matteo Sandrin" %}
 {% block head %}
-  <title>{{ title }}</title>
-  <meta
-    name="description"
-    content="{{ description }}" />
-  <meta name="twitter:site" content="@TeoSandrin">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ title }}">
-  <meta name="twitter:description" content="{{ description }}">
-  <meta name="og:image:alt" content="{{ description }}">
-  <meta name="og:site_name" content="{{ title }}">
-  <meta name="og:type" content="object">
-  <meta name="og:title" content="{{ title }}">
-  <meta name="og:url" content="https://{{ config.domain }}">
-  <meta name="og:description" content="{{ description }}">
-  <link rel="canonical" href="https://{{ config.domain }}" />
+  <title>Matteo Sandrin</title>
 {% endblock %}
 {% block body %}
   <div class="mx-auto max-w-2xl px-4">
