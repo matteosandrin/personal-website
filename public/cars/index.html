@@ -1,7 +1,7 @@
 {% extends "_partials/_page.html" %}
 {% from "cars/_car-item.html" import car_item %}
 {% set last_updated_date=(cars | cars_sort_date_desc | first)["date"] %}
-{% block title %}Cars I've driven – Matteo Sandrin{% endblock %}
+{% block title %}Cars I've driven | Matteo Sandrin{% endblock %}
 {% block description %}This is Matteo Sandrin's personal website. This page shows the cars that I've driven throughout the years.{% endblock %}
 {% block body %}
   <div class="mx-auto mb-16 mt-8 max-w-7xl px-8 md:px-16">
