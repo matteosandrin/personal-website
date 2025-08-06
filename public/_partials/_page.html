@@ -28,9 +28,12 @@
     <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.png" />
     <link rel="stylesheet" href="/assets/css/index.css" />
   </head>
-  <body class="bg-blueish-gray">
+  <body class="bg-blueish-gray flex flex-col min-h-screen">
     {% include "_partials/_header.html" %}
+    <div class="flex-grow">
     {% block body %}{% endblock %}
+    </div>
+    {% include "_partials/_footer.html" %}
     <script
         async
         src="https://www.googletagmanager.com/gtag/js?id=UA-122674032-1"></script>
