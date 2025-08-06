@@ -1,6 +1,9 @@
 {
   "config": {
-    "domain": "sandr.in"
+    "domain": "sandr.in",
+    "social" : {
+      "x" : "teosandrin"
+    }
   },
   "objects": [
     {
