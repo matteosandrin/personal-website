@@ -5,7 +5,7 @@
       "x" : "teosandrin"
     }
   },
-  "projects" : [
+  "projects_software" : [
     {
       "url": "https://shadymap.com",
       "img": "/assets/img/shady-map-thumbnail.jpg",
@@ -33,9 +33,9 @@
       ]
     }
   ],
-  "objects": [
+  "projects_design": [
     {
-      "url": "/objects/metro-clock",
+      "url": "/projects/metro-clock",
       "img": "/assets/img/metro-clock/metro-clock-thumbnail.jpg",
       "title": "milan metro clock",
       "subtitle": "A replica of the clock from Milan's Metro",
@@ -47,7 +47,7 @@
       ]
     },
     {
-      "url": "/objects/dd-sign",
+      "url": "/projects/dd-sign",
       "img": "/assets/img/dd-sign/dd-sign-thumbnail.jpg",
       "title": "dunkin sign",
       "subtitle": "A piece of original, restored Dunkin neon signage",
@@ -58,7 +58,7 @@
       ]
     },
     {
-      "url": "/objects/123-sign",
+      "url": "/projects/123-sign",
       "img": "/assets/img/123-sign/123-sign-thumbnail.jpg",
       "title": "one-two-three sign",
       "subtitle": "A painting inspired by 96th street subway station",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "url": "/objects/metrocard",
+      "url": "/projects/metrocard",
       "img": "/assets/img/metrocard/metrocard-thumbnail.jpg",
       "title": "metrocard XXL",
       "subtitle": "Large replica of the iconic NYC subway card",
@@ -80,7 +80,7 @@
       ]
     },
     {
-      "url": "/objects/space-clock",
+      "url": "/projects/space-clock",
       "img": "/assets/img/space-clock/space-clock-thumbnail.jpg",
       "title": "space clock",
       "subtitle": "A trusted timekeeper for outer space",
