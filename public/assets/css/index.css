@@ -24,6 +24,10 @@
     @apply mt-4 text-lg md:text-base;
   }
 
+  h2 {
+    @apply text-5xl font-medium;
+  }
+
   ul {
     @apply mt-2 text-lg md:text-base;
   }
