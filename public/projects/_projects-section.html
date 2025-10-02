@@ -1,0 +1,13 @@
+{% from "projects/_projects-tile.html" import object_item %}
+
+{% macro projects_section(title, items) %}
+<div class="flex flex-col gap-6 md:gap-8">
+    <h2 class="text-7xl font-medium md:text-center">{{ title }}</h2>
+    <div
+        class="grid grid-cols-2 gap-4 md:grid-cols-3 md:gap-8 justify-center">
+        {% for item in items %}
+        {{ object_item(item) }}
+        {% endfor %}
+    </div>
+</div>
+{% endmacro %}

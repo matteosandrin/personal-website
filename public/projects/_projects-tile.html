@@ -1,6 +1,6 @@
 {% macro object_item(object) %}
 <div>
-  <a href="{{ object.url }}">
+  <a href="{{ object.url }}" target="{% if object.newtab is defined and object.newtab %}_blank{% else %}_self{% endif %}">
     <div class="flex aspect-square w-full items-end">
       <img
         class="aspect-square w-full rounded-md object-cover object-center"

@@ -5,9 +5,22 @@
       "x" : "teosandrin"
     }
   },
-  "objects": [
+  "projects" : [
     {
-      "url": "/objects/led-matrix",
+      "url": "https://shadymap.com",
+      "img": "/assets/img/shady-map-thumbnail.jpg",
+      "title": "shadymap.com",
+      "subtitle": "A tool for shade-aware walking directions",
+      "newtab" : true
+    },
+    {
+      "url": "/power-broker",
+      "img": "/assets/img/power-broker/thumbnail.png",
+      "title": "The Power Broker",
+      "subtitle": "Summary by chapters of the entire book, made by AI"
+    },
+    {
+      "url": "/projects/led-matrix",
       "img": "/assets/img/led-matrix/led-matrix-thumbnail.jpg",
       "title": "LED matrix sign",
       "subtitle": "A pixel-perfect replica of the the MBTA & MTA platform displays",
@@ -18,7 +31,9 @@
         "/assets/img/led-matrix/led-matrix-04.jpg",
         "/assets/img/led-matrix/led-matrix-05.jpg"
       ]
-    },
+    }
+  ],
+  "objects": [
     {
       "url": "/objects/metro-clock",
       "img": "/assets/img/metro-clock/metro-clock-thumbnail.jpg",
