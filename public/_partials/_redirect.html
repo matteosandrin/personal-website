@@ -1,0 +1,19 @@
+{% macro redirect(url) %}
+<html>
+    <body>
+        <script type="text/javascript">
+            window.location.href = "{{ url }}"
+        </script>
+    </body>
+</html>
+{% endmacro %}
+
+{% macro redirect_sub(from, to) %}
+<html>
+    <body>
+        <script type="text/javascript">
+            window.location.href = window.location.href.replace("{{from}}", "{{to}}")
+        </script>
+    </body>
+</html>
+{% endmacro %}
