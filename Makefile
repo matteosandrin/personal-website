@@ -28,7 +28,7 @@ copy-assets:
 	cp node_modules/photoswipe/dist/*.min.js ${DESTINATION_DIR}/assets/js/
 	cp node_modules/photoswipe/dist/*.css ${DESTINATION_DIR}/assets/css/
 
-watch:
+watch: build
 	cd ${TEMPLATE_DIR} && watchmedo shell-command \
 		--recursive --verbose --wait --interval=1 \
 		--command='cd .. && make build'
