@@ -1,2 +1,2 @@
-{% from "_partials/_redirect.html" import redirect_sub %}
-{{ redirect_sub("objects", "projects") }}
+{% extends "objects/_objects-redirect.html" %}
+{% block canonical_path %}/metrocard/{% endblock %}
