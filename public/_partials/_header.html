@@ -1,10 +1,10 @@
 <div class="sticky z-50 top-0 bg-white pt-4 shadow">
-  <a class="w-full block text-center text-5xl font-bold" href="/">Matteo Sandrin</a>
+  <a class="w-full block text-center text-4xl font-medium" href="/">Matteo Sandrin</a>
   <div class="mx-auto flex max-w-4xl">
     {% macro nav_link(href, text) %}
       <a
         href="{{ href }}"
-        class="w-1/4 hover:underline hover:underline-offset-4 grow text-center text-lg font-medium tracking-wider pt-8 pb-4 md:pb-4
+        class="w-1/4 hover:underline hover:underline-offset-4 grow text-center text-lg font-medium tracking-wider pb-4 pt-6
                {% if selected == text %}underline underline-offset-4{% endif %}">
         {{ text }}
       </a>
