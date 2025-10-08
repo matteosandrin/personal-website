@@ -9,8 +9,8 @@
 {% block social_preview_url %}/assets/img/power-broker/social-preview.png{% endblock %}
 {% block body %}
   <div class="mx-auto my-8 max-w-3xl px-8 md:px-16">
-    <h2 class="mt-4 text-center leading-tight">{{ self.chapter() }}</h2>
-    <h3 class="mt-2 text-center text-xl text-slate-500">Summary of "{{ book }}" by {{ author }}</h3>
+    <h2 class="mt-8 text-center font-serif">{{ self.chapter() }}</h2>
+    <h3 class="mt-2 text-center text-xl text-slate-500">Summary of "{{ book }}"</h3>
     {{ power_broker_nav(self.index()) }}
     {% block content %}{% endblock %}
     {{ power_broker_nav(self.index()) }}
