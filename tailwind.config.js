@@ -13,6 +13,7 @@ module.exports = {
         fontFamily: {
             sans: ['"MoMA Sans Web"', ...defaultTheme.fontFamily.sans],
             serif: ['"Perfectly Nineties"', ...defaultTheme.fontFamily.serif],
+            mono: ['"Inconsolata"', ...defaultTheme.fontFamily.mono],
         }
     },
   },

@@ -1,18 +1,25 @@
-<div class="sticky z-50 top-0 bg-white pt-4 shadow">
-  <a class="w-full block text-center text-4xl font-medium" href="/">Matteo Sandrin</a>
-  <div class="mx-auto flex max-w-4xl">
-    {% macro nav_link(href, text) %}
-      <a
-        href="{{ href }}"
-        class="w-1/4 hover:underline hover:underline-offset-4 grow text-center text-lg font-medium tracking-wider pb-4 pt-6
-               {% if selected == text %}underline underline-offset-4{% endif %}">
-        {{ text }}
-      </a>
-    {% endmacro %}
+<div>
+  <div class="flex flex-col md:flex-row items-center justify-center md:gap-8 text-xl px-8 md:px-16">
+    <a class="font-medium text-center pt-4 md:pb-4" href="/">Matteo Sandrin</a>
+    <div class="flex w-fit gap-4 font-mono">
+      {% macro nav_link(href, text) %}
+        <a
+          href="{{ href }}"
+          class="text-center py-4">
+          {{ text }}
+        </a>
+      {% endmacro %}
+      {% macro separator() %}
+        <span class="py-4">/</span>
+      {% endmacro %}
 
-    {{ nav_link("/about", "about") }}
-    {{ nav_link("/work", "work") }}
-    {{ nav_link("/projects", "projects") }}
-    {{ nav_link("/photo", "photo") }}
+      {{ nav_link("/about", "about") }}
+      {{ separator() }}
+      {{ nav_link("/work", "work") }}
+      {{ separator() }}
+      {{ nav_link("/projects", "projects") }}
+      {{ separator() }}
+      {{ nav_link("/photo", "photo") }}
+    </div>
   </div>
 </div>
