@@ -4,7 +4,7 @@
     <a class="pt-4 font-medium md:pb-4" href="/">Matteo Sandrin</a>
     <div class="flex w-fit gap-4 font-mono">
       {% macro nav_link(href, text) %}
-        <a href="{{ href }}" class="py-4 text-center">{{ text }}</a>
+        <a href="{{ href }}" class="py-4 text-center hover:underline">{{ text }}</a>
       {% endmacro %}
       {% macro separator() %}
         <span class="py-4">/</span>
