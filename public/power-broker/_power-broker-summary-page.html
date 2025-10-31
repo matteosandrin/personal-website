@@ -3,16 +3,24 @@
 {% set book="The Power Broker" %}
 {% set author="Robert Caro" %}
 {% block title %}
-  {% block chapter %}{% endblock %} | {{ book }}: Chapter Summary 
+  {% block chapter %}
+  {% endblock %}
+  | {{ book }}: Chapter Summary
 {% endblock %}
-{% block description %}Summary of 'Chapter {{ self.chapter() }}' of the book '{{ book }}' by {{ author }}{% endblock %}
+{% block description %}
+  Summary of 'Chapter {{ self.chapter() }}' of the book '{{ book }}' by
+  {{ author }}
+{% endblock %}
 {% block social_preview_url %}/assets/img/power-broker/social-preview.png{% endblock %}
 {% block body %}
   <div class="mx-auto my-8 max-w-3xl px-8 md:px-16">
     <h2 class="mt-8 text-center font-serif">{{ self.chapter() }}</h2>
-    <h3 class="mt-2 text-center text-xl text-slate-500">Summary of "{{ book }}"</h3>
+    <h3 class="mt-2 text-center text-xl text-slate-500">
+      Summary of "{{ book }}"
+    </h3>
     {{ power_broker_nav(self.index()) }}
-    {% block content %}{% endblock %}
+    {% block content %}
+    {% endblock %}
     {{ power_broker_nav(self.index()) }}
   </div>
 {% endblock %}

@@ -12,7 +12,7 @@
 
   @screen md {
     :root {
-        font-size: 16px;
+      font-size: 16px;
     }
   }
 
@@ -20,7 +20,8 @@
     @apply text-blue-700 underline underline-offset-4;
   }
 
-  p {
+  p,
+  ul {
     @apply mt-4 text-lg md:text-base;
   }
 
@@ -28,11 +29,8 @@
     @apply text-5xl font-medium;
   }
 
-  ul {
-    @apply mt-2 text-lg md:text-base;
-  }
-
-  .right-arrow, .close-button {
+  .right-arrow,
+  .close-button {
     .outer-color {
       fill: transparent;
       stroke: black;
@@ -41,7 +39,7 @@
       opacity: 0.6;
       stroke-linecap: square;
     }
-    
+
     .inner-color {
       fill: transparent;
       stroke: #fff;

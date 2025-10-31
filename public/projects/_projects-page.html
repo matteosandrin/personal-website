@@ -1,16 +1,17 @@
 {% extends "_partials/_page.html" %}
 {% from "_partials/_image-gallery.html" import image_gallery %}
-{% from "_partials/_canonical.html" import canonical with context%}
+{% from "_partials/_canonical.html" import canonical with context %}
 {% set selected="projects" %}
 {% block title %}{{ project.title }} | Matteo Sandrin{% endblock %}
 {% block head %}{{ canonical(project.url) }}{% endblock %}
-{% block description %}This is Matteo Sandrin's personal website. This page showcases the {{ project.title }}{% endblock %}
+{% block description %}
+  This is Matteo Sandrin's personal website. This page showcases the
+  {{ project.title }}
+{% endblock %}
 {% block body %}
-  <div class="mx-auto max-w-xl px-8 md:px-16 my-4">
+  <div class="mx-auto my-4 max-w-xl px-8 md:px-16">
     <h2 class="mt-4">{{ project.title }}</h2>
-    <h3 class="mt-2 text-xl text-slate-500">
-        {{ project.subtitle }}
-    </h3>
+    <h3 class="mt-2 text-xl text-slate-500">{{ project.subtitle }}</h3>
     {% block project_description %}{% endblock %}
   </div>
   {{ image_gallery(project.images) }}

@@ -3,7 +3,7 @@ name: Deploy Matteo's portfolio website
 on:
   push:
     branches:
-      - 'master'
+      - "master"
 
 jobs:
   publish:

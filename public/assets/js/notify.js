@@ -1,5 +1,4 @@
-import { isLocal, botCheck, notify } from './notify-library.js';
-
+import { isLocal, botCheck, notify } from "./notify-library.js";
 
 const isLocalReq = isLocal();
 if (!botCheck() && !isLocalReq) {

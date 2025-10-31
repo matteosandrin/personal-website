@@ -53,7 +53,8 @@
 
 @font-face {
   font-family: "Perfectly Nineties";
-  src: url("/assets/fonts/PerfectlyNineties-RegularItalic.ttf") format("truetype");
+  src: url("/assets/fonts/PerfectlyNineties-RegularItalic.ttf")
+    format("truetype");
   font-weight: 400;
   font-style: italic;
   font-display: block;
@@ -69,7 +70,8 @@
 
 @font-face {
   font-family: "Perfectly Nineties";
-  src: url("/assets/fonts/PerfectlyNineties-SemiboldItalic.ttf") format("truetype");
+  src: url("/assets/fonts/PerfectlyNineties-SemiboldItalic.ttf")
+    format("truetype");
   font-weight: 600;
   font-style: italic;
   font-display: block;
@@ -101,7 +103,8 @@
 
 @font-face {
   font-family: "Perfectly Nineties";
-  src: url("/assets/fonts/PerfectlyNineties-ExtraboldItalic.ttf") format("truetype");
+  src: url("/assets/fonts/PerfectlyNineties-ExtraboldItalic.ttf")
+    format("truetype");
   font-weight: 800;
   font-style: italic;
   font-display: block;

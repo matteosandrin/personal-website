@@ -1,7 +1,10 @@
 {% from "_partials/_redirect.html" import redirect_sub %}
 <head>
-    <link rel="canonical" href="https://{{ config.domain }}/projects{% block canonical_path %}{% endblock %}" />
+  <link
+    rel="canonical"
+    href="https://{{ config.domain }}/projects{% block canonical_path %}
+    {% endblock %}" />
 </head>
 <body>
-    {{ redirect_sub("objects", "projects") }}
+  {{ redirect_sub("objects", "projects") }}
 </body>

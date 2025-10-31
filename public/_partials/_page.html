@@ -5,39 +5,46 @@
     {% block head %}{% endblock %}
     <meta
       name="description"
-      content="{% block description %}This is Matteo Sandrin's personal website. I build useful software and beautiful objects.{% endblock %}" />
-    <meta name="twitter:site" content="@TeoSandrin">
-    <meta name="twitter:title" content="{{ self.title() }}">
-    <meta name="twitter:description" content="{{ self.description() }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image:src" content="https://{{ config.domain }}{% block social_preview_url %}/assets/img/social-preview.jpg{% endblock %}">
-    <meta name="og:site_name" content="{{ self.title() }}">
-    <meta name="og:type" content="object">
-    <meta name="og:title" content="{{ self.title() }}">
-    <meta name="og:url" content="https://{{ config.domain }}">
-    <meta name="og:description" content="{{ self.description() }}">
-    <meta name="og:image" content="https://{{ config.domain }}{{ self.social_preview_url() }}">
-    <meta name="og:image:alt" content="{{ self.description() }}">
-    <meta name="og:image:width" content="1280">
-    <meta name="og:image:height" content="640">
+      content="{% block description %}
+        This is Matteo Sandrin's personal website. I build useful software and
+        beautiful objects.
+      {% endblock %}" />
+    <meta name="twitter:site" content="@TeoSandrin" />
+    <meta name="twitter:title" content="{{ self.title() }}" />
+    <meta name="twitter:description" content="{{ self.description() }}" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image:src"
+      content="https://{{ config.domain }}{% block social_preview_url %}/assets/img/social-preview.jpg{% endblock %}" />
+    <meta name="og:site_name" content="{{ self.title() }}" />
+    <meta name="og:type" content="object" />
+    <meta name="og:title" content="{{ self.title() }}" />
+    <meta name="og:url" content="https://{{ config.domain }}" />
+    <meta name="og:description" content="{{ self.description() }}" />
+    <meta
+      name="og:image"
+      content="https://{{ config.domain }}{{ self.social_preview_url() }}" />
+    <meta name="og:image:alt" content="{{ self.description() }}" />
+    <meta name="og:image:width" content="1280" />
+    <meta name="og:image:height" content="640" />
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
+
     <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico" />
     <link rel="stylesheet" href="/assets/css/index.css" />
   </head>
-  <body class="bg-blueish-gray flex flex-col min-h-screen">
+  <body class="flex min-h-screen flex-col bg-blueish-gray">
     {% include "_partials/_header.html" %}
-    <div class="flex-grow">
-    {% block body %}{% endblock %}
-    </div>
+    <div class="flex-grow">{% block body %}{% endblock %}</div>
     {% include "_partials/_footer.html" %}
     <script
-        async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-122674032-1"></script>
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122674032-1"></script>
     <script src="/assets/js/google-ads.js"></script>
     <script src="/assets/js/notify.js" type="module"></script>
   </body>

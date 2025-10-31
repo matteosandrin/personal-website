@@ -1,13 +1,10 @@
 <div>
-  <div class="flex flex-col md:flex-row md:items-center md:justify-center md:gap-8 text-xl px-8 md:px-16">
-    <a class="font-medium pt-4 md:pb-4" href="/">Matteo Sandrin</a>
+  <div
+    class="flex flex-col px-8 text-xl md:flex-row md:items-center md:justify-center md:gap-8 md:px-16">
+    <a class="pt-4 font-medium md:pb-4" href="/">Matteo Sandrin</a>
     <div class="flex w-fit gap-4 font-mono">
       {% macro nav_link(href, text) %}
-        <a
-          href="{{ href }}"
-          class="text-center py-4">
-          {{ text }}
-        </a>
+        <a href="{{ href }}" class="py-4 text-center">{{ text }}</a>
       {% endmacro %}
       {% macro separator() %}
         <span class="py-4">/</span>

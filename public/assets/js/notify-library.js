@@ -83,19 +83,12 @@ export function getIpData(callback) {
 }
 
 export function notify() {
-  getIpData(data => {
+  getIpData((data) => {
     var req = new XMLHttpRequest();
     var url = "https://api.pushover.net/1/messages.json";
-    const message = buildMessage(
-      data,
-      window.location.pathname,
-      getReferrer()
-    );
+    const message = buildMessage(data, window.location.pathname, getReferrer());
     req.open("POST", url, true); // true for asynchronous request
-    req.setRequestHeader(
-      "Content-type",
-      "application/x-www-form-urlencoded"
-    );
+    req.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     req.send(encodeMessage(message));
   });
 }
