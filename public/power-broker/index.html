@@ -55,10 +55,14 @@
         {% endfor %}
         <li>
           <div class="flex items-baseline gap-2">
-            <span class="whitespace-normal shrink-0">
-              <a href="/power-broker/{{ loop.index0 }}" class="link">{{ chapter.name }}</a>
+            <span class="shrink-0 whitespace-normal">
+              <a href="/power-broker/{{ loop.index0 }}" class="link">
+                {{ chapter.name }}
+              </a>
             </span>
-            <span aria-hidden="true" class="flex-1 min-w-0 border-b border-dotted border-black text-right">
+            <span
+              aria-hidden="true"
+              class="min-w-0 flex-1 border-b border-dotted border-black text-right">
               {{ chapter.page }}
             </span>
           </div>
