@@ -40,4 +40,7 @@ clean:
 	rm -rf $(DESTINATION_DIR)
 	rm -rf $(PROD_DIR)
 
-.PHONY: build prod build-templates build-tailwind copy-assets clean watch serve
+format:
+	npx prettier ${TEMPLATE_DIR} --write
+
+.PHONY: build prod build-templates build-tailwind copy-assets clean watch serve format
