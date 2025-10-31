@@ -1,6 +1,5 @@
-<div
-  class="mx-auto mt-12 flex max-w-5xl flex-col px-8 first:mt-8 md:flex-row md:px-16">
-  <div class="basis-3/5 md:mr-8">
+<div class="flex max-w-5xl flex-col gap-16 md:flex-row">
+  <div class="basis-3/5">
     <h2>{% block title %}{% endblock %}</h2>
     <h3 class="mt-2 text-xl text-slate-500">
       {% block subtitle %}{% endblock %}
@@ -9,7 +8,7 @@
   </div>
   <div class="flex basis-2/5 items-center justify-center">
     <img
-      class="mt-16 w-1/2 object-contain md:mt-0 md:w-3/4"
+      class="w-1/2 object-contain md:mt-0 md:w-3/4"
       src="{% block img_url %}{% endblock %}"
       alt="" />
   </div>

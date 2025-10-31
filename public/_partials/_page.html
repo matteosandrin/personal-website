@@ -40,7 +40,9 @@
   </head>
   <body class="flex min-h-screen flex-col bg-blueish-gray">
     {% include "_partials/_header.html" %}
-    <div class="flex-grow">{% block body %}{% endblock %}</div>
+    <div class="mx-auto flex-grow px-8 py-8 md:px-16">
+      {% block body %}{% endblock %}
+    </div>
     {% include "_partials/_footer.html" %}
     <script
       async
