@@ -1,18 +1,17 @@
-{% macro object_item(object) %}
+{% macro project_tile(project) %}
   <div>
     <a
-      href="{{ object.url }}"
-      target="{% if object.newtab is defined and object.newtab %}_blank{% else %}_self{% endif %}">
+      href="{{ project.url }}"
+      target="{% if project.newtab is defined and project.newtab %}_blank{% else %}_self{% endif %}">
       <div class="flex aspect-square w-full items-end">
         <img
-          class="aspect-square w-full rounded-md object-cover object-center"
-          src="{{ object.img.url }}"
+          class="aspect-square w-full object-cover object-center"
+          src="{{ project.img.url }}"
           alt="" />
       </div>
-      <h3 class="mt-2 text-2xl font-medium md:mt-4 md:text-4xl">
-        {{ object.title }}
+      <h3 class="mt-2 text-center font-mono text-lg md:mt-4">
+        {{ project.title }}
       </h3>
-      <h4 class="mt-2 text-slate-500 md:text-xl">{{ object.subtitle }}</h4>
     </a>
   </div>
 {% endmacro %}
