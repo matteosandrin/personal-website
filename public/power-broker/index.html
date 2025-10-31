@@ -54,19 +54,13 @@
           {% endif %}
         {% endfor %}
         <li>
-          <div class="flex justify-between gap-1">
-            <div class="whitespace-nowrap">
-              <a href="/power-broker/{{ loop.index0 }}" class="link">
-                {{ chapter.name }}
-              </a>
-            </div>
-            <div class="overflow-hidden whitespace-nowrap">
-              <div
-                class="float-right text-right underline decoration-dotted underline-offset-4">
-                {{ '&nbsp;' * 150 }}
-                {{ chapter.page }}
-              </div>
-            </div>
+          <div class="flex items-baseline gap-2">
+            <span class="whitespace-normal shrink-0">
+              <a href="/power-broker/{{ loop.index0 }}" class="link">{{ chapter.name }}</a>
+            </span>
+            <span aria-hidden="true" class="flex-1 min-w-0 border-b border-dotted border-black text-right">
+              {{ chapter.page }}
+            </span>
           </div>
         </li>
       {% endfor %}
