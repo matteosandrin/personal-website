@@ -6,10 +6,16 @@
 {% block body %}
   <div class="mx-auto max-w-2xl px-4">
     <a href="/projects/metrocard">
-      <img
-        class="mx-auto mt-8 max-w-full md:mt-4"
-        src="assets/img/metrocard/metrocard-splash.png"
-        alt="" />
+      <div class="mx-auto mt-8 md:mt-4 group relative">
+        <img
+          class="w-full group-hover:hidden"
+          src="assets/img/metrocard/metrocard-splash.png"
+          alt="" />
+        <img
+          class="w-full hidden group-hover:block"
+          src="assets/img/metrocard/metrocard-splash-back.png"
+          alt="" />
+      </div>
     </a>
     <div class="mx-auto w-fit">
       <p>Some things I've made recently:</p>
