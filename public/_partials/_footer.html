@@ -1,6 +1,5 @@
+{% set x = config.socials | selectattr('label', 'equalto', 'x.com') | first %}
 <div class="w-full pb-8 pt-4 text-center text-slate-500">
   like what you see?
-  <a class="link" target="_blank" href="https://x.com/{{ config.social.x }}">
-    follow me!
-  </a>
+  <a class="link" target="_blank" href="{{ x.url }}">follow me!</a>
 </div>
