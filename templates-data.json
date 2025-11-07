@@ -31,7 +31,7 @@
     {
       "url": "/power-broker",
       "img": "/assets/img/power-broker/thumbnail.png",
-      "title": "power broker summaries",
+      "title": "\"The Power Broker\" summaries",
       "subtitle": "Summary by chapters of the entire book, made by AI"
     },
     {
@@ -53,7 +53,7 @@
     {
       "url": "/projects/metro-clock",
       "img": "/assets/img/metro-clock/metro-clock-thumbnail.jpg",
-      "title": "milan metro clock",
+      "title": "Milan metro clock",
       "subtitle": "A replica of the clock from Milan's Metro",
       "images": [
         "/assets/img/metro-clock/metro-clock-01.jpg",
@@ -65,7 +65,7 @@
     {
       "url": "/projects/dd-sign",
       "img": "/assets/img/dd-sign/dd-sign-thumbnail.jpg",
-      "title": "dunkin sign",
+      "title": "Dunkin sign",
       "subtitle": "A piece of original, restored Dunkin neon signage",
       "images": [
         "/assets/img/dd-sign/dd-sign-01.jpg",
@@ -76,7 +76,7 @@
     {
       "url": "/projects/123-sign",
       "img": "/assets/img/123-sign/123-sign-thumbnail.jpg",
-      "title": "one-two-three sign",
+      "title": "123 sign",
       "subtitle": "A painting inspired by 96th street subway station",
       "images": [
         "/assets/img/123-sign/123-sign-01.jpg",
@@ -87,7 +87,7 @@
     {
       "url": "/projects/metrocard",
       "img": "/assets/img/metrocard/metrocard-thumbnail.jpg",
-      "title": "metrocard XXL",
+      "title": "Metrocard XXL",
       "subtitle": "Large replica of the iconic NYC subway card",
       "images": [
         "/assets/img/metrocard/metrocard-01.jpg",
@@ -98,7 +98,7 @@
     {
       "url": "/projects/space-clock",
       "img": "/assets/img/space-clock/space-clock-thumbnail.jpg",
-      "title": "space clock",
+      "title": "Space clock",
       "subtitle": "A trusted timekeeper for outer space",
       "images": [
         "/assets/img/space-clock/space-clock-01.jpg",
