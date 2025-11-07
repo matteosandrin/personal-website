@@ -37,14 +37,15 @@
     {
       "url": "/projects/led-matrix",
       "img": "/assets/img/led-matrix/led-matrix-thumbnail.jpg",
-      "title": "LED matrix sign",
-      "subtitle": "A pixel-perfect replica of the the MBTA & MTA platform displays",
+      "title": "LED subway sign",
+      "subtitle": "A pixel-perfect replica of the the MTA & MBTA platform displays",
       "images": [
         "/assets/img/led-matrix/led-matrix-01.jpg",
         "/assets/img/led-matrix/led-matrix-02.jpg",
         "/assets/img/led-matrix/led-matrix-03.jpg",
         "/assets/img/led-matrix/led-matrix-04.jpg",
-        "/assets/img/led-matrix/led-matrix-05.jpg"
+        "/assets/img/led-matrix/led-matrix-05.jpg",
+        "/assets/img/led-matrix/led-matrix-06.jpg"
       ]
     }
   ],
