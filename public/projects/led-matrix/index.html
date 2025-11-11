@@ -3,10 +3,10 @@
 {% block project_description %}
   <p>
     <a
-      class="link block w-full md:text-center"
+      class="link block w-full md:text-center italic"
       target="_blank"
       href="https://github.com/matteosandrin/led-matrix-sign-python">
-      github repo
+      All the code for this project is on Github.
     </a>
   </p>
   <p>
@@ -19,15 +19,21 @@
     MBTA's arrival boards. The display can also show currently playing songs and
     album art from Spotify.
   </p>
-  <p>
-    The real display hangs in my home, but I've made a web simulation with HTML
-    canvas and WebGL to show what it looks like. It's currently showing arrivals
-    based on historical data for the 86th st B and C trains station.
+{% endblock %}
+{% block project_body %}
+  <div class="w-full max-w-5xl mx-auto">
+    <iframe
+      scrolling="no"
+      frameborder="0"
+      src="https://led.sandr.in"
+      class="aspect-[4.8] w-full"
+      id="led-frame"></iframe>
+  </div>
+  {% set svg_train_class = "inline aspect-square w-4 scale-125 mt-[-0.2rem]" %}
+  <p class="max-w-2xl mx-auto mt-0">
+    The real display hangs in my home, but I've made the web simulation above with WebGL to show what it looks like in action. It's currently showing arrivals
+    based on historical data for the 86th st <img src="/assets/img/led-matrix/b_train.svg" class="{{ svg_train_class }} mr-[0.1rem]"/><img src="/assets/img/led-matrix/c_train.svg" class="{{ svg_train_class }}"/> train station in New York.
   </p>
-  <iframe
-    scrolling="no"
-    frameborder="0"
-    src="https://led.sandr.in"
-    class="mt-4 aspect-[4.8] w-full"
-    id="led-frame"></iframe>
+  <!-- Image gallery -->
+  {{ super() }} 
 {% endblock %}
