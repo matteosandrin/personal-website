@@ -3,7 +3,7 @@
 {% block project_description %}
   <p>
     <a
-      class="link block w-full md:text-center italic"
+      class="link block w-full italic md:text-center"
       target="_blank"
       href="https://github.com/matteosandrin/led-matrix-sign-python">
       All the code for this project is on Github.
@@ -21,7 +21,7 @@
   </p>
 {% endblock %}
 {% block project_body %}
-  <div class="w-full max-w-5xl mx-auto">
+  <div class="mx-auto w-full max-w-5xl">
     <iframe
       scrolling="no"
       frameborder="0"
@@ -30,10 +30,18 @@
       id="led-frame"></iframe>
   </div>
   {% set svg_train_class = "inline aspect-square w-4 scale-125 mt-[-0.2rem]" %}
-  <p class="max-w-2xl mx-auto mt-0">
-    The real display hangs in my home, but I've made the web simulation above with WebGL to show what it looks like in action. It's currently showing arrivals
-    based on historical data for the 86th st <img src="/assets/img/led-matrix/b_train.svg" class="{{ svg_train_class }} mr-[0.1rem]"/><img src="/assets/img/led-matrix/c_train.svg" class="{{ svg_train_class }}"/> train station in New York.
+  <p class="mx-auto mt-0 max-w-2xl">
+    The real display hangs in my home, but I've made the web simulation above
+    with WebGL to show what it looks like in action. It's currently showing
+    arrivals based on historical data for the 86th st
+    <img
+      src="/assets/img/led-matrix/b_train.svg"
+      class="{{ svg_train_class }}" />
+    <img
+      src="/assets/img/led-matrix/c_train.svg"
+      class="{{ svg_train_class }}" />
+    train station in New York.
   </p>
   <!-- Image gallery -->
-  {{ super() }} 
+  {{ super() }}
 {% endblock %}
