@@ -2,14 +2,16 @@
   <div>
     <a
       href="{{ project.url }}"
-      target="{% if project.newtab is defined and project.newtab %}_blank{% else %}_self{% endif %}">
+      target="{% if project.newtab is defined and project.newtab %}_blank{% else %}_self{% endif %}"
+      class="group">
       <div class="flex aspect-square w-full items-end">
         <img
           class="aspect-square w-full object-cover object-center"
           src="{{ project.img.url }}"
           alt="" />
       </div>
-      <h3 class="mt-2 text-center font-mono text-xl md:mt-4">
+      <h3
+        class="mt-2 text-center font-mono text-xl group-hover:underline md:mt-4">
         {{ project.title }}
       </h3>
     </a>
