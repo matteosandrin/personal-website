@@ -2,14 +2,6 @@
 {% set project = projects_software[2] %}
 {% block project_description %}
   <p>
-    <a
-      class="link block w-full italic md:text-center"
-      target="_blank"
-      href="https://github.com/matteosandrin/led-matrix-sign-python">
-      All the code for this project is on Github.
-    </a>
-  </p>
-  <p>
     The display shows a real-time view of the incoming trains for either New
     York or Boston subway stops. It's powered by five 32x32 dot matrix LED
     displays daisy-chained and controlled by a Rasbperry Pi. The MTA and MBTA
@@ -41,6 +33,14 @@
       src="/assets/img/led-matrix/c_train.svg"
       class="{{ svg_train_class }}" />
     train station in New York.
+  </p>
+  <p>
+    <a
+      class="link block w-full md:text-center"
+      target="_blank"
+      href="https://github.com/matteosandrin/led-matrix-sign-python">
+      All the code for this project is on Github.
+    </a>
   </p>
   <!-- Image gallery -->
   {{ super() }}
