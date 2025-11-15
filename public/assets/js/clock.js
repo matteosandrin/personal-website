@@ -2,11 +2,17 @@ let clocks;
 
 window.addEventListener("load", function () {
   const clock_ids = ["jr-clock", "milano-metro-clock"];
-  clocks = clock_ids.map((id) => ({
-    id,
-    svg: document.getElementById(id).contentDocument,
-    pivot_point: getPivotPoint(id),
-  }));
+  clocks = clock_ids.map((id) => {
+    const svgContainer = document.getElementById(id);
+    if (svgContainer) {
+      return {
+        id,
+        svg: svgContainer.contentDocument,
+        pivot_point: getPivotPoint(id),
+      };
+    }
+    return null;
+  });
   updateAllClocks();
   this.setInterval(updateAllClocks, 100);
 });
@@ -16,6 +22,9 @@ function updateAllClocks() {
 }
 
 function updateClock(clock) {
+  if (!clock) {
+    return;
+  }
   const date = new Date();
   const hours = date.getHours();
   const minutes = date.getMinutes();
