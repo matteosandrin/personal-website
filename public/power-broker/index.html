@@ -1,4 +1,5 @@
 {% extends "_partials/_page.html" %}
+{% from "_partials/_title_subtitle.html" import title_subtitle %}
 {% set book="The Power Broker" %}
 {% set author="Robert Caro" %}
 {% block title %}{{ book }}: Chapter Summaries{% endblock %}
@@ -6,10 +7,7 @@
 {% block social_preview_url %}/assets/img/power-broker/social-preview.png{% endblock %}
 {% block body %}
   <div class="max-w-2xl">
-    <h2 class="font-serif md:text-center">{{ book }}</h2>
-    <h3 class="mt-2 text-xl text-slate-500 md:text-center">
-      Chapter summaries of the entire book
-    </h3>
+    {{ title_subtitle(book, "Chapter summaries of the entire book", title_classes="font-serif") }}
     <p class="mt-8">
       This book is the biography of Robert Moses, the influential yet
       controversial public official who built almost every highway, bridge, park

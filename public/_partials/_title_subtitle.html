@@ -1,0 +1,8 @@
+{% macro title_subtitle(title, subtitle=None, title_classes="") %}
+  <div>
+    <h2 class="{{ title_classes }} md:text-center">{{ title }}</h2>
+    {% if not subtitle is none %}
+      <h3 class="mt-2 text-xl text-slate-500 md:text-center">{{ subtitle }}</h3>
+    {% endif %}
+  </div>
+{% endmacro %}

@@ -1,5 +1,6 @@
 {% extends "_partials/_page.html" %}
 {% from "power-broker/_power-broker-nav.html" import power_broker_nav with context %}
+{% from "_partials/_title_subtitle.html" import title_subtitle %}
 {% set book="The Power Broker" %}
 {% set author="Robert Caro" %}
 {% block title %}
@@ -14,10 +15,8 @@
 {% block social_preview_url %}/assets/img/power-broker/social-preview.png{% endblock %}
 {% block body %}
   <div class="max-w-2xl">
-    <h2 class="mt-8 font-serif md:text-center">{{ self.chapter() }}</h2>
-    <h3 class="mt-2 text-xl text-slate-500 md:text-center">
-      Summary of "{{ book }}"
-    </h3>
+    {% set subtitle="Summary of \"" + book + "\"" %}
+    {{ title_subtitle(self.chapter(), subtitle, title_classes="font-serif") }}
     {{ power_broker_nav(self.index()) }}
     {% block content %}
     {% endblock %}
