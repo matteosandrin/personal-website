@@ -1,5 +1,6 @@
 {% extends "projects/_projects-page.html" %}
 {% set project = projects_design[0] %}
+{% block social_preview_url %}{{ project.images[1].url }}{% endblock %}
 {% block project_description %}
   <p>
     Growing up in Milan, the Metro played an integral role in my daily life,
