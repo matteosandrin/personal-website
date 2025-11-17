@@ -1,7 +1,8 @@
-DATA_FILEPATH = ./templates-data.json
+DATA_DIR = ./data
 TEMPLATE_DIR = ./public
 DESTINATION_DIR = ./build
 PROD_DIR = ./prod
+DATA_FILEPATH = ${DATA_DIR}/templates-data.json
 
 build: clean copy-assets build-templates build-tailwind
 
@@ -20,18 +21,16 @@ build-templates:
 build-tailwind:
 	npx tailwind -i ${TEMPLATE_DIR}/assets/css/index.css -o ${DESTINATION_DIR}/assets/css/index.css
 
-watch-tailwind:
-	npx tailwind -i ${TEMPLATE_DIR}/assets/css/index.css -o ${DESTINATION_DIR}/assets/css/index.css --watch
-
 copy-assets:
 	rsync -av --exclude='*.html' --exclude='*.css' --exclude='_partials' ${TEMPLATE_DIR}/ ${DESTINATION_DIR}
 	cp node_modules/photoswipe/dist/*.min.js ${DESTINATION_DIR}/assets/js/
 	cp node_modules/photoswipe/dist/*.css ${DESTINATION_DIR}/assets/css/
 
 watch: build
-	cd ${TEMPLATE_DIR} && watchmedo shell-command \
+	watchmedo shell-command \
 		--recursive --verbose --wait --interval=1 \
-		--command='cd .. && make build'
+		--command='make build' \
+		${TEMPLATE_DIR} ${DATA_DIR}
 
 serve:
 	python3 -m http.server --directory ${DESTINATION_DIR}
@@ -43,4 +42,4 @@ clean:
 format:
 	npx prettier ${TEMPLATE_DIR} --write
 
-.PHONY: build prod build-templates build-tailwind copy-assets clean watch serve format
+.PHONY: build install prod dependencies build-templates build-tailwind copy-assets watch serve clean format
