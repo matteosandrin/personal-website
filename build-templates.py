@@ -68,14 +68,17 @@ def cars_sort_star_first(cars):
     cars = cars_sort_date_desc(cars)
     return [c for c in cars if c["star"]] + [c for c in cars if not c["star"]]
 
+def add_custom_filters(env):
+    env.filters['format_iso_date'] = format_iso_date
+    env.filters['cars_sort_star_first'] = cars_sort_star_first
+    env.filters['cars_sort_date_desc'] = cars_sort_date_desc
+
 data = load_data(DATA_FILEPATH)
 print("Processing images:")
 data = process_images(data)
 loader = FileSystemLoader(TEMPLATE_DIR)
 env = Environment(loader=loader)
-env.filters['format_iso_date'] = format_iso_date
-env.filters['cars_sort_star_first'] = cars_sort_star_first
-env.filters['cars_sort_date_desc'] = cars_sort_date_desc
+add_custom_filters(env)
 print("Generating templates:")
 for t in env.list_templates(filter_func=filter_templates):
     print(" * {}".format(t))
