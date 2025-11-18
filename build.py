@@ -7,7 +7,7 @@ import sys
 
 if len(sys.argv) < 4:
     print(
-        "usage: python build-templates.py <data_filepath> <template_dir> <destination_dir>",
+        "usage: python build.py <data_filepath> <template_dir> <destination_dir>",
         file=sys.stderr,
     )
     print(

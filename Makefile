@@ -16,7 +16,7 @@ dependencies:
 	npm install
 
 build-templates:
-	python3 build-templates.py ${DATA_FILEPATH} ${TEMPLATE_DIR} ${DESTINATION_DIR}
+	python3 build.py ${DATA_FILEPATH} ${TEMPLATE_DIR} ${DESTINATION_DIR}
 
 build-tailwind:
 	npx tailwind -i ${TEMPLATE_DIR}/assets/css/index.css -o ${DESTINATION_DIR}/assets/css/index.css
