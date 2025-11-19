@@ -1,4 +1,5 @@
 {% extends "_partials/_page.html" %}
+{% from "_partials/_macros.html" import title_subtitle %}
 {% block title %}Wall of SVGs | Matteo Sandrin{% endblock %}
 {% block description %}
   This is Matteo Sandrin's personal website. This page shows some SVGs that I've
@@ -6,12 +7,7 @@
 {% endblock %}
 {% block body %}
   <div class="max-w-4xl">
-    <div class="text-center text-3xl md:text-4xl">
-      This is a collection of fun SVGs
-      <br />
-      I've made for various projects ↓
-    </div>
-    <p class="text-center">(last update march 2025)</p>
+    {{ title_subtitle("SVG Wall", "A collection of SVGs I've made for various projects") }}
     <div class="mx-auto my-8 mt-8 grid grid-cols-1 gap-4">
       <div class="mx-auto w-full">
         <object
