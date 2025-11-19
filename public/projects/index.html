@@ -1,6 +1,6 @@
 {% extends "_partials/_page.html" %}
 {% from "projects/_projects-section.html" import projects_section %}
-{% from "_partials/_macros.html" import canonical with context %}
+{% from "_partials/_macros.html" import canonical, title_subtitle with context %}
 {% set selected="projects" %}
 {% block title %}Projects | Matteo Sandrin{% endblock %}
 {% block head %}{{ canonical("/projects") }}{% endblock %}
@@ -12,5 +12,22 @@
   <div class="flex max-w-7xl flex-col gap-12">
     {{ projects_section("software", projects_software) }}
     {{ projects_section("design+&ZeroWidthSpace;art", projects_design) }}
+    <div class="flex flex-col gap-6 md:gap-8">
+      {{ title_subtitle("experiments") }}
+      <div class="mx-auto w-fit">
+        <ul class="list mt-0">
+          <li>
+            <a class="link" href="/cars">
+              A list of all the cars I've ever driven.
+            </a>
+          </li>
+          <li>
+            <a class="link" href="/svgwall">
+              A list of all the SVGs I've made for various projects.
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 {% endblock %}
