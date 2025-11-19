@@ -1,7 +1,7 @@
 {% extends "_partials/_page.html" %}
 {% from "_partials/_image-gallery.html" import image_gallery %}
-{% from "_partials/_canonical.html" import canonical with context %}
-{% from "_partials/_title_subtitle.html" import title_subtitle %}
+{% from "_partials/_macros.html" import canonical with context %}
+{% from "_partials/_macros.html" import title_subtitle %}
 {% set selected="projects" %}
 {% block title %}{{ project.title }} | Matteo Sandrin{% endblock %}
 {% block head %}{{ canonical(project.url) }}{% endblock %}

@@ -1,8 +1,0 @@
-{% macro tooltip(content) %}
-  <div
-    class="invisible absolute -top-10 left-1/2 z-10 -translate-x-1/2 whitespace-nowrap rounded-lg bg-gray-900 px-3 py-2 text-sm font-medium text-white opacity-0 transition-opacity duration-300 group-hover:visible group-hover:opacity-100">
-    {{ content }}
-    <div
-      class="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-gray-900"></div>
-  </div>
-{% endmacro %}
