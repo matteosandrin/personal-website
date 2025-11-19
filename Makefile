@@ -41,5 +41,6 @@ clean:
 
 format:
 	npx prettier ${TEMPLATE_DIR} --write
+	python -m black *.py
 
 .PHONY: build install prod dependencies build-templates build-tailwind copy-assets watch serve clean format
