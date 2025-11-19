@@ -20,6 +20,10 @@
     @apply text-blue-700 underline decoration-blue-700/40 underline-offset-4 transition-colors hover:decoration-blue-700;
   }
 
+  .list {
+    @apply list-inside list-disc space-y-1;
+  }
+
   p,
   ul {
     @apply mt-4 text-lg md:text-base;
