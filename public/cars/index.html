@@ -23,7 +23,7 @@
         (last update {{ last_updated_date | format_iso_date("%B %Y") | lower }})
       </p>
     </div>
-    <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+    <div class="mt-16 grid grid-cols-1 gap-x-8 gap-y-12 md:grid-cols-3">
       {% for car in cars | cars_sort_star_first %}
         {{ car_item(car) }}
       {% endfor %}
