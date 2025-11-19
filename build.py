@@ -86,7 +86,7 @@ def cars_sort_date_desc(cars):
 def cars_sort_star_first(cars):
     # sort by date, descending
     cars = cars_sort_date_desc(cars)
-    return [c for c in cars if c["star"]] + [c for c in cars if not c["star"]]
+    return [c for c in cars if c.get("star")] + [c for c in cars if not c.get("star")]
 
 
 def add_custom_filters(env):
