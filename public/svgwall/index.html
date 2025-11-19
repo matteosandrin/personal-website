@@ -6,26 +6,31 @@
   made for various
 {% endblock %}
 {% block body %}
-  <div class="max-w-4xl">
+  <div class="max-w-2xl">
     {{ title_subtitle("SVG Wall", "A collection of SVGs I've made for various projects") }}
-    <div class="mx-auto my-8 mt-8 grid grid-cols-1 gap-4">
-      <div class="mx-auto w-full">
+    <p>
+      I've had the fortune of working on plenty of vector graphics for my
+      projects. However, at the end of a project, those SVGs end up trapped
+      within the depths of my hard drive. I wanted to have a space to showcase
+      these images with no specific agenda, other than admiring their beauty.
+      Enjoy!
+    </p>
+    <div class="mt-8 flex flex-col gap-8">
+      <div>
         <object
           id="jr-clock"
           data="/assets/img/jr-clock.svg"
           type="image/svg+xml"></object>
         <p class="text-center">
-          The iconic JR clock found in many Japanese train stations.
+          The iconic JR clock found in Japanese train stations.
         </p>
       </div>
-    </div>
-    <div class="mx-auto my-8 mt-8 grid grid-cols-1 gap-4">
-      <div class="mx-auto w-full">
+      <div>
         <object
           id="milano-metro-clock"
           data="/assets/img/milano-metro-clock.svg"
           type="image/svg+xml"></object>
-        <p class="text-center">The clock found in every Milan metro station.</p>
+        <p class="text-center">The clock found in Milan metro stations.</p>
       </div>
     </div>
   </div>
