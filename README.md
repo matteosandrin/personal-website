@@ -6,7 +6,7 @@ to build the templates and assets into a static website.
 
 The following commands are available:
 
-| Command       | Description                                                                                                                         |
+| Make command  | Description                                                                                                                         |
 | ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | `make build`  | Install Python/JS dependencies, copy static assets to `./build`, build Jinja templates and build Tailwind CSS files.                |
 | `make serve`  | Launch a webserver that serves the files in `./build`                                                                               |
