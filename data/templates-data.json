@@ -130,8 +130,21 @@
       "description": [
         "This car is an orange bathtub on wheels. No doors, no windows, no seat belts. Perfect for an italian summer, because there's always a breeze! The transmission is manual and temperamental, the steering wheel as large as a truck's. It's a surprisingly fun car to drive, and scary one to be a passenger in."
       ],
-      "tags": ["vintage"],
+      "tags": ["vintage", "manual"],
       "star": false
+    },
+    {
+      "year": "2024",
+      "make" : "Peugeot",
+      "model" : "2008",
+      "img" : "/assets/img/cars/2024_peugeot_2008.png",
+      "date" : "2025-06-06",
+      "description" : [
+        "I rented this car at Bilbao airport in Spain, and drove it for five days along the coast of the Basque country. The manual transmission was smooth, even when contending with cramped parking structures.",
+        "When I returned this vehicle, I foolishly forgot to take any pictures. A few days later, I got a letter from the rental agency alleging I had caused damage to the car, and asking me to pay €1000+ in damages. Fortunately Google Maps reviews showed this was a common scam for this location. I contacted my credit card issuer, which resolved the issue in my favor three weeks later."
+      ],
+      "tags" : ["rental", "suv", "manual"],
+      "star" : false
     },
     {
       "year": "2024",
@@ -154,7 +167,7 @@
       "description": [
         "This is a peculiar car. The DR brand is Italian, but the car itself is a rebadged version of a chinese car. It looks like a normal SUV, but shrunken down by 20%. It can run on either gasoline or GPL, and will get incredibly high mileage on GPL. The GPL system seems like an aftermarket modification, since it's not integrated with the car's dashboard."
       ],
-      "tags": ["rental", "suv", "GPL"],
+      "tags": ["rental", "suv", "GPL", "manual"],
       "star": false
     },
     {
@@ -167,7 +180,7 @@
         "I learned how to drive on this six-speed manual transmission car. It's my mom's old car. The acceleration is surprisingly good, considering it's a quarter decade old.",
         "However the passenger window doesn't work, the central locking system doesn't work, the power steering is long gone, it overheats going over 80km/h, and the rearview mirror is missing. Despite its inherent danger (or because of it), I love this vehicle."
       ],
-      "tags": ["hatchback"],
+      "tags": ["hatchback", "manual"],
       "star": true
     },
     {
