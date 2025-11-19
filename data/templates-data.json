@@ -181,7 +181,7 @@
         "However the passenger window doesn't work, the central locking system doesn't work, the power steering is long gone, it overheats going over 80km/h, and the rearview mirror is missing. Despite its inherent danger (or because of it), I love this vehicle."
       ],
       "tags": ["hatchback", "manual"],
-      "star": true
+      "star": false
     },
     {
       "year": "2025",
@@ -322,7 +322,7 @@
         "Shortly after I drove this car, the brakes completely failed, fortunately while driving at low speed."
       ],
       "tags": ["vintage", "SUV"],
-      "star": true
+      "star": false
     },
     {
       "year": "2023",
@@ -414,7 +414,7 @@
         "The car was only partly charged when I picked it up, but showed more than enough range for my trip. As I was driving back however, the range estimate dropped significantly. I almost didn't make it back to the rental counter."
       ],
       "tags": ["rental", "sedan", "electric"],
-      "star": true
+      "star": false
     },
     {
       "year": "2023",
