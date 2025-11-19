@@ -1,19 +1,28 @@
 {% extends "_partials/_page.html" %}
+{% from "_partials/_macros.html" import title_subtitle %}
 {% from "cars/_car-item.html" import car_item %}
 {% set last_updated_date=(cars | cars_sort_date_desc | first)["date"] %}
-{% block title %}Cars I've driven | Matteo Sandrin{% endblock %}
+{% block title %}Cars | Matteo Sandrin{% endblock %}
 {% block description %}
   This is Matteo Sandrin's personal website. This page shows the cars that I've
   driven throughout the years.
 {% endblock %}
 {% block body %}
   <div class="max-w-7xl">
-    <div class="text-4xl md:text-center">
-      This is a list of every car I've ever driven ↓
+    <div class="mx-auto max-w-2xl">
+      {{ title_subtitle("Cars", "A list of every car I've ever driven") }}
+      <p>
+        I created this page as a place to collect every car I've ever driven,
+        along with the stories, trips, and little quirks that made each one
+        memorable. Every entry pins a moment in time (where I went, who I was
+        with, what broke, what surprised me) while also documenting how
+        different kinds of cars feel to drive. Over time, it becomes a way to
+        trace my travels, my tastes, and the evolution of automobiles.
+      </p>
+      <p class="md:text-center">
+        (last update {{ last_updated_date | format_iso_date("%B %Y") | lower }})
+      </p>
     </div>
-    <p class="md:text-center">
-      (last update {{ last_updated_date | format_iso_date("%B %Y") | lower }})
-    </p>
     <div class="mt-8 grid grid-cols-1 gap-8 md:grid-cols-3">
       {% for car in cars | cars_sort_star_first %}
         {{ car_item(car) }}
