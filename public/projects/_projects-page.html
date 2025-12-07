@@ -5,7 +5,11 @@
 {% set selected="projects" %}
 {% block title %}{{ project.title }} | Matteo Sandrin{% endblock %}
 {% block head %}{{ canonical(project.url) }}{% endblock %}
-{% block social_preview_url %}{{ project.images[0].url }}{% endblock %}
+{% block social_preview_url %}
+  {% if project.images is defined %}
+    {{ project.images[0].url }}
+  {% endif %}
+{% endblock %}
 {% block description %}
   This is Matteo Sandrin's personal website. This page showcases the
   {{ project.title }}
@@ -17,7 +21,9 @@
       <div class="mt-8">{% block project_description %}{% endblock %}</div>
     </div>
     {% block project_body %}
-      {{ image_gallery(project.images) }}
+      {% if project.images is defined %}
+        {{ image_gallery(project.images) }}
+      {% endif %}
     {% endblock %}
   </div>
 {% endblock %}
