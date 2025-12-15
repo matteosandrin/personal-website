@@ -5,11 +5,9 @@
 {% set selected="projects" %}
 {% block title %}{{ project.title }} | Matteo Sandrin{% endblock %}
 {% block head %}{{ canonical(project.url) }}{% endblock %}
-{% block social_preview_url %}
-  {% if project.images is defined %}
-    {{ project.images[0].url }}
-  {% endif %}
-{% endblock %}
+{% if project.images is defined %}
+  {% block social_preview_url %}{{ project.images[0].url }}{% endblock %}
+{% endif %}
 {% block description %}
   This is Matteo Sandrin's personal website. This page showcases the
   {{ project.title }}
