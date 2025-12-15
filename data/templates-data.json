@@ -22,11 +22,13 @@
   },
   "projects_software": [
     {
-      "url": "https://diffusion.garden",
+      "url": "/projects/diffusion-garden",
       "img": "/assets/img/diffusion-garden/thumbnail.jpg",
       "title": "diffusion.garden",
       "subtitle": "A creative garden for image generation",
-      "newtab": true
+      "images": [
+        "/assets/img/diffusion-garden/diffusion-garden-01.jpg"
+      ]
     },
     {
       "url": "https://shadymap.com",

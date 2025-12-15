@@ -15,8 +15,8 @@
   {{ project.title }}
 {% endblock %}
 {% block body %}
-  <div class="flex flex-col gap-4">
-    <div class="mx-auto max-w-2xl">
+  <div class="flex flex-col items-center gap-4">
+    <div class="max-w-2xl">
       {{ title_subtitle(project.title, project.subtitle) }}
       <div class="mt-8">{% block project_description %}{% endblock %}</div>
     </div>

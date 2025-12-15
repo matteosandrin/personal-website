@@ -18,9 +18,10 @@
   <div>
     <h2 class="{{ title_classes }} md:text-center">{{ title }}</h2>
     {% if not subtitle is none %}
-      <h3 class="mt-2 text-xl leading-relaxed text-slate-500 md:text-center">
+      <div
+        class="mt-2 w-full text-xl leading-relaxed text-slate-500 md:text-center">
         {{ subtitle }}
-      </h3>
+      </div>
     {% endif %}
   </div>
 {% endmacro %}

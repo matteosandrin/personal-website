@@ -1,0 +1,164 @@
+{% extends "projects/_projects-page.html" %}
+{% set project = projects_software[0] %}
+{% block project_body %}
+  <div class="flex max-w-5xl flex-col items-center">
+    <div class="w-full md:text-center">
+      <div>
+        Try it out now at
+        <a href="https://diffusion.garden" class="link" target="_blank">
+          https://diffusion.garden
+        </a>
+      </div>
+    </div>
+    <img
+      src="/assets/img/diffusion-garden/diffusion-garden-01.jpg"
+      class="mt-8 w-full" />
+    <div class="max-w-2xl">
+      <h3>What is this?</h3>
+      <p>
+        <a href="https://diffusion.garden" class="link" target="_blank">
+          diffusion.garden
+        </a>
+        is an AI canvas for image generation that I built during my residency at
+        the
+        <!-- prettier-ignore -->
+        <a href="https://www.recurse.com/" class="link" target="_blank">Recurse Center</a>
+        . You start with a prompt, then branch it into connected text or image
+        blocks that can each run tools like expand, twist, image variations,
+        etc. Each block can take in input from multiple blocks, and direct
+        output to many other blocks. The edges between blocks preserve the
+        history of an idea, making it easy to branch and explore in multiple
+        directions.
+      </p>
+      <h3>Why did I build it?</h3>
+      <p>
+        I decided to build this as an exercise to get myself comfortable
+        integrating text and image generation into a real product. I also wanted
+        to run an experiment in building software that is tightly tailored to my
+        own needs. All the tools I’ve built into this product are the result of
+        trying to sand down the rough edges of my workflow in generating images.
+      </p>
+      <h3>Is there a demo?</h3>
+      <p>
+        You bet!
+        <a
+          href="https://www.youtube.com/watch?v=ruvm8wIi_I0"
+          class="link"
+          target="_blank">
+          Check out the demo below:
+        </a>
+      </p>
+      <div class="mt-4 w-full">
+        <iframe
+          class="aspect-[3720/2160] w-full"
+          src="https://www.youtube.com/embed/ruvm8wIi_I0?si=AIdMNkDg9ROifNCh"
+          title="diffusion.garden demo"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+      <h3>How does it work?</h3>
+      <p>
+        The main canvas is built on
+        <!-- prettier-ignore -->
+        <a href="https://reactflow.dev/" class="link" target="_blank">ReactFlow</a>
+        , an excellent library that provides scaffolding to build node-based
+        UIs, which runs inside a React+Typescript frontend. I decided to try out
+        <a
+          href="https://github.com/pmndrs/zustand"
+          class="link"
+          target="_blank">
+          Zustand
+        </a>
+        for state management, because it seemed like a lighter and simpler
+        alternative to Redux, and it has delivered on that expectation.
+      </p>
+
+      <p>
+        It would have been feasible to run this entire application
+        frontend-only, since I planned to offload inference to the OpenAI and
+        Gemini APIs. However, I had two key requirements for this project that
+        steered me towards implementing a backend:
+      </p>
+
+      <ul class="list-outside list-disc space-y-2 pl-12">
+        <li>
+          I wanted users to navigate to the website and start creating right
+          away. In a frontend-only application, this would have required me
+          shipping my OpenAI and Gemini API keys with the frontend, which would
+          expose them to abuse. By performing inference requests from my
+          backend, I have full control over their throughput and lifecycle.
+        </li>
+        <li>
+          I wanted users to be able to start an image or text generation task,
+          leave the canvas, and have that task complete in the background. This
+          required some mechanism for performing background jobs, which is much
+          easier to implement with a backend.
+        </li>
+      </ul>
+
+      <p>
+        To meet these requirements, I decided to implement a backend in Python,
+        running a
+        <a href="https://fastapi.tiangolo.com/" class="link" target="_blank">
+          FastAPI
+        </a>
+        web server with a Postgres database. The backend has several
+        responsibilities:
+      </p>
+      <ul class="list-outside list-disc space-y-2 pl-12">
+        <li>
+          It maintains a queue of image and text generation jobs, and kicks them
+          off asynchronously with retry logic and graceful failure. The frontend
+          is able to subscribe to the status of these jobs through Server Side
+          Events, and request both in-progress updates and final results. SSE is
+          also how I'm able to stream chunks of text as they come in from the
+          API, creating the pleasing waterfall effect during text generation.
+        </li>
+        <li>
+          It receives frequent updates on the state of the canvas itself, and
+          saves that state to the database. This allows the canvas to be
+          restored after a page refresh.
+        </li>
+        <li>
+          It manages the creation of pre-signed links for
+          <a
+            href="https://www.cloudflare.com/developer-platform/products/r2/"
+            class="link"
+            target="_blank">
+            Cloudflare R2
+          </a>
+          object storage (similar to AWS S3, but with a more generous free
+          tier!), which can then be used by both frontend and backend to upload
+          images. This frees up bandwidth in the backend server, and makes the
+          images load much faster since they are behind Cloudflare’s CDN.
+        </li>
+        <li>
+          It implements aggressive rate-limiting to the API endpoints for text
+          and image generation (30 req/min per IP address). This protects the
+          endpoints from abuse, and prevents my Google Cloud bill from
+          ballooning.
+        </li>
+      </ul>
+
+      <p>
+        Both frontend and backend are hosted on
+        <a href="https://railway.app/" class="link" target="_blank">Railway</a>
+        , as separate projects. Railway takes care of auto-scaling resources
+        vertically to my web server and database.
+      </p>
+      <h3>Where's the code?</h3>
+      <p>
+        The code for this project is open source and available on
+        <a
+          href="https://github.com/matteosandrin/diffusion-garden"
+          class="link"
+          target="_blank">
+          GitHub
+        </a>
+        .
+      </p>
+    </div>
+  </div>
+{% endblock %}

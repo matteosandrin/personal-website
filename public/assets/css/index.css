@@ -33,6 +33,10 @@
     @apply text-5xl font-medium;
   }
 
+  h3 {
+    @apply mt-8 text-3xl font-medium;
+  }
+
   .right-arrow,
   .close-button {
     .outer-color {
