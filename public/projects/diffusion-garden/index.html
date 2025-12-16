@@ -21,9 +21,10 @@
         </a>
         is an AI canvas for image generation that I built during my residency at
         the
-        <!-- prettier-ignore -->
-        <a href="https://www.recurse.com/" class="link" target="_blank">Recurse Center</a>
-        . You start with a prompt, then branch it into connected text or image
+        <!-- prettier-ignore-start -->
+        <a href="https://www.recurse.com/" class="link" target="_blank">Recurse Center</a>.
+        <!-- prettier-ignore-end -->
+        You start with a prompt, then branch it into connected text or image
         blocks that can each run tools like expand, twist, image variations,
         etc. Each block can take in input from multiple blocks, and direct
         output to many other blocks. The edges between blocks preserve the
@@ -61,16 +62,18 @@
       <h3>How does it work?</h3>
       <p>
         The main canvas is built on
-        <!-- prettier-ignore -->
-        <a href="https://reactflow.dev/" class="link" target="_blank">ReactFlow</a>
-        , an excellent library that provides scaffolding to build node-based
-        UIs, which runs inside a React+Typescript frontend. I decided to try out
+        <!-- prettier-ignore-start -->
+        <a href="https://reactflow.dev/" class="link" target="_blank">ReactFlow</a>,
+        <!-- prettier-ignore-end -->
+        an excellent library that provides scaffolding to build node-based UIs,
+        which runs inside a React+Typescript frontend. I decided to try out
+        <!-- prettier-ignore-start -->
         <a
           href="https://github.com/pmndrs/zustand"
           class="link"
           target="_blank">
-          Zustand
-        </a>
+          Zustand</a>
+        <!-- prettier-ignore-end -->
         for state management, because it seemed like a lighter and simpler
         alternative to Redux, and it has delivered on that expectation.
       </p>
@@ -101,9 +104,8 @@
       <p>
         To meet these requirements, I decided to implement a backend in Python,
         running a
-        <a href="https://fastapi.tiangolo.com/" class="link" target="_blank">
-          FastAPI
-        </a>
+        <!-- prettier-ignore -->
+        <a href="https://fastapi.tiangolo.com/" class="link" target="_blank">FastAPI</a>
         web server with a Postgres database. The backend has several
         responsibilities:
       </p>
@@ -144,20 +146,22 @@
 
       <p>
         Both frontend and backend are hosted on
-        <a href="https://railway.app/" class="link" target="_blank">Railway</a>
-        , as separate projects. Railway takes care of auto-scaling resources
+        <!-- prettier-ignore-start -->
+        <a href="https://railway.app/" class="link" target="_blank">Railway</a>,
+        <!-- prettier-ignore-end -->
+        as separate projects. Railway takes care of auto-scaling resources
         vertically to my web server and database.
       </p>
       <h3>Where's the code?</h3>
       <p>
         The code for this project is open source and available on
+        <!-- prettier-ignore-start -->
         <a
           href="https://github.com/matteosandrin/diffusion-garden"
           class="link"
           target="_blank">
-          GitHub
-        </a>
-        .
+          GitHub</a>.
+        <!-- prettier-ignore-end -->
       </p>
     </div>
   </div>
