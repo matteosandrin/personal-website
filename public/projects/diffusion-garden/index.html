@@ -81,8 +81,8 @@
       </p>
 
       <p>
-        It would have been feasible to run this entire application
-        frontend-only, since I planned to offload inference to the OpenAI and
+        It would have been feasible to run this entire application in the
+        frontend, since I planned to run inference through the OpenAI and
         Gemini APIs. However, I had two key requirements for this project that
         steered me towards implementing a backend:
       </p>
@@ -90,9 +90,9 @@
       <ul class="list-outside list-disc space-y-2 pl-12">
         <li>
           I wanted users to navigate to the website and start creating right
-          away. In a frontend-only application, this would have required me
+          away. In a frontend-only application, this would have required
           shipping my OpenAI and Gemini API keys with the frontend, which would
-          expose them to abuse. By performing inference requests from my
+          expose them to abuse. By performing inference requests from the
           backend, I have full control over their throughput and lifecycle.
         </li>
         <li>
@@ -118,15 +118,15 @@
           is able to subscribe to the status of these jobs through Server Side
           Events, and request both in-progress updates and final results. SSE is
           also how I'm able to stream chunks of text as they come in from the
-          API, creating the pleasing waterfall effect during text generation.
+          API, creating the waterfall effect during text generation.
         </li>
         <li>
-          It receives frequent updates on the state of the canvas itself, and
+          The backend receives frequent updates on the state of the canvas itself, and
           saves that state to the database. This allows the canvas to be
           restored after a page refresh.
         </li>
         <li>
-          It manages the creation of pre-signed links for
+          The backend manages the creation of pre-signed links for
           <a
             href="https://www.cloudflare.com/developer-platform/products/r2/"
             class="link"
@@ -136,10 +136,10 @@
           object storage (similar to AWS S3, but with a more generous free
           tier!), which can then be used by both frontend and backend to upload
           images. This frees up bandwidth in the backend server, and makes the
-          images load much faster since they are behind Cloudflare’s CDN.
+          images load much faster since they are behind Cloudflare's CDN.
         </li>
         <li>
-          It implements aggressive rate-limiting to the API endpoints for text
+          The backend implements aggressive rate-limiting to the API endpoints for text
           and image generation (30 req/min per IP address). This protects the
           endpoints from abuse, and prevents my Google Cloud bill from
           ballooning.
