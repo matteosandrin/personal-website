@@ -29,11 +29,11 @@
     @apply mt-4 text-lg md:text-base;
   }
 
-  h2 {
+  h1 {
     @apply text-5xl font-medium;
   }
 
-  h3.subheading {
+  h2.subheading {
     @apply mt-8 text-3xl font-medium;
   }
 

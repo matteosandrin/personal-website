@@ -50,7 +50,7 @@
         {% set chapter_index = loop.index0 %}
         {% for section in power_broker.sections %}
           {% if section.chapter == chapter_index %}
-            <h3 class="pt-4 font-serif text-2xl">{{ section.name | upper }}</h3>
+            <h2 class="pt-4 font-serif text-2xl">{{ section.name | upper }}</h2>
           {% endif %}
         {% endfor %}
         <li>
