@@ -33,7 +33,7 @@
     @apply text-5xl font-medium;
   }
 
-  h3 {
+  h3.subheading {
     @apply mt-8 text-3xl font-medium;
   }
 
