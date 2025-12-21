@@ -7,7 +7,7 @@
 {% block social_preview_url %}/assets/img/power-broker/social-preview.png{% endblock %}
 {% block body %}
   <div class="max-w-2xl">
-    {{ title_subtitle(book, "Chapter summaries of the entire book", title_classes="font-serif") }}
+    {{ title_subtitle(book, "Chapter summaries of the entire book", title_classes="font-serif", center=True) }}
     <p class="mt-8">
       I hope everyone reads "The Power Broker", but I recognize it's not
       realistic for most people to invest six months in doing so. I created this
@@ -39,7 +39,7 @@
     </p>
     <p>
       <a
-        class="link block w-full md:text-center"
+        class="link"
         target="_blank"
         href="https://github.com/matteosandrin/power-broker-ai-summaries">
         All the code for this project is on Github.

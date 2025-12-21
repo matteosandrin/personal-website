@@ -10,7 +10,18 @@
 {% block social_preview_url %}{{ film_images[2].url }}{% endblock %}
 {% block body %}
   <div class="flex flex-col gap-4">
-    {{ title_subtitle("photography") }}
+    <div class="mx-auto max-w-2xl">
+      {{ title_subtitle("photography") }}
+      <p>
+        Since I was a kid I've enjoyed taking pictures, and I've been shooting
+        on film since 2018. These photos were taken on either Kodak Ultramax 400
+        or Kodak Portra 400 film, with either a Nikon FE or a Pentax PC35AF
+        camera.
+      </p>
+      <p>
+        This is a small selection of pictures I think turned out well. Enjoy!
+      </p>
+    </div>
     {{ image_gallery(film_images) }}
   </div>
 {% endblock %}

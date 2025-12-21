@@ -1,19 +1,19 @@
 {% extends "projects/_projects-page.html" %}
 {% set project = projects_software[0] %}
+{% block project_description %}
+  <div>
+    Try it out now at
+    <a href="https://diffusion.garden" class="link" target="_blank">
+      https://diffusion.garden
+    </a>
+  </div>
+{% endblock %}
 {% block project_body %}
   <div class="flex max-w-5xl flex-col items-center">
-    <div class="w-full md:text-center">
-      <div>
-        Try it out now at
-        <a href="https://diffusion.garden" class="link" target="_blank">
-          https://diffusion.garden
-        </a>
-      </div>
-    </div>
     <a href="https://diffusion.garden" class="link" target="_blank">
       <img
         src="/assets/img/diffusion-garden/diffusion-garden-01.jpg"
-        class="mt-8 w-full shadow-xl" />
+        class="mt-4 w-full shadow-xl" />
     </a>
     <div class="max-w-2xl">
       <h2 class="subheading">What is this?</h2>

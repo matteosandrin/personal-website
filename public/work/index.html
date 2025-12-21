@@ -6,8 +6,11 @@
   professional accomplishments in software engineering
 {% endblock %}
 {% block body %}
-  <div class="flex flex-col gap-16">
-    {% include "work/_work-item-google.html" %}
-    {% include "work/_work-item-smartcar.html" %}
+  <div class="max-w-2xl">
+    <h1>work</h1>
+    <div>
+      {% include "work/_work-item-google.html" %}
+      {% include "work/_work-item-smartcar.html" %}
+    </div>
   </div>
 {% endblock %}

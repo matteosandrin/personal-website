@@ -16,7 +16,7 @@
 {% block body %}
   <div class="max-w-2xl">
     {% set subtitle="Summary of \"" + book + "\"" %}
-    {{ title_subtitle(self.chapter(), subtitle, title_classes="font-serif") }}
+    {{ title_subtitle(self.chapter(), subtitle, title_classes="font-serif", center=True) }}
     {{ power_broker_nav(self.index()) }}
     {% block content %}
     {% endblock %}
