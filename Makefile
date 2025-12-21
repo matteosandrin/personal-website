@@ -33,7 +33,7 @@ watch: build
 		${TEMPLATE_DIR} ${DATA_DIR}
 
 serve:
-	python3 -m http.server --directory ${DESTINATION_DIR}
+	python3 -m http.server --directory ${DESTINATION_DIR} 8080
 
 clean:
 	rm -rf $(DESTINATION_DIR)
