@@ -21,7 +21,7 @@
     </h1>
     {% if not subtitle is none %}
       <div
-        class="mt-2 w-full text-xl leading-relaxed text-slate-500 {{ 'md:text-center' if center }}">
+        class="{{ 'md:text-center' if center }} mt-2 w-full text-xl leading-relaxed text-slate-500">
         {{ subtitle }}
       </div>
     {% endif %}
