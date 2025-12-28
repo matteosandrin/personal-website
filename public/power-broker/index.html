@@ -45,28 +45,33 @@
         All the code for this project is on Github.
       </a>
     </p>
-    <ul class="mt-4 space-y-2">
+    <ul class="mt-8 space-y-2">
       {% for chapter in power_broker.chapters %}
         {% set chapter_index = loop.index0 %}
         {% for section in power_broker.sections %}
           {% if section.chapter == chapter_index %}
-            <h2 class="pt-4 font-serif text-xl font-semibold">
+            <h2 class="!mt-8 font-serif text-xl font-semibold">
               {{ section.name | upper }}
             </h2>
           {% endif %}
         {% endfor %}
         <li>
-          <div class="flex items-baseline gap-2">
-            <span class="shrink-0 whitespace-normal">
+          <div class="flex items-end gap-2">
+            <div class="max-w-[90%] shrink-0 whitespace-normal">
               <a href="/power-broker/{{ loop.index0 }}" class="link">
-                {{ chapter.name }}
+                {% if loop.index0 == 12 %}
+                  <!-- The title for chapter12 is too long on mobile -->
+                  {{ chapter.name | replace("Robert Moses", "RM") }}
+                {% else %}
+                  {{ chapter.name }}
+                {% endif %}
               </a>
-            </span>
-            <span
+            </div>
+            <div
               aria-hidden="true"
-              class="min-w-0 flex-1 border-b border-dotted border-black text-right">
+              class="min-w-0 flex-1 border-b border-dotted border-black text-right font-mono">
               {{ chapter.page }}
-            </span>
+            </div>
           </div>
         </li>
       {% endfor %}
