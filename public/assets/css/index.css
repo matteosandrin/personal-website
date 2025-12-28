@@ -15,7 +15,7 @@
   }
 
   .list {
-    @apply list-disc space-y-1 pl-6;
+    @apply list-disc space-y-2 pl-6;
   }
 
   p,
