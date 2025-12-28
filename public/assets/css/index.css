@@ -6,14 +6,8 @@
 
 @layer base {
   :root {
-    @apply text-slate-900;
-    font-size: 12px;
-  }
-
-  @screen md {
-    :root {
-      font-size: 16px;
-    }
+    color: #1a1a1a;
+    font-size: 16px;
   }
 
   .link {
@@ -21,20 +15,20 @@
   }
 
   .list {
-    @apply list-inside list-disc space-y-1;
+    @apply list-disc space-y-1 pl-6;
   }
 
   p,
   ul {
-    @apply mt-4 text-lg md:text-base;
+    @apply my-6 text-base;
   }
 
   h1 {
-    @apply text-5xl font-medium;
+    @apply mb-8 text-2xl font-semibold;
   }
 
   h2.subheading {
-    @apply mt-8 text-3xl font-medium;
+    @apply my-6 text-xl font-semibold;
   }
 
   .right-arrow,

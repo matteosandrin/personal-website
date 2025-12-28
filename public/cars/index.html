@@ -10,11 +10,7 @@
 {% block body %}
   <div class="max-w-2xl">
     <div class="mx-auto max-w-2xl">
-      {{ title_subtitle("cars") }}
-      <p>
-        (last update:
-        {{ last_updated_date | format_iso_date("%B %Y") | lower }})
-      </p>
+      {{ title_subtitle("Cars", "A list of all the cars I've ever driven") }}
       <p>
         I created this page as a place to collect every car I've ever driven,
         along with the stories, trips, and little quirks that made each one
@@ -23,8 +19,12 @@
         different kinds of cars feel to drive. Over time, it becomes a way to
         trace my travels, my tastes, and the evolution of automobiles.
       </p>
+      <p>
+        (last update:
+        {{ last_updated_date | format_iso_date("%B %Y") | lower }})
+      </p>
     </div>
-    <div class="mt-8 flex flex-col gap-8">
+    <div class="mt-8 flex flex-col">
       {% for car in cars | cars_sort_star_first %}
         {{ car_item(car) }}
       {% endfor %}

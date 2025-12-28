@@ -13,35 +13,37 @@
   </p>
 {% endblock %}
 {% block project_body %}
-  <div class="mx-auto w-full max-w-5xl">
-    <iframe
-      scrolling="no"
-      frameborder="0"
-      src="https://led.sandr.in"
-      class="aspect-[4.8] w-full"
-      id="led-frame"></iframe>
+  <div class="mx-auto max-w-2xl">
+    <div class="w-full">
+      <iframe
+        scrolling="no"
+        frameborder="0"
+        src="https://led.sandr.in"
+        class="aspect-[4.8] w-full"
+        id="led-frame"></iframe>
+    </div>
+    {% set svg_train_class = "inline aspect-square w-4 scale-125 mt-[-0.2rem]" %}
+    <p>
+      The real display hangs in my home, but I've made the web simulation above
+      to show what it looks like in action. It's currently showing arrivals
+      based on historical data for the 86th st
+      <img
+        src="/assets/img/led-matrix/b_train.svg"
+        class="{{ svg_train_class }}" />
+      <img
+        src="/assets/img/led-matrix/c_train.svg"
+        class="{{ svg_train_class }}" />
+      train station in New York.
+    </p>
+    <p>
+      <a
+        class="link block w-full md:text-center"
+        target="_blank"
+        href="https://github.com/matteosandrin/led-matrix-sign-python">
+        All the code for this project is on Github.
+      </a>
+    </p>
   </div>
-  {% set svg_train_class = "inline aspect-square w-4 scale-125 mt-[-0.2rem]" %}
-  <p class="mx-auto mt-0 max-w-2xl">
-    The real display hangs in my home, but I've made the web simulation above to
-    show what it looks like in action. It's currently showing arrivals based on
-    historical data for the 86th st
-    <img
-      src="/assets/img/led-matrix/b_train.svg"
-      class="{{ svg_train_class }}" />
-    <img
-      src="/assets/img/led-matrix/c_train.svg"
-      class="{{ svg_train_class }}" />
-    train station in New York.
-  </p>
-  <p>
-    <a
-      class="link block w-full md:text-center"
-      target="_blank"
-      href="https://github.com/matteosandrin/led-matrix-sign-python">
-      All the code for this project is on Github.
-    </a>
-  </p>
   <!-- Image gallery -->
   {{ super() }}
 {% endblock %}

@@ -15,13 +15,13 @@
 {% endmacro %}
 
 {% macro title_subtitle(title, subtitle=None, title_classes="", center=False) %}
-  <div>
-    <h1 class="{{ title_classes }} {{ 'md:text-center' if center }}">
+  <div class="mb-8">
+    <h1 class="{{ title_classes }} {{ 'md:text-center' if center }} mb-0">
       {{ title }}
     </h1>
     {% if not subtitle is none %}
       <div
-        class="{{ 'md:text-center' if center }} mt-2 w-full text-xl leading-relaxed text-slate-500">
+        class="{{ 'md:text-center' if center }} w-full leading-relaxed text-slate-500">
         {{ subtitle }}
       </div>
     {% endif %}
