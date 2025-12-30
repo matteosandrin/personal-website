@@ -2,12 +2,10 @@
 {% from "_partials/_macros.html" import title_subtitle %}
 
 {% macro projects_section(title, items) %}
-  <div>
-    {{ title_subtitle(title) }}
-    <div class="grid grid-cols-1 justify-center gap-8 md:grid-cols-2">
-      {% for item in items %}
-        {{ project_tile(item) }}
-      {% endfor %}
-    </div>
+  <h2>{{ title }}</h2>
+  <div class="mt-single grid grid-cols-1 justify-center gap-3 md:grid-cols-2">
+    {% for item in items %}
+      {{ project_tile(item) }}
+    {% endfor %}
   </div>
 {% endmacro %}

@@ -16,7 +16,7 @@
   <div>
     <div class="mx-auto w-full max-w-2xl">
       {{ title_subtitle(project.title, project.subtitle) }}
-      <div class="mt-8">{% block project_description %}{% endblock %}</div>
+      <div class="mt-triple">{% block project_description %}{% endblock %}</div>
     </div>
     {% block project_body %}
       {% if project.images is defined %}

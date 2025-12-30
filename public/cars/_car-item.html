@@ -1,7 +1,7 @@
 {% from "_partials/_macros.html" import tooltip %}
 {% macro car_item(car) %}
   <div>
-    <h2 class="subheading !mt-0">
+    <h2>
       {{ car.make }} {{ car.model }}
       {% if car.star %}
         <span class="group relative">
@@ -23,11 +23,13 @@
         </span>
       {% endif %}
     </h2>
-    <img
-      class="mt-4 aspect-[2/1] w-full rounded-xl object-contain object-center"
-      src="{{ car.img.url }}"
-      alt="" />
-    <table class="mt-4">
+    <div class="img-container">
+      <img
+        class="aspect-[2/1] w-full rounded-xl object-contain object-center"
+        src="{{ car.img.url }}"
+        alt="" />
+    </div>
+    <table>
       <tr>
         <td class="py-[0.25rem] font-medium">Date</td>
         <td class="py-[0.25rem] pl-4">

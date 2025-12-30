@@ -18,17 +18,31 @@
     @apply list-disc space-y-2 pl-6;
   }
 
+  .list-single {
+    @apply list space-y-1;
+  }
+
   p,
   ul {
-    @apply my-6 text-base;
+    @apply mt-single text-base;
   }
 
   h1 {
-    @apply mb-8 text-2xl font-semibold;
+    @apply mb-triple text-4xl font-bold;
   }
 
-  h2.subheading {
-    @apply my-6 text-xl font-semibold;
+  h2 {
+    @apply mt-double text-2xl font-bold;
+  }
+
+  .img-container,
+  iframe {
+    @apply mt-double;
+  }
+
+  .img-container + *,
+  iframe + * {
+    @apply mt-double;
   }
 
   .right-arrow,

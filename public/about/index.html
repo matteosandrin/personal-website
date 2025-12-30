@@ -24,8 +24,8 @@
         stuff • film photography • transit • subway signage • Fellini films •
         Wes Anderson films
       </p>
-      <h2 class="subheading">How to reach me</h2>
-      <ul class="list">
+      <h2>How to reach me</h2>
+      <ul class="list-single">
         <li>sandrin98@gmail.com (reply guaranteed!)</li>
         {% for social in config.socials %}
           <li>
@@ -36,7 +36,9 @@
         {% endfor %}
       </ul>
       <p>(last update: july 2025)</p>
-      <img src="/assets/img/matteo-about.jpg" alt="" />
+      <div class="img-container">
+        <img src="/assets/img/matteo-about.jpg" alt="" />
+      </div>
     </div>
   </div>
 {% endblock %}

@@ -9,13 +9,14 @@
   projects.
 {% endblock %}
 {% block body %}
-  <div class="flex max-w-2xl flex-col gap-8">
-    {{ projects_section("Projects", projects_software) }}
+  <div class="max-w-2xl">
+    <h1>Projects</h1>
+    {{ projects_section("Software", projects_software) }}
     {{ projects_section("Design+&ZeroWidthSpace;art", projects_design) }}
     <div>
-      {{ title_subtitle("Experiments") }}
+      <h2>Experiments</h2>
       <div>
-        <ul class="list mt-0">
+        <ul class="list">
           <li>
             <a class="link" href="https://trainlog.sandr.in">
               A web app to track all subway cars I've ridden.

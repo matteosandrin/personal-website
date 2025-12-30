@@ -9,16 +9,18 @@
     id="gallery"
     class="pswp-gallery pswp-gallery--single-column flex max-w-7xl flex-col">
     {% for image in images %}
-      <a
-        data-pswp-src="{{ image.url }}"
-        data-pswp-width="{{ image.width }}"
-        data-pswp-height="{{ image.height }}"
-        alt="">
-        <img
-          src="{{ image.url }}"
-          class="mx-auto mt-4 cursor-zoom-in object-contain md:max-h-[75vh]"
-          alt="" />
-      </a>
+      <div class="img-container">
+        <a
+          data-pswp-src="{{ image.url }}"
+          data-pswp-width="{{ image.width }}"
+          data-pswp-height="{{ image.height }}"
+          alt="">
+          <img
+            src="{{ image.url }}"
+            class="mx-auto cursor-zoom-in object-contain md:max-h-[75vh]"
+            alt="" />
+        </a>
+      </div>
     {% endfor %}
   </div>
   <script type="module" src="/assets/js/image-gallery.js"></script>

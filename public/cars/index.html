@@ -24,7 +24,7 @@
         {{ last_updated_date | format_iso_date("%B %Y") | lower }})
       </p>
     </div>
-    <div class="mt-8 flex flex-col">
+    <div class="mt-triple">
       {% for car in cars | cars_sort_star_first %}
         {{ car_item(car) }}
       {% endfor %}

@@ -12,6 +12,11 @@ module.exports = {
         serif: ['"Perfectly Nineties"', ...defaultTheme.fontFamily.serif],
         mono: ['"Inconsolata"', ...defaultTheme.fontFamily.mono],
       },
+      margin: {
+        single: "0.75rem",
+        double: "1.5rem",
+        triple: "2.25rem",
+      },
     },
   },
   plugins: [],
