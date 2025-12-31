@@ -8,7 +8,10 @@
 {% block body %}
   <div class="max-w-2xl">
     {{ title_subtitle(book, "Chapter summaries of the entire book", title_classes="font-serif", center=True) }}
-    <p class="mt-triple">
+    <p class="md:text-center">
+      <a href="#chapter-summaries" class="link">Jump to chapter summaries</a>
+    </p>
+    <p>
       I hope everyone reads "The Power Broker", but I recognize it's not
       realistic for most people to invest six months in doing so. I created this
       repository of chapter summaries as an easier on-ramp to the book, and to
@@ -45,7 +48,7 @@
         All the code for this project is on Github.
       </a>
     </p>
-    <ul class="mt-triple space-y-2">
+    <ul id="chapter-summaries" class="mt-triple space-y-2">
       {% for chapter in power_broker.chapters %}
         {% set chapter_index = loop.index0 %}
         {% for section in power_broker.sections %}
