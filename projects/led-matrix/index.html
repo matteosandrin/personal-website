@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LED subway sign | Matteo Sandrin</title>
+    
+  <link rel="canonical" href="https://sandr.in/projects/led-matrix" />
+
+    <meta
+      name="description"
+      content="
+  This is Matteo Sandrin's personal website. This page showcases the
+  LED subway sign
+" />
+    <meta name="twitter:site" content="@TeoSandrin" />
+    <meta name="twitter:title" content="LED subway sign | Matteo Sandrin" />
+    <meta name="twitter:description" content="
+  This is Matteo Sandrin's personal website. This page showcases the
+  LED subway sign
+" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image:src"
+      content="https://sandr.in/assets/img/led-matrix/led-matrix-01.jpg" />
+    <meta name="og:site_name" content="LED subway sign | Matteo Sandrin" />
+    <meta name="og:type" content="object" />
+    <meta name="og:title" content="LED subway sign | Matteo Sandrin" />
+    <meta name="og:url" content="https://sandr.in" />
+    <meta name="og:description" content="
+  This is Matteo Sandrin's personal website. This page showcases the
+  LED subway sign
+" />
+    <meta
+      name="og:image"
+      content="https://sandr.in/assets/img/led-matrix/led-matrix-01.jpg" />
+    <meta name="og:image:alt" content="
+  This is Matteo Sandrin's personal website. This page showcases the
+  LED subway sign
+" />
+    <meta name="og:image:width" content="1280" />
+    <meta name="og:image:height" content="640" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent" />
+    <meta name="theme-color" content="#f5f9fa" />
+    <link rel="shortcut icon" type="image/png" href="/assets/img/favicon.ico" />
+    <link rel="stylesheet" href="/assets/css/index.css" />
+  </head>
+  <body class="flex min-h-screen flex-col bg-blueish-gray">
+    <div class="px-4 md:px-12">
+  <div
+    class="mx-auto flex max-w-2xl flex-col py-4 text-xl md:w-full md:flex-row md:items-baseline md:justify-between">
+    <a href="/">Matteo Sandrin</a>
+    <div class="flex w-fit gap-4 pt-2 font-mono text-base md:pt-0">
+      
+      
+
+      
+        <a href="/about" class="text-center hover:underline">about</a>
+      
+      
+        <span class="text-slate-400">/</span>
+      
+      
+        <a href="/work" class="text-center hover:underline">work</a>
+      
+      
+        <span class="text-slate-400">/</span>
+      
+      
+        <a href="/projects" class="text-center hover:underline">projects</a>
+      
+      
+        <span class="text-slate-400">/</span>
+      
+      
+        <a href="/photo" class="text-center hover:underline">photo</a>
+      
+    </div>
+  </div>
+</div>
+    <div class="mx-auto flex-grow px-4 py-8 md:px-12">
+      
+  <div>
+    <div class="mx-auto w-full max-w-2xl">
+      
+  <div class="mb-triple">
+    <h1 class="  mb-0">
+      LED subway sign
+    </h1>
+    
+      <div
+        class=" w-full leading-relaxed text-slate-500">
+        A replica of the NYC subway platform display
+      </div>
+    
+  </div>
+
+      <div class="mt-triple">
+  <p>
+    The display shows a real-time view of the incoming trains for either New
+    York or Boston subway stops. It's powered by five 32x32 dot matrix LED
+    displays daisy-chained and controlled by a Rasbperry Pi. The MTA and MBTA
+    fonts were faithfully re-created pixel-by-pixel from hundreds of reference
+    pictures, along with the specific copy and timing of announcements. The
+    final product is an exact and functional replica of both the MTA's and
+    MBTA's arrival boards. The display can also show currently playing songs and
+    album art from Spotify.
+  </p>
+</div>
+    </div>
+    
+  <div class="mx-auto max-w-2xl">
+    <div class="w-full">
+      <iframe
+        scrolling="no"
+        frameborder="0"
+        src="https://led.sandr.in"
+        class="aspect-[4.8] w-full"
+        id="led-frame"></iframe>
+    </div>
+    
+    <p>
+      The real display hangs in my home, but I've made the web simulation above
+      to show what it looks like in action. It's currently showing arrivals
+      based on historical data for the 86th st
+      <img
+        src="/assets/img/led-matrix/b_train.svg"
+        class="inline aspect-square w-4 scale-125 mt-[-0.2rem]" />
+      <img
+        src="/assets/img/led-matrix/c_train.svg"
+        class="inline aspect-square w-4 scale-125 mt-[-0.2rem]" />
+      train station in New York.
+    </p>
+    <p>
+      <a
+        class="link block w-full md:text-center"
+        target="_blank"
+        href="https://github.com/matteosandrin/led-matrix-sign-python">
+        All the code for this project is on Github.
+      </a>
+    </p>
+  </div>
+  <!-- Image gallery -->
+  
+      
+        
+  <link rel="stylesheet" href="/assets/css/photoswipe.css" />
+  <style>
+    .pswp {
+      --pswp-bg: white;
+    }
+  </style>
+  <div
+    id="gallery"
+    class="pswp-gallery pswp-gallery--single-column flex max-w-7xl flex-col">
+    
+      <div class="img-container">
+        <a
+          data-pswp-src="/assets/img/led-matrix/led-matrix-01.jpg"
+          data-pswp-width="2000"
+          data-pswp-height="1334"
+          alt="">
+          <img
+            src="/assets/img/led-matrix/led-matrix-01.jpg"
+            class="mx-auto cursor-zoom-in object-contain md:max-h-[75vh]"
+            alt="" />
+        </a>
+      </div>
+    
+      <div class="img-container">
+        <a
+          data-pswp-src="/assets/img/led-matrix/led-matrix-02.jpg"
+          data-pswp-width="2000"
+          data-pswp-height="1334"
+          alt="">
+          <img
+            src="/assets/img/led-matrix/led-matrix-02.jpg"
+            class="mx-auto cursor-zoom-in object-contain md:max-h-[75vh]"
+            alt="" />
+        </a>
+      </div>
+    
+      <div class="img-container">
+        <a
+          data-pswp-src="/assets/img/led-matrix/led-matrix-03.jpg"
+          data-pswp-width="2000"
+          data-pswp-height="1333"
+          alt="">
+          <img
+            src="/assets/img/led-matrix/led-matrix-03.jpg"
+            class="mx-auto cursor-zoom-in object-contain md:max-h-[75vh]"
+            alt="" />
+        </a>
+      </div>
+    
+      <div class="img-container">
+        <a
+          data-pswp-src="/assets/img/led-matrix/led-matrix-04.jpg"
+          data-pswp-width="2000"
+          data-pswp-height="1333"
+          alt="">
+          <img
+            src="/assets/img/led-matrix/led-matrix-04.jpg"
+            class="mx-auto cursor-zoom-in object-contain md:max-h-[75vh]"
+            alt="" />
+        </a>
+      </div>
+    
+      <div class="img-container">
+        <a
+          data-pswp-src="/assets/img/led-matrix/led-matrix-05.jpg"
+          data-pswp-width="2000"
+          data-pswp-height="1333"
+          alt="">
+          <img
+            src="/assets/img/led-matrix/led-matrix-05.jpg"
+            class="mx-auto cursor-zoom-in object-contain md:max-h-[75vh]"
+            alt="" />
+        </a>
+      </div>
+    
+      <div class="img-container">
+        <a
+          data-pswp-src="/assets/img/led-matrix/led-matrix-06.jpg"
+          data-pswp-width="2000"
+          data-pswp-height="1333"
+          alt="">
+          <img
+            src="/assets/img/led-matrix/led-matrix-06.jpg"
+            class="mx-auto cursor-zoom-in object-contain md:max-h-[75vh]"
+            alt="" />
+        </a>
+      </div>
+    
+  </div>
+  <script type="module" src="/assets/js/image-gallery.js"></script>
+
+      
+    
+
+  </div>
+
+    </div>
+    
+<div class="w-full pb-8 pt-4 text-center text-slate-500">
+  like what you see?
+  <a class="link" target="_blank" href="https://x.com/teosandrin">follow me!</a>
+</div>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-122674032-1"></script>
+    <script src="/assets/js/google-ads.js"></script>
+    <script src="/assets/js/notify.js" type="module"></script>
+  </body>
+</html>
