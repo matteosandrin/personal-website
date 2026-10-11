@@ -36,3 +36,22 @@
       class="absolute -bottom-1 left-1/2 h-2 w-2 -translate-x-1/2 rotate-45 bg-gray-900"></div>
   </div>
 {% endmacro %}
+
+{# Inline label that shows content on hover or tap. Parent must be relative. #}
+{% macro inline_tooltip(label, content) %}
+  <span
+    class="group cursor-help underline decoration-slate-400 decoration-dotted underline-offset-4"
+    tabindex="0">
+    {{- label -}}
+    {# Padding fills the gap to the label, so hover stays on the way up.
+       Visibility transition keeps the tooltip on screen while it fades out. #}
+    <span
+      class="invisible absolute left-0 right-0 z-10 mx-auto w-fit -translate-y-full pb-2 opacity-0 transition-[opacity,visibility] duration-300 group-hover:visible group-hover:opacity-100 group-focus:visible group-focus:opacity-100">
+      <span
+        class="block cursor-text select-text break-all rounded-lg bg-gray-900 px-3 py-2 font-mono text-sm text-white">
+        {{- content -}}
+      </span>
+    </span>
+    {#- -#}
+  </span>
+{% endmacro %}

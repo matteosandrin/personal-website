@@ -35,6 +35,18 @@
     @apply mt-double text-2xl font-bold;
   }
 
+  code {
+    @apply rounded bg-slate-200/70 px-1 font-mono [overflow-wrap:anywhere];
+  }
+
+  pre {
+    @apply mt-single overflow-x-auto rounded bg-slate-200/70 p-4 leading-relaxed [contain:inline-size];
+  }
+
+  pre code {
+    @apply break-normal bg-transparent p-0;
+  }
+
   .img-container,
   iframe {
     @apply mt-double;
