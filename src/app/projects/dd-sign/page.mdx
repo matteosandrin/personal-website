@@ -1,0 +1,18 @@
+import { Gallery } from "@/components/Gallery";
+import { ProjectLayout } from "@/components/ProjectLayout";
+import { getProject, projectMetadata } from "../projects";
+
+export const project = getProject("/projects/dd-sign");
+export const metadata = projectMetadata(project);
+
+<ProjectLayout title={project.title} subtitle={project.subtitle}>
+
+I found this original Dunkin Donuts neon sign in an antique shop in Rhode
+Island, laying non-functional in a corner. It was originally manufactured in
+2009 in Virginia. I cleaned up the inside, dirty after years of outdoors
+service, and I redid the internal wiring from scratch. The sign originally came
+with cool white neon bulbs, but I changed them out for moody warm white ones.
+
+</ProjectLayout>
+
+<Gallery images={project.images} />

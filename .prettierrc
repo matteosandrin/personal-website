@@ -1,14 +1,8 @@
 {
+  "plugins": ["prettier-plugin-tailwindcss"],
   "overrides": [
     {
-      "files": ["*.html"],
-      "options": {
-        "parser": "jinja-template",
-        "htmlWhitespaceSensitivity": "ignore"
-      }
-    },
-    {
-      "files": ["*.md"],
+      "files": ["*.md", "*.mdx"],
       "options": {
         "proseWrap": "always"
       }

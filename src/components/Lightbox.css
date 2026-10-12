@@ -1,0 +1,22 @@
+/* Loaded after photoswipe/style.css, so these rules win. */
+.pswp {
+  --pswp-bg: white;
+}
+
+.right-arrow .outer-color,
+.close-button .outer-color {
+  fill: transparent;
+  stroke: black;
+  stroke-width: 2.5px;
+  color: black;
+  opacity: 0.6;
+  stroke-linecap: square;
+}
+
+.right-arrow .inner-color,
+.close-button .inner-color {
+  fill: transparent;
+  stroke: #fff;
+  stroke-width: 1.5px;
+  stroke-linecap: square;
+}

@@ -1,23 +1,36 @@
 {
   "name": "personal-website",
   "version": "1.0.0",
+  "private": true,
   "description": "Matteo Sandrin's personal website",
-  "main": "index.js",
-  "scripts": {
-    "build-tailwind": "npx tailwindcss -i public/assets/css/index.css -o build/assets/css/index.css",
-    "watch-tailwind": "npx tailwindcss -i public/assets/css/index.css -o build/assets/css/index.css --watch"
-  },
   "author": "Matteo Sandrin",
   "license": "ISC",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "npx serve out",
+    "format": "prettier . --write"
+  },
   "dependencies": {
-    "autoprefixer": "^10.4.14",
-    "photoswipe": "^5.3.7",
-    "postcss-cli": "^10.1.0",
-    "tailwindcss": "^3.3.2"
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.4.0",
+    "image-size": "^2.0.2",
+    "next": "^16.4.0",
+    "photoswipe": "^5.4.4",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
   },
   "devDependencies": {
-    "prettier": "^2.8.8",
-    "prettier-plugin-jinja-template": "^0.5.0",
-    "prettier-plugin-tailwindcss": "^0.3.0"
+    "@types/mdx": "^2.0.14",
+    "@types/node": "^26.6.5",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.29",
+    "prettier": "^3.9.10",
+    "prettier-plugin-tailwindcss": "^0.8.1",
+    "tailwindcss": "^3.4.19",
+    "typescript": "^7.0.2"
   }
 }
