@@ -8,6 +8,8 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Check out
         uses: actions/checkout@v4
@@ -25,7 +27,11 @@ jobs:
         run: npm run build
 
       - name: Publish build output to GitHub Pages
-        uses: rayluo/github-pages-overwriter@v1.3
+        # Push out/ to gh-pages as one commit. The old action used "git add -A",
+        # which skips out/ because .gitignore lists it.
+        uses: peaceiris/actions-gh-pages@v4
         with:
-          source-directory: out
-          target-branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          publish_branch: gh-pages
+          force_orphan: true
