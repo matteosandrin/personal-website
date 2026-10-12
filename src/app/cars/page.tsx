@@ -4,7 +4,8 @@ import { cars, formatDate, sortByDateDesc, sortStarFirst } from "./cars";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Cars | Matteo Sandrin",
+  title: "Cars",
+  path: "/cars",
   description: siteDescription(
     "This page shows the cars that I've driven throughout the years.",
   ),

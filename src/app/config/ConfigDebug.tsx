@@ -5,8 +5,8 @@ import {
   type IpData,
   getIpData,
   isBot,
-  isLocal,
-  toggleTracking,
+  isTrackingOff,
+  setTrackingOff,
 } from "@/lib/notify";
 
 const tableClass =
@@ -17,9 +17,14 @@ export function ConfigDebug() {
   const [tracking, setTracking] = useState<boolean>();
 
   useEffect(() => {
-    setTracking(!isLocal());
+    setTracking(!isTrackingOff());
     getIpData().then(setIp);
   }, []);
+
+  const toggleTracking = () => {
+    setTrackingOff(Boolean(tracking));
+    setTracking(!tracking);
+  };
 
   const info = [
     ["Current IP", ip?.ip],

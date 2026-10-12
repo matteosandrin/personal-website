@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
-import type { Project } from "@/app/projects/projects";
+import { getImageSize } from "@/lib/image-size";
+
+export const SITE_NAME = "Matteo Sandrin";
+
+// The root layout adds " | Matteo Sandrin" to each page title.
+export const TITLE_TEMPLATE = {
+  template: `%s | ${SITE_NAME}`,
+  default: SITE_NAME,
+};
 
 export function siteDescription(text: string) {
   return `This is Matteo Sandrin's personal website. ${text}`;
@@ -11,31 +19,32 @@ const DEFAULT_DESCRIPTION = siteDescription(
 const DEFAULT_IMAGE = "/assets/img/social-preview.jpg";
 
 type PageMetadata = {
-  title: string;
+  // Use { absolute } for a title without the site name.
+  title: string | { absolute: string };
+  // Root-relative URL of the page. It is the canonical and og:url.
+  path: string;
   description?: string;
   // Root-relative URL of the social preview image.
   image?: string;
-  // Root-relative URL of the canonical page.
-  canonical?: string;
 };
 
 export function pageMetadata({
   title,
+  path,
   description = DEFAULT_DESCRIPTION,
   image = DEFAULT_IMAGE,
-  canonical,
 }: PageMetadata): Metadata {
   return {
     title,
     description,
-    alternates: canonical ? { canonical } : undefined,
+    alternates: { canonical: path },
     openGraph: {
-      siteName: title,
+      siteName: SITE_NAME,
       type: "website",
       title,
-      url: "/",
+      url: path,
       description,
-      images: [{ url: image, width: 1280, height: 640, alt: description }],
+      images: [{ url: image, ...getImageSize(image), alt: description }],
     },
     twitter: {
       card: "summary_large_image",
@@ -45,13 +54,4 @@ export function pageMetadata({
       images: [image],
     },
   };
-}
-
-export function projectMetadata(project: Project) {
-  return pageMetadata({
-    title: `${project.title} | Matteo Sandrin`,
-    description: siteDescription(`This page showcases the ${project.title}`),
-    image: project.preview ?? project.images?.[0],
-    canonical: project.url,
-  });
 }

@@ -1,7 +1,6 @@
 import { Gallery } from "@/components/Gallery";
 import { ProjectLayout } from "@/components/ProjectLayout";
-import { designProjects, getProject } from "../projects";
-import { projectMetadata } from "@/lib/metadata";
+import { designProjects, getProject, projectMetadata } from "../projects";
 
 // Projects with an intro and a gallery. Other projects have their own page.
 type Props = { params: Promise<{ slug: string }> };
@@ -20,8 +19,12 @@ export async function generateMetadata({ params }: Props) {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   const project = getProject(`/projects/${slug}`);
+  const { default: Intro } = await import(`../intros/${slug}.mdx`);
   return (
-    <ProjectLayout project={project}>
+    <ProjectLayout
+      title={project.title}
+      subtitle={project.subtitle}
+      intro={<Intro />}>
       <Gallery images={project.images!} />
     </ProjectLayout>
   );

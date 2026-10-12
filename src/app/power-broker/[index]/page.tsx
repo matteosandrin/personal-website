@@ -12,9 +12,11 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props) {
-  const { name } = chapters[Number((await params).index)];
+  const { index } = await params;
+  const { name } = chapters[Number(index)];
   return pageMetadata({
-    title: `${name} | ${BOOK}: Chapter Summary`,
+    title: { absolute: `${name} | ${BOOK}: Chapter Summary` },
+    path: `/power-broker/${index}`,
     description: `Summary of 'Chapter ${name}' of the book '${BOOK}' by ${AUTHOR}`,
     image: SOCIAL_PREVIEW,
   });

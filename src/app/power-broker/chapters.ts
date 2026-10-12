@@ -2,7 +2,12 @@ export const BOOK = "The Power Broker";
 export const AUTHOR = "Robert Caro";
 export const SOCIAL_PREVIEW = "/assets/img/power-broker/social-preview.png";
 
-export type Chapter = { name: string; page: number };
+export type Chapter = {
+  name: string;
+  page: number;
+  // Shorter name for the index, if the name is too long on mobile.
+  shortName?: string;
+};
 
 // The parts of the book, in order.
 export const parts: { name: string; chapters: Chapter[] }[] = [
@@ -39,7 +44,11 @@ export const parts: { name: string; chapters: Chapter[] }[] = [
     name: "Part IV : The Use of Power",
     chapters: [
       { name: "11. The Majesty of the Law", page: 181 },
-      { name: "12. Robert Moses and the Creature of the Machine", page: 207 },
+      {
+        name: "12. Robert Moses and the Creature of the Machine",
+        shortName: "12. RM and the Creature of the Machine",
+        page: 207,
+      },
       { name: "13. Driving", page: 226 },
       { name: "14. Changing", page: 241 },
       { name: "15. Curator of Cauliflowers", page: 260 },

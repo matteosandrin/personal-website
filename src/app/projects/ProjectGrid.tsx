@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Img } from "@/components/Img";
 import type { Project } from "./projects";
 
 type Props = {
@@ -25,10 +26,9 @@ function ProjectCard({ project }: { project: Project }) {
       href={project.url}
       target={project.newTab ? "_blank" : undefined}
       className="group">
-      <img
+      <Img
         className="aspect-square w-full object-cover object-center"
         src={project.img}
-        alt=""
       />
       <div className="mt-2 text-center font-mono group-hover:underline">
         {project.title}

@@ -3,22 +3,23 @@ import { SvgClock } from "./SvgClock";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Wall of SVGs | Matteo Sandrin",
+  title: "Wall of SVGs",
+  path: "/svgwall",
   description: siteDescription(
-    "This page shows some SVGs that I've made for various",
+    "This page shows some SVGs that I've made for various projects.",
   ),
 });
 
 const clocks = [
   {
-    src: "/assets/img/jr-clock.svg",
+    clock: "jr",
     caption: "The iconic JR clock found in Japanese train stations.",
   },
   {
-    src: "/assets/img/milano-metro-clock.svg",
+    clock: "milano",
     caption: "The clock found in Milan metro stations.",
   },
-];
+] as const;
 
 export default function SvgWall() {
   return (
@@ -35,9 +36,9 @@ export default function SvgWall() {
         Enjoy!
       </p>
       <div className="mt-triple flex flex-col gap-8">
-        {clocks.map(({ src, caption }) => (
-          <div key={src}>
-            <SvgClock src={src} />
+        {clocks.map(({ clock, caption }) => (
+          <div key={clock}>
+            <SvgClock clock={clock} />
             <p className="text-center">{caption}</p>
           </div>
         ))}

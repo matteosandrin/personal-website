@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
-import { isBot, isLocal, notify } from "@/lib/notify";
+import { isBot, isTrackingOff, notify } from "@/lib/notify";
 
 // Sends a visit notification 2s after each page view. Navigation is
 // client-side, so this runs on each path change, not only on page load.
@@ -10,7 +10,7 @@ export function VisitNotifier() {
   const pathname = usePathname();
 
   useEffect(() => {
-    if (isBot() || isLocal()) return;
+    if (isBot() || isTrackingOff()) return;
     const timer = window.setTimeout(() => notify(pathname), 2000);
     return () => window.clearTimeout(timer);
   }, [pathname]);

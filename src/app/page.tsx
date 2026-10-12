@@ -1,10 +1,12 @@
 import Link from "next/link";
+import { BulletList } from "@/components/BulletList";
+import { Img } from "@/components/Img";
 import { TextLink } from "@/components/TextLink";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Matteo Sandrin",
-  canonical: "/",
+  title: { absolute: "Matteo Sandrin" },
+  path: "/",
 });
 
 export default function Home() {
@@ -12,21 +14,19 @@ export default function Home() {
     <div className="max-w-2xl">
       <Link href="/projects/metrocard">
         <div className="group relative">
-          <img
+          <Img
             className="w-full group-hover:hidden"
             src="/assets/img/metrocard/metrocard-splash.png"
-            alt=""
           />
-          <img
+          <Img
             className="hidden w-full group-hover:block"
             src="/assets/img/metrocard/metrocard-splash-back.png"
-            alt=""
           />
         </div>
       </Link>
       <div className="mx-auto mt-double w-fit">
         <p>Some things I've made recently:</p>
-        <ul className="list">
+        <BulletList>
           <li>
             <TextLink href="/ipod-podcasts">
               A guide to syncing podcasts to an iPod
@@ -50,7 +50,7 @@ export default function Home() {
           <li>
             <TextLink href="/projects">(more fun stuff)</TextLink>
           </li>
-        </ul>
+        </BulletList>
       </div>
     </div>
   );

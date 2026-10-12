@@ -1,30 +1,32 @@
+import { BulletList } from "@/components/BulletList";
+import { Img } from "@/components/Img";
 import { ProjectLayout } from "@/components/ProjectLayout";
 import { TextLink } from "@/components/TextLink";
 import { Tooltip } from "@/components/Tooltip";
-import type { Project } from "@/app/projects/projects";
-import { projectMetadata } from "@/lib/metadata";
+import { pageMetadata, siteDescription } from "@/lib/metadata";
 
-const project: Project = {
-  url: "/ipod-podcasts",
-  title: "How to Sync Podcasts to an iPod",
-  images: ["/assets/img/ipod-podcasts/ipod-podcasts-01.jpg"],
-};
-export const metadata = projectMetadata(project);
+const TITLE = "How to Sync Podcasts to an iPod";
+const IMAGE = "/assets/img/ipod-podcasts/ipod-podcasts-01.jpg";
+
+export const metadata = pageMetadata({
+  title: TITLE,
+  path: "/ipod-podcasts",
+  description: siteDescription(`This page showcases the ${TITLE}`),
+  image: IMAGE,
+});
 
 const PODCASTS_DIR =
   "~/Library/Group Containers/243LU875E5.groups.com.apple.podcasts";
 
 export default function Page() {
   return (
-    <ProjectLayout project={project}>
+    <ProjectLayout title={TITLE}>
       <div className="max-w-2xl">
-        <div className="img-container">
-          <img
-            src={project.images![0]}
-            alt="An iPod Classic showing the Podcasts menu"
-            className="w-full shadow-xl"
-          />
-        </div>
+        <Img
+          src={IMAGE}
+          alt="An iPod Classic showing the Podcasts menu"
+          className="my-double w-full shadow-xl"
+        />
         <p>
           When I first started restoring my iPod Classic, I was surprised to
           learn that it can still sync natively with a modern Mac. Apple
@@ -47,7 +49,7 @@ export default function Page() {
           When I first synced podcasts from my Mac to the iPod, I noticed some
           peculiarities:
         </p>
-        <ul className="list">
+        <BulletList>
           <li>
             Episode titles looked like production filenames, such as{" "}
             <code>99_pi_audiomix_2008</code>
@@ -60,7 +62,7 @@ export default function Page() {
           <li>
             Some episodes appeared under a playlist named <code>Root</code>
           </li>
-        </ul>
+        </BulletList>
         <p className="relative">
           All these issues trace back to one problem. When the Podcasts app on
           macOS downloads an episode, it stores clean metadata in a local{" "}
@@ -111,7 +113,7 @@ python3 fix_podcast_tags.py`}</code>
           because it has a stale local cache. To clear it, open Activity Monitor
           and force quit these processes:
         </p>
-        <ul className="list">
+        <BulletList>
           <li>
             <code>AMPLibraryAgent</code>
           </li>
@@ -121,7 +123,7 @@ python3 fix_podcast_tags.py`}</code>
           <li>
             <code>AMPDeviceDiscoveryAgent</code>
           </li>
-        </ul>
+        </BulletList>
         <p>
           After that, Finder will reload the episode titles from the MP3 tags.
         </p>

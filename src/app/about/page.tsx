@@ -1,9 +1,12 @@
+import { BulletList } from "@/components/BulletList";
+import { Img } from "@/components/Img";
 import { TextLink } from "@/components/TextLink";
 import { socials } from "@/lib/site";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "About | Matteo Sandrin",
+  title: "About",
+  path: "/about",
   description: siteDescription(
     "This page has some information about Matteo Sandrin.",
   ),
@@ -30,7 +33,7 @@ export default function About() {
           Wes Anderson films
         </p>
         <h2>How to reach me</h2>
-        <ul className="list-single">
+        <BulletList tight>
           <li>sandrin98@gmail.com (reply guaranteed!)</li>
           {socials.map((social) => (
             <li key={social.label}>
@@ -39,11 +42,9 @@ export default function About() {
               </TextLink>
             </li>
           ))}
-        </ul>
+        </BulletList>
         <p>(last update: july 2025)</p>
-        <div className="img-container">
-          <img src="/assets/img/matteo-about.jpg" alt="" />
-        </div>
+        <Img src="/assets/img/matteo-about.jpg" className="mt-double" />
       </div>
     </div>
   );

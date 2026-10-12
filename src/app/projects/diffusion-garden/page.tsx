@@ -1,7 +1,8 @@
+import { BulletList } from "@/components/BulletList";
+import { Img } from "@/components/Img";
 import { ProjectLayout } from "@/components/ProjectLayout";
 import { TextLink } from "@/components/TextLink";
-import { getProject } from "../projects";
-import { projectMetadata } from "@/lib/metadata";
+import { getProject, projectMetadata } from "../projects";
 
 const project = getProject("/projects/diffusion-garden");
 export const metadata = projectMetadata(project);
@@ -10,13 +11,21 @@ const APP_URL = "https://diffusion.sandr.in";
 
 export default function Page() {
   return (
-    <ProjectLayout project={project}>
-      <div className="max-w-2xl">
-        <div className="img-container">
-          <a href={APP_URL} target="_blank">
-            <img src={project.images![0]} alt="" className="w-full shadow-xl" />
-          </a>
+    <ProjectLayout
+      title={project.title}
+      subtitle={project.subtitle}
+      intro={
+        <div>
+          Try it out now at{" "}
+          <TextLink href={APP_URL} newTab>
+            {APP_URL}
+          </TextLink>
         </div>
+      }>
+      <div className="max-w-2xl">
+        <a href={APP_URL} target="_blank" className="my-double block">
+          <Img src={project.images![0]} className="w-full shadow-xl" />
+        </a>
         <h2>What is this?</h2>
         <p>
           <TextLink href={APP_URL} newTab>
@@ -52,7 +61,7 @@ export default function Page() {
         </p>
         <div className="w-full">
           <iframe
-            className="aspect-[3720/2160] w-full"
+            className="mt-double aspect-[3720/2160] w-full"
             src="https://www.youtube.com/embed/ruvm8wIi_I0?si=AIdMNkDg9ROifNCh&rel=0"
             title="diffusion.sandr.in demo"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -81,7 +90,7 @@ export default function Page() {
           Gemini APIs. However, I had two key requirements for this project that
           steered me towards implementing a backend:
         </p>
-        <ul className="list">
+        <BulletList>
           <li>
             I wanted users to navigate to the website and start creating right
             away. In a frontend-only application, this would have required
@@ -96,7 +105,7 @@ export default function Page() {
             This required some mechanism for performing background jobs, which
             is much easier to implement with a backend.
           </li>
-        </ul>
+        </BulletList>
         <p>
           To meet these requirements, I decided to implement a backend in
           Python, running a{" "}
@@ -106,7 +115,7 @@ export default function Page() {
           web server with a Postgres database. The backend has several
           responsibilities:
         </p>
-        <ul className="list">
+        <BulletList>
           <li>
             It maintains a queue of image and text generation jobs, and kicks
             them off asynchronously with retry logic and graceful failure. The
@@ -140,7 +149,7 @@ export default function Page() {
             protects the endpoints from abuse, and prevents my Google Cloud bill
             from ballooning.
           </li>
-        </ul>
+        </BulletList>
         <p>
           Both frontend and backend are hosted on{" "}
           <TextLink href="https://railway.app/" newTab>

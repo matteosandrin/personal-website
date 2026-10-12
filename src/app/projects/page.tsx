@@ -1,12 +1,13 @@
 import { ProjectGrid } from "./ProjectGrid";
+import { BulletList } from "@/components/BulletList";
 import { TextLink } from "@/components/TextLink";
 import { designProjects, softwareProjects } from "./projects";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Projects | Matteo Sandrin",
+  title: "Projects",
   description: siteDescription("This page showcases Matteo's projects."),
-  canonical: "/projects",
+  path: "/projects",
 });
 
 const experiments = [
@@ -31,13 +32,13 @@ export default function Projects() {
       <ProjectGrid title={"Design+​art"} projects={designProjects} />
       <div>
         <h2>Experiments</h2>
-        <ul className="list">
+        <BulletList>
           {experiments.map(({ href, label }) => (
             <li key={href}>
               <TextLink href={href}>{label}</TextLink>
             </li>
           ))}
-        </ul>
+        </BulletList>
       </div>
     </div>
   );

@@ -1,11 +1,11 @@
-import { Fragment } from "react";
 import { PageHeader } from "@/components/PageHeader";
 import { TextLink } from "@/components/TextLink";
 import { BOOK, SOCIAL_PREVIEW, chapters, parts } from "./chapters";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: `${BOOK}: Chapter Summaries | Matteo Sandrin`,
+  title: `${BOOK}: Chapter Summaries`,
+  path: "/power-broker",
   description: `Chapter summaries of the book '${BOOK}'`,
   image: SOCIAL_PREVIEW,
 });
@@ -56,35 +56,34 @@ export default function PowerBroker() {
           All the code for this project is on Github.
         </TextLink>
       </p>
-      <ul id="chapter-summaries" className="mt-triple space-y-2">
+      <div id="chapter-summaries" className="mt-triple">
         {parts.map((part) => (
-          <Fragment key={part.name}>
-            <h2 className="!mt-double font-serif">{part.name.toUpperCase()}</h2>
-            {part.chapters.map((chapter) => {
-              const index = chapters.indexOf(chapter);
-              return (
-                <li key={index}>
-                  <div className="flex items-end gap-2">
-                    <div className="max-w-[90%] shrink-0 whitespace-normal">
-                      <TextLink href={`/power-broker/${index}`}>
-                        {/* The title of chapter 12 is too long on mobile. */}
-                        {index === 12
-                          ? chapter.name.replace("Robert Moses", "RM")
-                          : chapter.name}
-                      </TextLink>
+          <section key={part.name}>
+            <h2 className="font-serif">{part.name.toUpperCase()}</h2>
+            <ul className="mt-2 space-y-2">
+              {part.chapters.map((chapter) => {
+                const index = chapters.indexOf(chapter);
+                return (
+                  <li key={index}>
+                    <div className="flex items-end gap-2">
+                      <div className="max-w-[90%] shrink-0 whitespace-normal">
+                        <TextLink href={`/power-broker/${index}`}>
+                          {chapter.shortName ?? chapter.name}
+                        </TextLink>
+                      </div>
+                      <div
+                        aria-hidden="true"
+                        className="min-w-0 flex-1 border-b border-dotted border-black text-right font-mono">
+                        {chapter.page}
+                      </div>
                     </div>
-                    <div
-                      aria-hidden="true"
-                      className="min-w-0 flex-1 border-b border-dotted border-black text-right font-mono">
-                      {chapter.page}
-                    </div>
-                  </div>
-                </li>
-              );
-            })}
-          </Fragment>
+                  </li>
+                );
+              })}
+            </ul>
+          </section>
         ))}
-      </ul>
+      </div>
     </div>
   );
 }

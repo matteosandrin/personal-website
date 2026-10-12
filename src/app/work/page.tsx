@@ -3,7 +3,8 @@ import { TextLink } from "@/components/TextLink";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Work | Matteo Sandrin",
+  title: "Work",
+  path: "/work",
   description: siteDescription(
     "This page showcases Matteo's professional accomplishments in software engineering",
   ),
@@ -17,7 +18,7 @@ export default function Work() {
         <Job company="Google" role="Software Engineer">
           <p>
             I'm a software engineer on the Google Travel team. I lead
-            development of new formats &amp; improvements on the{" "}
+            development of new formats & improvements on the{" "}
             <TextLink href="http://google.com/hotels" newTab>
               Google Hotels
             </TextLink>{" "}

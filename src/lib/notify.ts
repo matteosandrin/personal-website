@@ -6,7 +6,9 @@ const BOT_PATTERN = new RegExp(
   "i",
 );
 
-const LOCAL_KEY = "isLocal";
+// Set in localStorage when this browser has turned off tracking. The name is
+// old, but changing it would turn tracking back on for those browsers.
+const TRACKING_OFF_KEY = "isLocal";
 
 export type IpData = {
   ip: string;
@@ -21,18 +23,16 @@ export function isBot() {
   return BOT_PATTERN.test(navigator.userAgent);
 }
 
-// True when this browser has turned off tracking.
-export function isLocal() {
-  return window.localStorage.getItem(LOCAL_KEY) != null;
+export function isTrackingOff() {
+  return window.localStorage.getItem(TRACKING_OFF_KEY) != null;
 }
 
-export function toggleTracking() {
-  if (isLocal()) {
-    window.localStorage.removeItem(LOCAL_KEY);
+export function setTrackingOff(off: boolean) {
+  if (off) {
+    window.localStorage.setItem(TRACKING_OFF_KEY, "true");
   } else {
-    window.localStorage.setItem(LOCAL_KEY, "true");
+    window.localStorage.removeItem(TRACKING_OFF_KEY);
   }
-  window.location.reload();
 }
 
 export async function getIpData(): Promise<IpData> {

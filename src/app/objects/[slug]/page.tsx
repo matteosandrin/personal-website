@@ -1,4 +1,4 @@
-import { Redirect } from "../Redirect";
+import { MetaRedirect } from "../MetaRedirect";
 
 // The projects pages used to live under /objects.
 const OLD_SLUGS = [
@@ -18,7 +18,12 @@ export function generateStaticParams() {
   return OLD_SLUGS.map((slug) => ({ slug }));
 }
 
+export async function generateMetadata({ params }: Props) {
+  const { slug } = await params;
+  return { alternates: { canonical: `/projects/${slug}` } };
+}
+
 export default async function ObjectRedirect({ params }: Props) {
   const { slug } = await params;
-  return <Redirect to={`/projects/${slug}/`} />;
+  return <MetaRedirect to={`/projects/${slug}/`} />;
 }

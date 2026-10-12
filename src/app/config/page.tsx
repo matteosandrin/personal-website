@@ -1,7 +1,7 @@
 import { ConfigDebug } from "./ConfigDebug";
 
 export const metadata = {
-  title: "Config page for matteo's website",
+  title: { absolute: "Config page for matteo's website" },
 };
 
 export default function Config() {

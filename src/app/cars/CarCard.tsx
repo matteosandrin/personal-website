@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { Img } from "@/components/Img";
 import { Tooltip } from "@/components/Tooltip";
 import type { Car } from "./cars";
 import { formatDate } from "./cars";
@@ -15,13 +16,10 @@ export function CarCard({ car }: { car: Car }) {
           </Tooltip>
         )}
       </h2>
-      <div className="img-container">
-        <img
-          className="aspect-[2/1] w-full rounded-xl object-contain object-center"
-          src={car.img}
-          alt=""
-        />
-      </div>
+      <Img
+        className="my-double aspect-[2/1] w-full rounded-xl object-contain object-center"
+        src={car.img}
+      />
       <table>
         <tbody>
           <Row label="Date">

@@ -12,7 +12,8 @@ const filmImages = [
 ];
 
 export const metadata = pageMetadata({
-  title: "Photo | Matteo Sandrin",
+  title: "Photo",
+  path: "/photo",
   description: siteDescription("This page showcases Matteo's photography."),
   image: filmImages[2],
 });
