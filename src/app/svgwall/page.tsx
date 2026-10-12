@@ -12,14 +12,14 @@ export const metadata = pageMetadata({
 
 const clocks = [
   {
-    clock: "jr",
+    src: "/assets/img/jr-clock.svg",
     caption: "The iconic JR clock found in Japanese train stations.",
   },
   {
-    clock: "milano",
+    src: "/assets/img/milano-metro-clock.svg",
     caption: "The clock found in Milan metro stations.",
   },
-] as const;
+];
 
 export default function SvgWall() {
   return (
@@ -36,9 +36,9 @@ export default function SvgWall() {
         Enjoy!
       </p>
       <div className="mt-triple flex flex-col gap-8">
-        {clocks.map(({ clock, caption }) => (
-          <div key={clock}>
-            <SvgClock clock={clock} />
+        {clocks.map(({ src, caption }) => (
+          <div key={src}>
+            <SvgClock src={src} />
             <p className="text-center">{caption}</p>
           </div>
         ))}

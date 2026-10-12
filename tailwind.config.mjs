@@ -18,10 +18,6 @@ export default {
         double: "1.5rem",
         triple: "2.25rem",
       },
-      animation: {
-        "clock-hours": "spin 43200s linear infinite",
-        "clock-minutes": "spin 3600s linear infinite",
-      },
     },
   },
   plugins: [],

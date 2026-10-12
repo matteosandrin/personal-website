@@ -1,45 +1,51 @@
 "use client";
 
-import { type CSSProperties, useEffect, useState } from "react";
-import { JR_PIVOT, JrClock } from "./JrClock";
-import { MILANO_PIVOT, MilanoClock } from "./MilanoClock";
+import { useEffect, useRef } from "react";
 
-const CLOCKS = {
-  jr: { Face: JrClock, pivot: JR_PIVOT },
-  milano: { Face: MilanoClock, pivot: MILANO_PIVOT },
-};
-
-// Shows a clock whose hands follow the current time. A CSS animation turns
-// each hand; a negative delay starts it at the current position.
-export function SvgClock({ clock }: { clock: keyof typeof CLOCKS }) {
-  const { Face, pivot } = CLOCKS[clock];
-  // Seconds since 12:00. Unknown until mount, so the server render shows 12:00.
-  const [elapsed, setElapsed] = useState<number>();
+// Shows a clock SVG and turns its hands to the current time. The SVG must
+// have #background, #hours_hand and #minutes_hand elements.
+export function SvgClock({ src }: { src: string }) {
+  const ref = useRef<HTMLObjectElement>(null);
 
   useEffect(() => {
-    const now = new Date();
-    setElapsed(
-      (now.getHours() % 12) * 3600 +
-        now.getMinutes() * 60 +
-        now.getSeconds() +
-        now.getMilliseconds() / 1000,
-    );
+    let timer: number | undefined;
+    const start = () => {
+      const svg = ref.current?.contentDocument;
+      if (!svg) return;
+      const box = (
+        svg.getElementById("background") as unknown as SVGGraphicsElement
+      ).getBBox();
+      const pivot = `${box.width / 2} ${box.height / 2}`;
+      const hours = svg.getElementById("hours_hand")!;
+      const minutes = svg.getElementById("minutes_hand")!;
+      const tick = () => {
+        const now = new Date();
+        const minuteSec =
+          now.getMinutes() * 60 +
+          now.getSeconds() +
+          now.getMilliseconds() / 1000;
+        const hourSec = (now.getHours() % 12) * 3600 + minuteSec;
+        minutes.setAttribute(
+          "transform",
+          `rotate(${(minuteSec / 3600) * 360} ${pivot})`,
+        );
+        hours.setAttribute(
+          "transform",
+          `rotate(${(hourSec / 43200) * 360} ${pivot})`,
+        );
+      };
+      tick();
+      timer = window.setInterval(tick, 100);
+    };
+    const object = ref.current!;
+    // The SVG can finish loading before React attaches the listener.
+    if (object.contentDocument?.getElementById("background")) start();
+    else object.addEventListener("load", start, { once: true });
+    return () => {
+      object.removeEventListener("load", start);
+      window.clearInterval(timer);
+    };
   }, []);
 
-  const hand = (className: string, period: number) => ({
-    className: elapsed === undefined ? undefined : className,
-    style: {
-      transformBox: "view-box",
-      transformOrigin: `${pivot.x}px ${pivot.y}px`,
-      animationDelay:
-        elapsed === undefined ? undefined : `-${elapsed % period}s`,
-    } satisfies CSSProperties,
-  });
-
-  return (
-    <Face
-      hours={hand("animate-clock-hours", 12 * 3600)}
-      minutes={hand("animate-clock-minutes", 3600)}
-    />
-  );
+  return <object ref={ref} data={src} type="image/svg+xml" />;
 }
