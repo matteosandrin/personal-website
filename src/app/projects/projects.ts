@@ -49,7 +49,6 @@ export const softwareProjects: Project[] = [
   },
 ];
 
-// Each design project has an intro in intros/<slug>.mdx.
 export const designProjects: Project[] = [
   {
     url: "/projects/metro-clock",

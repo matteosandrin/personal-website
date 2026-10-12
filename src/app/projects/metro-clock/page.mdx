@@ -1,3 +1,12 @@
+import { Gallery } from "@/components/Gallery";
+import { ProjectLayout } from "@/components/ProjectLayout";
+import { getProject, projectMetadata } from "../projects";
+
+export const project = getProject("/projects/metro-clock");
+export const metadata = projectMetadata(project);
+
+<ProjectLayout title={project.title} subtitle={project.subtitle}>
+
 Growing up in Milan, the Metro played an integral role in my daily life,
 shuttling me between home, school, and many nights out. I was fascinated by the
 distinctive signage that Bob Noorda had designed in the 1960s for the Milan
@@ -11,3 +20,7 @@ the dial is painstakingly recreated with spray acrylic paint. The red hands are
 3D printed, thoroughly sanded and coated with layers of durable enamel paint.
 The shorter end of the minute hand is filled with steel bearings, counteracting
 the weight of its 15in wingspan.
+
+</ProjectLayout>
+
+<Gallery images={project.images} />

@@ -17,9 +17,10 @@ GitHub Pages. Pushes to `master` deploy automatically.
   that page's folder.
 - `src/components` holds the components that more than one page uses.
 - A page's data lives next to it, e.g. `src/app/cars/cars.ts`,
-  `src/app/projects/projects.ts` and `src/app/power-broker/chapters.ts`. Long
-  text is in MDX: the chapter summaries in `src/app/power-broker/summaries` and
-  the project intros in `src/app/projects/intros`.
+  `src/app/projects/projects.ts` and `src/app/power-broker/chapters.ts`.
+- Pages that are mostly text are MDX: each project page and the iPod podcasts
+  page is a `page.mdx`, and the chapter summaries are in
+  `src/app/power-broker/summaries`.
 - `src/app/sitemap.ts` and `src/app/robots.ts` generate `sitemap.xml` and
   `robots.txt`. The fonts are in `src/app/fonts`.
 - `src/lib` holds shared helpers and site-wide constants.

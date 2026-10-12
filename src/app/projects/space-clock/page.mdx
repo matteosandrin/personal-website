@@ -1,3 +1,12 @@
+import { Gallery } from "@/components/Gallery";
+import { ProjectLayout } from "@/components/ProjectLayout";
+import { getProject, projectMetadata } from "../projects";
+
+export const project = getProject("/projects/space-clock");
+export const metadata = projectMetadata(project);
+
+<ProjectLayout title={project.title} subtitle={project.subtitle}>
+
 This object began its life as a General Electric model F1-8147 bedside alarm
 clock. When I found it on the shelves of a thrift store, I was struck by the
 space age look of its vacuum-fluorescent display and by the boxy 80s silhouette
@@ -11,3 +20,7 @@ Every button is cleaned and resoldered. The shell is sanded, primed and painted
 a lunar shade of white. The iconic NASA logo is carefully applied to both sides,
 while the alarm control switch is painted a vibrant red to match. Finally, the
 display rim and raised labeling are touched up for contrast.
+
+</ProjectLayout>
+
+<Gallery images={project.images} />
