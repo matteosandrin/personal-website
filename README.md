@@ -18,7 +18,6 @@ GitHub Pages. Pushes to `master` deploy automatically.
 - `src/components` holds the components that more than one page uses.
 - A page's data lives next to it, e.g. `src/app/cars/cars.ts`,
   `src/app/projects/projects.tsx` and `src/app/power-broker/chapters.ts`. The
-  chapter summaries are in `src/app/power-broker/summaries`, one paragraph per
-  block of text.
+  chapter summaries are MDX files in `src/app/power-broker/summaries`.
 - `src/lib` holds shared helpers and site-wide constants.
 - `public` holds static files (images, fonts, `CNAME`, `sitemap.xml`).

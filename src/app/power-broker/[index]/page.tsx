@@ -1,5 +1,3 @@
-import { readFileSync } from "node:fs";
-import path from "node:path";
 import { PageHeader } from "@/components/PageHeader";
 import { pageMetadata } from "@/lib/metadata";
 import { AUTHOR, BOOK, SOCIAL_PREVIEW, chapters } from "../chapters";
@@ -22,20 +20,9 @@ export async function generateMetadata({ params }: Props) {
   });
 }
 
-// Paragraphs are separated by blank lines.
-function readSummary(index: string) {
-  const file = path.join(
-    process.cwd(),
-    "src/app/power-broker/summaries",
-    `${index}.txt`,
-  );
-  return readFileSync(file, "utf8")
-    .trim()
-    .split(/\n\s*\n/);
-}
-
 export default async function Chapter({ params }: Props) {
   const { index } = await params;
+  const { default: Summary } = await import(`../summaries/${index}.mdx`);
   return (
     <div className="max-w-2xl">
       <PageHeader
@@ -45,9 +32,7 @@ export default async function Chapter({ params }: Props) {
         className="font-serif"
       />
       <ChapterNav index={Number(index)} />
-      {readSummary(index).map((paragraph, i) => (
-        <p key={i}>{paragraph}</p>
-      ))}
+      <Summary />
       <ChapterNav index={Number(index)} />
     </div>
   );
