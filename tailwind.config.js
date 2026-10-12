@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
-  mode: "jit",
-  content: ["./public/**/*.{html,js}"],
+  content: ["./src/**/*.{ts,tsx}"],
   theme: {
     extend: {
       colors: {
@@ -20,5 +19,4 @@ module.exports = {
     },
   },
   plugins: [],
-  variants: {},
 };

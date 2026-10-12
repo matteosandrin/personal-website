@@ -1,14 +1,24 @@
 # Matteo's Personal Website (https://sandr.in)
 
-This repository holds the templates and assets for my personal website. There is
-a Makefile in the root of this repository that contains all the commands needed
-to build the templates and assets into a static website.
+This repository holds the source for my personal website. It is a
+[Next.js](https://nextjs.org) app that is exported to static HTML and served by
+GitHub Pages. Pushes to `master` deploy automatically.
 
-The following commands are available:
+| Command          | Description                                             |
+| ---------------- | ------------------------------------------------------- |
+| `npm run dev`    | Start a dev server with hot reload on `localhost:3000`. |
+| `npm run build`  | Build the static site into `./out`.                     |
+| `npm run serve`  | Serve the files in `./out`.                             |
+| `npm run format` | Format the code with Prettier.                          |
 
-| Make command  | Description                                                                                                                         |
-| ------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| `make build`  | Install Python/JS dependencies, copy static assets to `./build`, build Jinja templates and build Tailwind CSS files.                |
-| `make serve`  | Launch a webserver that serves the files in `./build`                                                                               |
-| `make watch`  | Launch a watchdog instance that looks for file changes in `./public` and runs `make build` automatically when a change is detected. |
-| `make format` | Format JS, HTML and Python files with Prettier and Black.                                                                           |
+## Layout
+
+- `src/app` holds one folder per URL. A component used by only one page lives in
+  that page's folder.
+- `src/components` holds the components that more than one page uses.
+- A page's data lives next to it, e.g. `src/app/cars/cars.ts`,
+  `src/app/projects/projects.tsx` and `src/app/power-broker/chapters.ts`. The
+  chapter summaries are in `src/app/power-broker/summaries`, one paragraph per
+  block of text.
+- `src/lib` holds shared helpers and site-wide constants.
+- `public` holds static files (images, fonts, `CNAME`, `sitemap.xml`).
