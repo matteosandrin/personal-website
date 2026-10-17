@@ -7,7 +7,6 @@ export type Car = {
   date: string;
   description: string[];
   tags: string[];
-  star?: boolean;
 };
 
 export const cars: Car[] = [
@@ -33,7 +32,6 @@ export const cars: Car[] = [
       "When I returned this vehicle, I foolishly forgot to take any pictures. A few days later, I got a letter from the rental agency alleging I had caused damage to the car, and asking me to pay €1000+ in damages. Fortunately Google Maps reviews showed this was a common scam for this location. I contacted my credit card issuer, which resolved the issue in my favor three weeks later.",
     ],
     tags: ["rental", "suv", "manual"],
-    star: false,
   },
   {
     year: "2024",
@@ -347,11 +345,6 @@ export const cars: Car[] = [
 
 export function sortByDateDesc(cars: Car[]) {
   return [...cars].sort((a, b) => b.date.localeCompare(a.date));
-}
-
-export function sortStarFirst(cars: Car[]) {
-  const sorted = sortByDateDesc(cars);
-  return [...sorted.filter((c) => c.star), ...sorted.filter((c) => !c.star)];
 }
 
 // Use UTC, so that the ISO date does not move to the previous day.
