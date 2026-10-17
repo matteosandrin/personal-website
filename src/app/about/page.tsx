@@ -1,6 +1,7 @@
 import { BulletList } from "@/components/BulletList";
 import { Img } from "@/components/Img";
 import { TextLink } from "@/components/TextLink";
+import { LastUpdate } from "@/components/LastUpdate";
 import { socials } from "@/lib/site";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
@@ -19,7 +20,7 @@ export default function About() {
         <h1>About</h1>
         <p>I was born in Milan, Italy. Now I live and work in New York.</p>
         <p>
-          Currently I write software at Google, on the Hotel Ads team.{" "}
+          Currently I write software at Numeric.{" "}
           <TextLink href="/work">More about my work.</TextLink>
         </p>
         <p>
@@ -43,7 +44,7 @@ export default function About() {
             </li>
           ))}
         </BulletList>
-        <p>(last update: july 2025)</p>
+        <LastUpdate path="src/app/about/page.tsx" />
         <Img src="/assets/img/matteo-about.jpg" className="mt-double" />
       </div>
     </div>

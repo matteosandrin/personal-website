@@ -1,6 +1,7 @@
 import { CarCard } from "./CarCard";
 import { PageHeader } from "@/components/PageHeader";
-import { cars, formatDate, sortByDateDesc, sortStarFirst } from "./cars";
+import { LastUpdate } from "@/components/LastUpdate";
+import { cars, sortByDateDesc } from "./cars";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -9,11 +10,6 @@ export const metadata = pageMetadata({
   description: siteDescription(
     "This page shows the cars that I've driven throughout the years.",
   ),
-});
-
-const lastUpdate = formatDate(sortByDateDesc(cars)[0].date, {
-  month: "long",
-  year: "numeric",
 });
 
 export default function Cars() {
@@ -32,10 +28,10 @@ export default function Cars() {
           different kinds of cars feel to drive. Over time, it becomes a way to
           trace my travels, my tastes, and the evolution of automobiles.
         </p>
-        <p>(last update: {lastUpdate.toLowerCase()})</p>
+        <LastUpdate path="src/app/(collections)/cars/page.tsx" />
       </div>
       <div className="mt-triple">
-        {sortStarFirst(cars).map((car) => (
+        {sortByDateDesc(cars).map((car) => (
           <CarCard key={car.img} car={car} />
         ))}
       </div>
