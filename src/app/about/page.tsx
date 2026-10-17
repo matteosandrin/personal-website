@@ -43,7 +43,7 @@ export default function About() {
             </li>
           ))}
         </BulletList>
-        <p>(last update: july 2025)</p>
+        <p>(last update: oct 2026)</p>
         <Img src="/assets/img/matteo-about.jpg" className="mt-double" />
       </div>
     </div>

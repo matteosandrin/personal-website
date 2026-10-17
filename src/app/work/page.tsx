@@ -94,6 +94,9 @@ export default function Work() {
             Summer 2019
           </p>
         </Job>
+        <p className="mt-triple">
+          (last update: oct 2026)
+        </p>
       </div>
     </div>
   );
