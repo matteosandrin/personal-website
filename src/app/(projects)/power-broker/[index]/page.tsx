@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props) {
   const { index } = await params;
   const { name } = chapters[Number(index)];
   return pageMetadata({
-    title: { absolute: `${name} | ${BOOK}: Chapter Summary` },
+    title: `${name} | ${BOOK}: Chapter Summary`,
     path: `/power-broker/${index}`,
     description: `Summary of 'Chapter ${name}' of the book '${BOOK}' by ${AUTHOR}`,
     image: SOCIAL_PREVIEW,

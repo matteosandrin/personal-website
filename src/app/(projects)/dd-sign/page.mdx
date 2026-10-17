@@ -1,11 +1,13 @@
 import { Gallery } from "@/components/Gallery";
 import { ProjectLayout } from "@/components/ProjectLayout";
-import { getProject, projectMetadata } from "../projects";
+import { entryMetadata, getEntry } from "@/lib/content";
 
-export const project = getProject("/projects/dd-sign");
-export const metadata = projectMetadata(project);
+export const project = getEntry("dd-sign");
+export const metadata = entryMetadata(project);
 
-<ProjectLayout title={project.title} subtitle={project.subtitle}>
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
 
 I found this original Dunkin Donuts neon sign in an antique shop in Rhode
 Island, laying non-functional in a corner. It was originally manufactured in

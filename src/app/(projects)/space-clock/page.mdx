@@ -1,11 +1,13 @@
 import { Gallery } from "@/components/Gallery";
 import { ProjectLayout } from "@/components/ProjectLayout";
-import { getProject, projectMetadata } from "../projects";
+import { entryMetadata, getEntry } from "@/lib/content";
 
-export const project = getProject("/projects/space-clock");
-export const metadata = projectMetadata(project);
+export const project = getEntry("space-clock");
+export const metadata = entryMetadata(project);
 
-<ProjectLayout title={project.title} subtitle={project.subtitle}>
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
 
 This object began its life as a General Electric model F1-8147 bedside alarm
 clock. When I found it on the shelves of a thrift store, I was struck by the
