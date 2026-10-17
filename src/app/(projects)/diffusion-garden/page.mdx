@@ -1,11 +1,13 @@
 import { Img } from "@/components/Img";
 import { ProjectLayout } from "@/components/ProjectLayout";
-import { getProject, projectMetadata } from "../projects";
+import { entryMetadata, getEntry } from "@/lib/content";
 
-export const project = getProject("/projects/diffusion-garden");
-export const metadata = projectMetadata(project);
+export const project = getEntry("diffusion-garden");
+export const metadata = entryMetadata(project);
 
-<ProjectLayout title={project.title} subtitle={project.subtitle}>
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
 
 Try it out now at [https://diffusion.sandr.in](https://diffusion.sandr.in)
 

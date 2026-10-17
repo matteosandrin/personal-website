@@ -1,0 +1,13 @@
+import { ProjectLayout } from "@/components/ProjectLayout";
+import { entryMetadata, getEntry } from "@/lib/content";
+
+export const project = getEntry("trainlog");
+export const metadata = entryMetadata(project);
+
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
+
+Try it out now at [https://trainlog.sandr.in](https://trainlog.sandr.in)
+
+</ProjectLayout>

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BulletList } from "@/components/BulletList";
 import { Img } from "@/components/Img";
 import { TextLink } from "@/components/TextLink";
+import { entryPath, latestEntries } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -12,7 +13,7 @@ export const metadata = pageMetadata({
 export default function Home() {
   return (
     <div className="max-w-2xl">
-      <Link href="/projects/metrocard">
+      <Link href="/metrocard">
         <div className="group relative">
           <Img
             className="w-full group-hover:hidden"
@@ -27,26 +28,11 @@ export default function Home() {
       <div className="mx-auto mt-double w-fit">
         <p>Some things I've made recently:</p>
         <BulletList>
-          <li>
-            <TextLink href="/ipod-podcasts">
-              A guide to syncing podcasts to an iPod
-            </TextLink>
-          </li>
-          <li>
-            <TextLink href="/projects/diffusion-garden">
-              A creative garden for image generation
-            </TextLink>
-          </li>
-          <li>
-            <TextLink href="https://shade.sandr.in">
-              A tool for shade-aware walking directions
-            </TextLink>
-          </li>
-          <li>
-            <TextLink href="/power-broker">
-              Chapter summaries of "The Power Broker"
-            </TextLink>
-          </li>
+          {latestEntries(4).map((entry) => (
+            <li key={entry.slug}>
+              <TextLink href={entryPath(entry)}>{entry.subtitle}</TextLink>
+            </li>
+          ))}
           <li>
             <TextLink href="/projects">(more fun stuff)</TextLink>
           </li>

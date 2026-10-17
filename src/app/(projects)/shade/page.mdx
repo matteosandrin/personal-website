@@ -1,0 +1,18 @@
+import { Img } from "@/components/Img";
+import { ProjectLayout } from "@/components/ProjectLayout";
+import { entryMetadata, getEntry } from "@/lib/content";
+
+export const project = getEntry("shade");
+export const metadata = entryMetadata(project);
+
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
+
+Try it out now at [https://shade.sandr.in](https://shade.sandr.in)
+
+<a href={project.url} target="_blank" className="my-double block">
+  <Img src={project.img} className="w-full shadow-xl" />
+</a>
+
+</ProjectLayout>

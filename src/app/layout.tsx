@@ -23,9 +23,12 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
+    // Browser extensions can change the attributes of <html> before React
+    // loads. Ignore those changes. This does not apply to child elements.
     <html
       lang="en"
-      className={`${serif.variable} ${mono.variable} ${momaSans.variable}`}>
+      className={`${serif.variable} ${mono.variable} ${momaSans.variable}`}
+      suppressHydrationWarning>
       <body className="flex min-h-screen flex-col bg-blueish-gray">
         <Header />
         <main className="mx-auto flex-grow px-4 py-8 md:px-12">{children}</main>

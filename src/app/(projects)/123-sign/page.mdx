@@ -1,11 +1,13 @@
 import { Gallery } from "@/components/Gallery";
 import { ProjectLayout } from "@/components/ProjectLayout";
-import { getProject, projectMetadata } from "../projects";
+import { entryMetadata, getEntry } from "@/lib/content";
 
-export const project = getProject("/projects/123-sign");
-export const metadata = projectMetadata(project);
+export const project = getEntry("123-sign");
+export const metadata = entryMetadata(project);
 
-<ProjectLayout title={project.title} subtitle={project.subtitle}>
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
 
 When I lived in New York in college, I would often take the 1 train downtown
 from 116th street, then change to the 2 or 3 train at 96th street. This painting

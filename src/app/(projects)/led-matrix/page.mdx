@@ -2,10 +2,10 @@ import { Gallery } from "@/components/Gallery";
 import { Img } from "@/components/Img";
 import { ProjectLayout } from "@/components/ProjectLayout";
 import { TextLink } from "@/components/TextLink";
-import { getProject, projectMetadata } from "../projects";
+import { entryMetadata, getEntry } from "@/lib/content";
 
-export const project = getProject("/projects/led-matrix");
-export const metadata = projectMetadata(project);
+export const project = getEntry("led-matrix");
+export const metadata = entryMetadata(project);
 
 export function TrainIcon({ line }) {
   return (
@@ -17,7 +17,9 @@ export function TrainIcon({ line }) {
   );
 }
 
-<ProjectLayout title={project.title} subtitle={project.subtitle}>
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
 
 The display shows a real-time view of the incoming trains for either New York or
 Boston subway stops. It's powered by five 32x32 dot matrix LED displays

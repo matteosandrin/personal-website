@@ -1,11 +1,13 @@
 import { Gallery } from "@/components/Gallery";
 import { ProjectLayout } from "@/components/ProjectLayout";
-import { getProject, projectMetadata } from "../projects";
+import { entryMetadata, getEntry } from "@/lib/content";
 
-export const project = getProject("/projects/metrocard");
-export const metadata = projectMetadata(project);
+export const project = getEntry("metrocard");
+export const metadata = entryMetadata(project);
 
-<ProjectLayout title={project.title} subtitle={project.subtitle}>
+<ProjectLayout
+  title={project.title}
+  subtitle={project.subtitle}>
 
 In November 2022, the MTA announced the discontinuation of the MetroCard from
 NYC subways. As a frequent subway rider, I had grown fond of its iconic design
