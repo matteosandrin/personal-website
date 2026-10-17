@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { Img } from "@/components/Img";
-import { type Entry, entryPath } from "@/lib/content";
+import { type Entry, entryHref } from "@/lib/content";
 
 type Props = {
   title?: string;
@@ -22,7 +22,10 @@ export function ContentGrid({ title, entries }: Props) {
 
 function ContentCard({ entry }: { entry: Entry }) {
   return (
-    <Link href={entryPath(entry)} className="group">
+    <Link
+      href={entryHref(entry)}
+      target={entry.url ? "_blank" : undefined}
+      className="group">
       {entry.img ? (
         <Img
           className="aspect-square w-full object-cover object-center"

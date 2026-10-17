@@ -9,6 +9,7 @@ export const sections: Record<Section, { title: string; path: string }> = {
 
 export type Entry = {
   // The page URL is "/<slug>". Put the page in src/app/(<section>)/<slug>.
+  // Entries with a "url" have no page.
   slug: string;
   section: Section;
   // Group in the projects index. Only for projects.
@@ -22,7 +23,7 @@ export type Entry = {
   images?: string[];
   // Social preview image, if not the first image.
   preview?: string;
-  // Live site, for projects that run somewhere else.
+  // Live site, for projects that run somewhere else. Links go here.
   url?: string;
 };
 
@@ -42,7 +43,7 @@ export const entries: Entry[] = [
     slug: "shade",
     section: "projects",
     group: "Software",
-    title: "shade.sandr.in",
+    title: "Shade-aware directions",
     subtitle: "A tool for shade-aware walking directions",
     date: "2025-10-02",
     img: "/assets/img/shady-map-thumbnail.jpg",
@@ -52,9 +53,10 @@ export const entries: Entry[] = [
     slug: "trainlog",
     section: "projects",
     group: "Software",
-    title: "trainlog.sandr.in",
+    title: "Train car logger",
     subtitle: "A web app to track all subway cars I've ridden",
     date: "2025-11-19",
+    img: "/assets/img/trainlog/trainlog-thumbnail.jpg",
     url: "https://trainlog.sandr.in",
   },
   {
@@ -180,7 +182,7 @@ export const entries: Entry[] = [
   {
     slug: "photo",
     section: "collections",
-    title: "Photography",
+    title: "Photos",
     subtitle: "A selection of pictures I've shot on film",
     date: "2023-06-25",
     img: "/assets/img/film/roll_007_img_15_nov_2019.jpg",
@@ -188,7 +190,7 @@ export const entries: Entry[] = [
   {
     slug: "svgwall",
     section: "collections",
-    title: "SVG wall",
+    title: "SVGs",
     subtitle: "A collection of SVGs I've made for various projects",
     date: "2025-03-07",
     img: "/assets/img/milano-metro-clock.svg",
@@ -202,8 +204,8 @@ for (const { slug } of entries) {
   seen.add(slug);
 }
 
-export function entryPath(entry: Entry) {
-  return `/${entry.slug}`;
+export function entryHref(entry: Entry) {
+  return entry.url ?? `/${entry.slug}`;
 }
 
 export function getEntry(slug: string): Entry {
@@ -226,7 +228,7 @@ export function latestEntries(count: number) {
 export function entryMetadata(entry: Entry) {
   return pageMetadata({
     title: entry.title,
-    path: entryPath(entry),
+    path: entryHref(entry),
     description: siteDescription(`This page showcases the ${entry.title}`),
     image: entry.preview ?? entry.images?.[0],
   });

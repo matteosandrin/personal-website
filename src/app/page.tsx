@@ -2,7 +2,7 @@ import Link from "next/link";
 import { BulletList } from "@/components/BulletList";
 import { Img } from "@/components/Img";
 import { TextLink } from "@/components/TextLink";
-import { entryPath, latestEntries } from "@/lib/content";
+import { entryHref, latestEntries } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -30,7 +30,9 @@ export default function Home() {
         <BulletList>
           {latestEntries(4).map((entry) => (
             <li key={entry.slug}>
-              <TextLink href={entryPath(entry)}>{entry.subtitle}</TextLink>
+              <TextLink href={entryHref(entry)} newTab={!!entry.url}>
+                {entry.subtitle}
+              </TextLink>
             </li>
           ))}
           <li>
