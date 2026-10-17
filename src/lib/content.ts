@@ -43,7 +43,7 @@ export const entries: Entry[] = [
     slug: "shade",
     section: "projects",
     group: "Software",
-    title: "Shade-aware directions",
+    title: "Shady walking directions",
     subtitle: "A tool for shade-aware walking directions",
     date: "2025-10-02",
     img: "/assets/img/shady-map-thumbnail.jpg",
@@ -160,7 +160,7 @@ export const entries: Entry[] = [
     title: "How to sync podcasts to an iPod",
     subtitle: "A guide to syncing podcasts to an iPod",
     date: "2026-10-11",
-    img: "/assets/img/ipod-podcasts/ipod-podcasts-01.jpg",
+    img: "/assets/img/ipod-podcasts/ipod-podcasts-thumbnail.jpg",
   },
   {
     slug: "power-broker",
@@ -177,7 +177,7 @@ export const entries: Entry[] = [
     title: "Cars",
     subtitle: "A list of all the cars I've ever driven",
     date: "2024-12-03",
-    img: "/assets/img/cars/1969_citroen_mehari.jpg",
+    img: "/assets/img/cars/cars-thumbnail.jpg",
   },
   {
     slug: "photo",
@@ -185,7 +185,7 @@ export const entries: Entry[] = [
     title: "Photos",
     subtitle: "A selection of pictures I've shot on film",
     date: "2023-06-25",
-    img: "/assets/img/film/roll_007_img_15_nov_2019.jpg",
+    img: "/assets/img/film/film-thumbnail.jpg",
   },
   {
     slug: "svgwall",
@@ -193,7 +193,7 @@ export const entries: Entry[] = [
     title: "SVGs",
     subtitle: "A collection of SVGs I've made for various projects",
     date: "2025-03-07",
-    img: "/assets/img/milano-metro-clock.svg",
+    img: "/assets/img/svgwall/svgwall-thumbnail.jpg",
   },
 ];
 
