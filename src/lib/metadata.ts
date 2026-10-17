@@ -3,12 +3,6 @@ import { getImageSize } from "@/lib/image-size";
 
 export const SITE_NAME = "Matteo Sandrin";
 
-// The root layout adds " | Matteo Sandrin" to each page title.
-export const TITLE_TEMPLATE = {
-  template: `%s | ${SITE_NAME}`,
-  default: SITE_NAME,
-};
-
 export function siteDescription(text: string) {
   return `This is Matteo Sandrin's personal website. ${text}`;
 }
@@ -19,8 +13,7 @@ const DEFAULT_DESCRIPTION = siteDescription(
 const DEFAULT_IMAGE = "/assets/img/social-preview.jpg";
 
 type PageMetadata = {
-  // Use { absolute } for a title without the site name.
-  title: string | { absolute: string };
+  title: string;
   // Root-relative URL of the page. It is the canonical and og:url.
   path: string;
   description?: string;

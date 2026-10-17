@@ -5,15 +5,15 @@ import { Analytics } from "@/components/Analytics";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
 import { VisitNotifier } from "@/components/VisitNotifier";
-import { TITLE_TEMPLATE } from "@/lib/metadata";
+import { SITE_NAME } from "@/lib/metadata";
 import { SITE_URL } from "@/lib/site";
 import { momaSans, mono, serif } from "./fonts";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
-  title: TITLE_TEMPLATE,
-  openGraph: { title: TITLE_TEMPLATE },
-  twitter: { title: TITLE_TEMPLATE },
+  title: SITE_NAME,
+  openGraph: { title: SITE_NAME },
+  twitter: { title: SITE_NAME },
   appleWebApp: { statusBarStyle: "black-translucent" },
 };
 

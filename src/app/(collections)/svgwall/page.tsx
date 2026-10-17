@@ -3,7 +3,7 @@ import { SvgClock } from "./SvgClock";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Wall of SVGs",
+  title: "SVG Wall",
   path: "/svgwall",
   description: siteDescription(
     "This page shows some SVGs that I've made for various projects.",

@@ -3,10 +3,10 @@ import { BulletList } from "@/components/BulletList";
 import { Img } from "@/components/Img";
 import { TextLink } from "@/components/TextLink";
 import { entryHref, latestEntries } from "@/lib/content";
-import { pageMetadata } from "@/lib/metadata";
+import { SITE_NAME, pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: { absolute: "Matteo Sandrin" },
+  title: SITE_NAME,
   path: "/",
 });
 
