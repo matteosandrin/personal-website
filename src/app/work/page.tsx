@@ -1,3 +1,4 @@
+import { BulletList } from "@/components/BulletList";
 import { Job } from "./Job";
 import { TextLink } from "@/components/TextLink";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
@@ -15,9 +16,26 @@ export default function Work() {
     <div className="max-w-2xl">
       <h1>Work</h1>
       <div>
+        <Job company="Numeric" role="Senior Software Engineer">
+          <p>
+            I currently build software at{" "}
+            <TextLink href="https://numeric.io">Numeric</TextLink>. I take large
+            intractable accounting concepts and turn them into code. I spent the
+            past six month building the{" "}
+            <TextLink href="https://www.numeric.io/financial-data-platform">
+              FDP
+            </TextLink>
+            , which is a radically better way to do accounting.
+          </p>
+          <p>
+            New York, NY
+            <br />
+            Jan 2026 – present
+          </p>
+        </Job>
         <Job company="Google" role="Software Engineer">
           <p>
-            I'm a software engineer on the Google Travel team. I lead
+            I worked a software engineer on the Google Travel team. I led
             development of new formats & improvements on the{" "}
             <TextLink href="http://google.com/hotels" newTab>
               Google Hotels
@@ -25,14 +43,21 @@ export default function Work() {
             ads booking module.
           </p>
           <p>
-            I get to work on a product with hundreds of millions of daily users.
-            I run experiments every day to improve ad performance by a couple
-            percentage points, which translates into large revenue gains. I also
-            get to learn from some of the most accomplished software engineers
+            I got to work on a product with hundreds of millions of daily users.
+            I ran experiments every day to improve ad performance by a couple
+            percentage points, which translated into large revenue gains. I also
+            got to learn from some of the most accomplished software engineers
             in the industry.
           </p>
           <p>
-            Before that, I interned on the Google Flights team. Over the course
+            Boston, MA
+            <br />
+            July 2021 – Nov 2025
+          </p>
+        </Job>
+        <Job company="Google" role="Software Engineering Intern">
+          <p>
+            I interned on the Google Flights team. Over the course
             of a summer, I and a scrappy band of interns redesigned and rewrote
             from scratch the frontend of the{" "}
             <TextLink href="https://matrix.itasoftware.com" newTab>
@@ -42,11 +67,9 @@ export default function Work() {
             over 200,000 flight enthusiasts.
           </p>
           <p>
-            Cambridge, MA
+            Boston, MA
             <br />
-            2021 – Now (full time)
-            <br />
-            Summer 2020 (intern)
+            Summer 2020
           </p>
         </Job>
         <Job company="Smartcar" role="Software Engineering Intern">

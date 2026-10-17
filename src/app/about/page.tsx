@@ -19,7 +19,7 @@ export default function About() {
         <h1>About</h1>
         <p>I was born in Milan, Italy. Now I live and work in New York.</p>
         <p>
-          Currently I write software at Google, on the Hotel Ads team.{" "}
+          Currently I write software at Numeric.{" "}
           <TextLink href="/work">More about my work.</TextLink>
         </p>
         <p>
