@@ -1,6 +1,7 @@
 import { BulletList } from "@/components/BulletList";
 import { Job } from "./Job";
 import { TextLink } from "@/components/TextLink";
+import { LastUpdate } from "@/components/LastUpdate";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
@@ -94,9 +95,7 @@ export default function Work() {
             Summer 2019
           </p>
         </Job>
-        <p className="mt-triple">
-          (last update: oct 2026)
-        </p>
+        <LastUpdate path="src/app/work/page.tsx" className="mt-triple" />
       </div>
     </div>
   );

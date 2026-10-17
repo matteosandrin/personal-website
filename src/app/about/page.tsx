@@ -1,6 +1,7 @@
 import { BulletList } from "@/components/BulletList";
 import { Img } from "@/components/Img";
 import { TextLink } from "@/components/TextLink";
+import { LastUpdate } from "@/components/LastUpdate";
 import { socials } from "@/lib/site";
 import { pageMetadata, siteDescription } from "@/lib/metadata";
 
@@ -43,7 +44,7 @@ export default function About() {
             </li>
           ))}
         </BulletList>
-        <p>(last update: oct 2026)</p>
+        <LastUpdate path="src/app/about/page.tsx" />
         <Img src="/assets/img/matteo-about.jpg" className="mt-double" />
       </div>
     </div>
