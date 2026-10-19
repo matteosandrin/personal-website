@@ -1,0 +1,9 @@
+:HL["/_next/static/chunks/14kc6mt82xsjl.css","style"]
+:HC["/",""]
+:HL["/assets/img/cars/cars-thumbnail.jpg","image"]
+:HL["/assets/img/film/film-thumbnail.jpg","image"]
+:HL["/assets/img/svgwall/svgwall-thumbnail.jpg","image"]
+3:[["children",{"s":"__PAGE__","h":160}]]
+2:[["children",{"s":"collections","h":96,"c":"$Q3"}]]
+1:[["children",{"s":"(collections)","h":96,"c":"$Q2"}]]
+0:{"b":"OMgTwabQWZtq3yV2blUQB","t":{"t":{"s":"","h":80,"c":"$Q1"}}}

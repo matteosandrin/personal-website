@@ -1,0 +1,55 @@
+1:"$Sreact.fragment"
+2:"/_next/static/chunks/0n-2948z-bm-o.js"
+3:"/_next/static/chunks/04t7bcf6m9-ji.js"
+4:I[22016,["$2","$3"],""]
+5:I[39756,["$2"],"default"]
+6:I[37457,["$2"],"default"]
+7:I[79520,["$2"],""]
+8:I[13529,["$2"],"VisitNotifier"]
+14:"ViewportBoundary"
+15:I[97367,["$2"],"$14"]
+16:"MetadataBoundary"
+17:I[97367,["$2"],"$16"]
+18:"$Sreact.suspense"
+:HL["/_next/static/chunks/14kc6mt82xsjl.css","style"]
+a:X
+d:X
+d:C
+11:[["children",{"s":"__PAGE__","h":160,"d":{"r":"$L12","p":"$@13","v":null,"s":"$a"}}]]
+e:[["children",{"s":"123-sign","h":96,"d":{"r":["$","$1","c",{"children":[null,"$Lf"]}],"p":"$@10","v":"$d","s":"$a"},"c":"$Q11"}]]
+b:[["children",{"s":"(projects)","h":96,"d":{"r":["$","$1","c",{"children":[null,["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:1:props:children:props:notFound:0:1:props:style","children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":"$0:t:t:d:r:props:children:1:props:children:props:children:1:props:children:props:notFound:0:1:props:children:props:children:1:props:style","children":404}],["$","div",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:1:props:children:props:notFound:0:1:props:children:props:children:2:props:style","children":["$","h2",null,{"style":"$0:t:t:d:r:props:children:1:props:children:props:children:1:props:children:props:notFound:0:1:props:children:props:children:2:props:children:props:style","children":"This page could not be found."}]}]]}]}]],[]]}]]}],"p":"$@c","v":"$d","s":"$a"},"c":"$Qe"}]]
+0:{"t":{"t":{"s":"","h":80,"d":{"r":["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/14kc6mt82xsjl.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/0n-2948z-bm-o.js","async":true}]],["$","html",null,{"lang":"en","className":"PrUcEq_variable Gbyjrq_variable SMAQSW_variable","suppressHydrationWarning":true,"children":["$","body",null,{"className":"flex min-h-screen flex-col bg-blueish-gray","children":[["$","header",null,{"className":"px-4 md:px-12","children":["$","div",null,{"className":"mx-auto flex max-w-2xl flex-col py-4 text-xl md:w-full md:flex-row md:items-baseline md:justify-between","children":[["$","$L4",null,{"href":"/","children":"Matteo Sandrin"}],["$","nav",null,{"className":"flex w-fit gap-2 pt-2 font-mono text-base sm:gap-4 md:pt-0","children":[["$","$1","/about",{"children":[false,["$","$L4",null,{"href":"/about","className":"text-center hover:underline","children":"about"}]]}],["$","$1","/work",{"children":[["$","span",null,{"className":"text-slate-400","children":"/"}],["$","$L4",null,{"href":"/work","className":"text-center hover:underline","children":"work"}]]}],["$","$1","/projects",{"children":[["$","span",null,{"className":"text-slate-400","children":"/"}],["$","$L4",null,{"href":"/projects","className":"text-center hover:underline","children":"projects"}]]}],["$","$1","/collections",{"children":[["$","span",null,{"className":"text-slate-400","children":"/"}],["$","$L4",null,{"href":"/collections","className":"text-center hover:underline","children":"collections"}]]}]]}]]}]}],["$","main",null,{"className":"mx-auto flex-grow px-4 py-8 md:px-12","children":["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}],"notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]]}]}],["$","footer",null,{"className":"w-full pb-8 pt-4 text-center text-slate-500","children":["like what you see?"," ",["$","$L4",null,{"href":"https://x.com/teosandrin","className":"text-blue-700 underline decoration-blue-700/40 underline-offset-4 transition-colors hover:decoration-blue-700","target":"_blank","children":"follow me!"}]]}],[["$","$L7",null,{"src":"https://www.googletagmanager.com/gtag/js?id=UA-122674032-1"}],["$","$L7",null,{"id":"gtag","children":"window.dataLayer = window.dataLayer || [];\nfunction gtag() { dataLayer.push(arguments); }\ngtag(\"js\", new Date());\ngtag(\"config\", \"UA-122674032-1\");"}],["$","$L7",null,{"src":"https://linklytics.co/api/notify-4b30e4de-6180-46ae-b741-7b6aa4f648e9.js"}]],["$","$L8",null,{}]]}]}]]}],"p":"$@9","v":null,"s":"$a"},"c":"$Qb"},"h":{"r":["$","$1","h",{"children":[null,["$","$L15",null,{"children":[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","content":"#f5f9fa"}]]}],["$","$L17",null,{"children":[["$","div",null,{"hidden":true,"children":["$","$18",null,{"name":"Next.Metadata","children":[["$","title","0",{"children":"123 sign"}],["$","meta","1",{"name":"description","content":"This is Matteo Sandrin's personal website. This page showcases the 123 sign"}],["$","link","2",{"rel":"canonical","href":"https://sandr.in/123-sign/"}],["$","meta","3",{"name":"mobile-web-app-capable","content":"yes"}],["$","meta","4",{"name":"apple-mobile-web-app-status-bar-style","content":"black-translucent"}],["$","meta","5",{"property":"og:title","content":"123 sign"}],["$","meta","6",{"property":"og:description","content":"This is Matteo Sandrin's personal website. This page showcases the 123 sign"}],"$L19","$L1a","$L1b","$L1c","$L1d","$L1e","$L1f","$L20","$L21","$L22","$L23","$L24","$L25","$L26"]}]}],null]}],"$L27"]}],"p":"$@28","v":null,"s":"$a"}},"a":"$@29","u":"$@2a","b":"OMgTwabQWZtq3yV2blUQB"}
+2b:I[36016,["$2","$3"],"Lightbox"]
+2c:I[97367,["$2"],"OutletBoundary"]
+2e:I[27201,["$2"],"IconMark"]
+:HL["/assets/img/123-sign/123-sign-01.jpg","image"]
+:HL["/assets/img/123-sign/123-sign-02.jpg","image"]
+:HL["/assets/img/123-sign/123-sign-03.jpg","image"]
+:HL["/_next/static/chunks/06w4qvgd4c8a-.css","style"]
+f:["$","$L5",null,{"parallelRouterKey":"children","template":["$","$L6",null,{}]}]
+12:["$","$1","c",{"children":[[["$","div",null,{"className":"mx-auto w-full max-w-2xl","children":[["$","div",null,{"className":"mb-triple","children":[["$","h1",null,{"className":"mb-0","children":"123 sign"}],["$","div",null,{"className":"w-full leading-relaxed text-slate-500","children":"A painting inspired by 96th street subway station"}]]}],["$","div",null,{"className":"mt-triple","children":["$","p",null,{"children":"When I lived in New York in college, I would often take the 1 train downtown\nfrom 116th street, then change to the 2 or 3 train at 96th street. This painting\nmemorializes the station's sign into six square panels of acrylic on canvas. I\nchose to paint this sign because I think of this station as a liminal checkpoint\nof sorts, a threshold between the sleepy upper Manhattan and the bustling\ndowntown."}]}]]}],"\n",["$","$L2b",null,{"children":[["$","a","/assets/img/123-sign/123-sign-01.jpg",{"href":"/assets/img/123-sign/123-sign-01.jpg","data-pswp-width":2000,"data-pswp-height":1526,"className":"mt-double","children":["$","img",null,{"src":"/assets/img/123-sign/123-sign-01.jpg","width":2000,"height":1526,"className":"mx-auto cursor-zoom-in object-contain md:max-h-[75vh]","alt":""}]}],["$","a","/assets/img/123-sign/123-sign-02.jpg",{"href":"/assets/img/123-sign/123-sign-02.jpg","data-pswp-width":2000,"data-pswp-height":1335,"className":"mt-double","children":["$","img",null,{"src":"/assets/img/123-sign/123-sign-02.jpg","width":2000,"height":1335,"className":"mx-auto cursor-zoom-in object-contain md:max-h-[75vh]","alt":""}]}],["$","a","/assets/img/123-sign/123-sign-03.jpg",{"href":"/assets/img/123-sign/123-sign-03.jpg","data-pswp-width":2000,"data-pswp-height":1309,"className":"mt-double","children":["$","img",null,{"src":"/assets/img/123-sign/123-sign-03.jpg","width":2000,"height":1309,"className":"mx-auto cursor-zoom-in object-contain md:max-h-[75vh]","alt":""}]}]]}]],[["$","link","0",{"rel":"stylesheet","href":"/_next/static/chunks/06w4qvgd4c8a-.css","precedence":"next"}],["$","script","script-0",{"src":"/_next/static/chunks/04t7bcf6m9-ji.js","async":true}]],["$","$L2c",null,{"children":["$","$18",null,{"name":"Next.MetadataOutlet","children":"$@2d"}]}]]}]
+19:["$","meta","7",{"property":"og:url","content":"https://sandr.in/123-sign/"}]
+1a:["$","meta","8",{"property":"og:site_name","content":"Matteo Sandrin"}]
+1b:["$","meta","9",{"property":"og:image","content":"https://sandr.in/assets/img/123-sign/123-sign-01.jpg"}]
+1c:["$","meta","10",{"property":"og:image:width","content":"2000"}]
+1d:["$","meta","11",{"property":"og:image:height","content":"1526"}]
+1e:["$","meta","12",{"property":"og:image:alt","content":"This is Matteo Sandrin's personal website. This page showcases the 123 sign"}]
+1f:["$","meta","13",{"property":"og:type","content":"website"}]
+20:["$","meta","14",{"name":"twitter:card","content":"summary_large_image"}]
+21:["$","meta","15",{"name":"twitter:site","content":"@TeoSandrin"}]
+22:["$","meta","16",{"name":"twitter:title","content":"123 sign"}]
+23:["$","meta","17",{"name":"twitter:description","content":"This is Matteo Sandrin's personal website. This page showcases the 123 sign"}]
+24:["$","meta","18",{"name":"twitter:image","content":"https://sandr.in/assets/img/123-sign/123-sign-01.jpg"}]
+25:["$","link","19",{"rel":"icon","href":"/favicon.ico?favicon.3ikkedptzkc-_.ico","sizes":"48x48","type":"image/x-icon"}]
+26:["$","$L2e","20",{}]
+27:["$","meta",null,{"name":"next-size-adjust","content":""}]
+a:300
+2d:null
+2a:true
+a:C
+29:0
+10:"$undefined"
+c:"$undefined"
+9:"$undefined"
+28:"$undefined"
+13:"$undefined"
